@@ -2,12 +2,12 @@
 <BaliProject version="3.2" title="ProjetoTinyQV" device="LFE5U-45F-6BG381C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="uart_tx"/>
+        <Options def_top="tinyQV_top"/>
         <Source name="impl1/source/alu.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="impl1/source/bram.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="BRAM"/>
         </Source>
         <Source name="impl1/source/core.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -16,7 +16,7 @@
             <Options/>
         </Source>
         <Source name="impl1/source/cpu.v" type="Verilog" type_short="Verilog">
-            <Options top_module="tinyqv_cpu"/>
+            <Options/>
         </Source>
         <Source name="impl1/source/decode.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -27,18 +27,6 @@
         <Source name="impl1/source/mem_ctrl.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/peri_byte_empty.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/peri_byte_example.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/peri_full_empty.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/peri_full_example.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="impl1/source/peripherals_min.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -46,12 +34,9 @@
             <Options/>
         </Source>
         <Source name="impl1/source/qspi_flash.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="qspi_flash_controller"/>
         </Source>
         <Source name="impl1/source/register.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/sim_qspi.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="impl1/source/time.v" type="Verilog" type_short="Verilog">
@@ -61,13 +46,13 @@
             <Options/>
         </Source>
         <Source name="impl1/source/top.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="tinyQV_top"/>
         </Source>
         <Source name="impl1/source/uart_rx.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="impl1/source/uart_tx.v" type="Verilog" type_short="Verilog">
-            <Options top_module="uart_tx"/>
+            <Options/>
         </Source>
         <Source name="ProjetoTinyQV.lpf" type="Logic Preference" type_short="LPF">
             <Options/>

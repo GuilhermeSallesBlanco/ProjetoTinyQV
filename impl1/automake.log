@@ -1,0 +1,156 @@
+
+synthesis -f "ProjetoTinyQV_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Nov 18 20:46:50 2025
+
+
+Command Line:  synthesis -f ProjetoTinyQV_impl1_lattice.synproj -gui 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-45F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-45F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Timing
+Top-level module name = tinyQV_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV (searchpath added)
+-p C:/lscc/diamond/3.14/ispfpga/sa5p00/data (searchpath added)
+-p C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1 (searchpath added)
+-p C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV (searchpath added)
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/alu.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/bram.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/core.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/counter.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/cpu.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/decode.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/latch_reg.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/mem_ctrl.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/peripherals_min.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/qspi_ctrl.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/qspi_flash.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/register.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/time.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/tinyqv.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/top.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_rx.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_tx.v
+NGD file = ProjetoTinyQV_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/bram.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/latch_reg.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_flash.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): tinyQV_top
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(8): " arg1="tinyQV_top" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v" arg3="8"  />
+    <postMsg mid="35901063" type="Warning" dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(50): " arg1="sim_qspi_pmod" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v" arg3="50"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(9): " arg1="tinyQV" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v" arg3="9"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(86): " arg1="32" arg2="1" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v" arg4="86"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(6): " arg1="tinyqv_cpu" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v" arg3="6"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v(6): " arg1="tinyqv_decoder" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v" arg3="6"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(241): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v" arg4="241"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(6): " arg1="tinyqv_core" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v" arg3="6"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v(10): " arg1="tinyqv_registers" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v" arg3="10"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(25): " arg1="tinyqv_alu" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v" arg3="25"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(61): " arg1="tinyqv_shifter" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v" arg3="61"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(95): " arg1="tinyqv_mul" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v" arg3="95"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(147): " arg1="32" arg2="1" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v" arg4="147"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(210): " arg1="32" arg2="2" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v" arg4="210"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): " arg1="tinyqv_counter(OUTPUT_WIDTH=7)" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): " arg1="tinyqv_counter" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v" arg3="3"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v(12): " arg1="tinyQV_time" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v" arg3="12"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v(6): " arg1="tinyqv_mem_ctrl" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v" arg3="6"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(35): " arg1="qspi_controller" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg3="35"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(140): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg4="140"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(142): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg4="142"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(161): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg4="161"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(179): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg4="179"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(207): " arg1="32" arg2="3" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v" arg4="207"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(1): " arg1="peripherals_min(CLOCK_MHZ=14)" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): " arg1="uart_tx(CLK_HZ=14000000)" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v" arg3="14"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): " arg1="32" arg2="4" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v" arg4="85"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(14): " arg1="uart_rx(CLK_HZ=14000000)" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v" arg3="14"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(95): " arg1="32" arg2="4" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v" arg4="95"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(101): " arg1="32" arg2="4" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v" arg4="101"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(105): " arg1="32" arg2="4" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v" arg4="105"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): " arg1="uart_tx(BIT_RATE=1000000,CLK_HZ=14000000)" arg2="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v" arg3="14"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): " arg1="32" arg2="4" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v" arg4="85"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(228): " arg1="32" arg2="8" arg3="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v" arg4="228"  />
+    <postMsg mid="35001714" type="Warning" dynamic="1" navigation="0" arg0="qspi_clk_out"  />
+	 instance i_tinyqv
+
+
+
+    <postMsg mid="35931000" type="Error"   dynamic="4" navigation="2" arg0="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(50): " arg1="qspi_clk_out" arg2="i_qspi" arg3="qspi_clk" arg4="c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v" arg5="50"  />

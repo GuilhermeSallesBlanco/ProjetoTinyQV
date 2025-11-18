@@ -6,11 +6,11 @@
 `default_nettype none
 
 module tinyQV_top (
-        input clk,
-        input rst_n,
+        input wire clk,
+        input wire rst_n,
 
-        input [7:0] ui_in,
-        output [7:0] uo_out
+        input wire [7:0] ui_in,
+        output wire [7:0] uo_out
 
 );
     localparam CLOCK_MHZ = 14;
@@ -158,7 +158,7 @@ module tinyQV_top (
     assign uo_out[6] = gpio_out_sel[6] ? peri_out[6] : debug_uart_txd;
     assign uo_out[7] = gpio_out_sel[7] ? peri_out[7] : debug_signal;
 
-    tinyQV_peripherals #(.CLOCK_MHZ(CLOCK_MHZ)) i_peripherals (
+    peripherals_min #(.CLOCK_MHZ(CLOCK_MHZ)) i_peripherals (
         .clk(clk),
         .rst_n(rst_reg_n),
 

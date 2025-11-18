@@ -80,18 +80,32 @@ wire mid_bit      = cycle_counter == CYCLES_PER_BIT[COUNT_REG_LEN-1:0] / 2;
 
 //
 // Handle picking the next state.
-function [3:0] next_fsm_state();
-    case(fsm_state)
-        FSM_IDLE : next_fsm_state = uart_rxd  ? FSM_IDLE  : FSM_START;
-        
-        // Only go STOP -> READY on a valid STOP bit.
-        FSM_STOP : next_fsm_state = mid_bit     ? (uart_rxd ? FSM_READY : FSM_IDLE) : FSM_STOP;
+reg [3:0] next_fsm_state;
+	always @* begin
+		case (fsm_state)
+			FSM_IDLE: begin
+				if (uart_rxd)
+					next_fsm_state = FSM_IDLE;
+				else
+					next_fsm_state = FSM_START;
+			end
 
-        FSM_READY: next_fsm_state = uart_rx_read? FSM_IDLE  : FSM_READY;
+			FSM_STOP: begin
+				if (mid_bit)
+					next_fsm_state = uart_rxd ? FSM_READY : FSM_IDLE;
+				else
+					next_fsm_state = FSM_STOP;
+			end
 
-        default  : next_fsm_state = next_bit    ? fsm_state + 1 : fsm_state;
-    endcase
-endfunction
+			FSM_READY: begin
+				next_fsm_state = uart_rx_read ? FSM_IDLE : FSM_READY;
+			end
+
+			default: begin
+				next_fsm_state = next_bit ? (fsm_state + 1) : fsm_state;
+			end
+		endcase
+end
 
 // --------------------------------------------------------------------------- 
 // Internal register setting and re-setting.
@@ -135,7 +149,7 @@ always @(posedge clk) begin : p_fsm_state
     if(!resetn) begin
         fsm_state <= FSM_IDLE;
     end else begin
-        fsm_state <= next_fsm_state();
+        fsm_state <= next_fsm_state;
     end
 end
 

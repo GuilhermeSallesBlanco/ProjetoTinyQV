@@ -4,39 +4,39 @@
  */
 
 module tinyqv_mem_ctrl (
-    input clk,
-    input rstn,
+    input wire clk,
+    input wire rstn,
 
-    input [23:1] instr_addr,
-    input        instr_fetch_restart,
-    input        instr_fetch_stall,
+    input wire [23:1] instr_addr,
+    input wire       instr_fetch_restart,
+    input wire       instr_fetch_stall,
 
     output reg     instr_fetch_started,
     output reg     instr_fetch_stopped,
-    output  [15:0] instr_data,
-    output         instr_ready,
+    output wire [15:0] instr_data,
+    output wire        instr_ready,
 
-    input [24:0] data_addr,
-    input [1:0]  data_write_n, // 11 = no write, 00 = 8-bits, 01 = 16-bits, 10 = 32-bits
-    input [1:0]  data_read_n,  // 11 = no read,  00 = 8-bits, 01 = 16-bits, 10 = 32-bits
-    input [31:0] data_to_write,
+    input wire [24:0] data_addr,
+    input wire [1:0]  data_write_n, // 11 = no write, 00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+    input wire [1:0]  data_read_n,  // 11 = no read,  00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+    input wire [31:0] data_to_write,
 
-    input        data_continue, // Whether another read/write at the next address will immediately follow this one
+    input wire       data_continue, // Whether another read/write at the next address will immediately follow this one
 
-    output         data_ready,  // Transaction complete/data request can be modified.
-    output  [31:0] data_from_read,
+    output wire        data_ready,  // Transaction complete/data request can be modified.
+    output wire [31:0] data_from_read,
 
     // External SPI interface
-    input      [3:0] spi_data_in,
-    output     [3:0] spi_data_out,
-    output     [3:0] spi_data_oe,
-    output           spi_clk_out,
-    output           spi_flash_select,
-    output           spi_ram_a_select,
-    output           spi_ram_b_select,
+    input wire     [3:0] spi_data_in,
+    output wire    [3:0] spi_data_out,
+    output wire    [3:0] spi_data_oe,
+    output wire          spi_clk_out,
+    output wire          spi_flash_select,
+    output wire          spi_ram_a_select,
+    output wire          spi_ram_b_select,
 
-    output        debug_stall_txn,
-    output        debug_stop_txn
+    output wire       debug_stall_txn,
+    output wire       debug_stop_txn
 );
 
     // Combinational

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(8): </Dynamic>
+            <Dynamic>tinyQV_top</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901063</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(50): </Dynamic>
+            <Dynamic>sim_qspi_pmod</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v</Navigation>
+            <Navigation>50</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(9): </Dynamic>
+            <Dynamic>tinyQV</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(86): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v</Navigation>
+            <Navigation>86</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(6): </Dynamic>
+            <Dynamic>tinyqv_cpu</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v(6): </Dynamic>
+            <Dynamic>tinyqv_decoder</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(241): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v</Navigation>
+            <Navigation>241</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(6): </Dynamic>
+            <Dynamic>tinyqv_core</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v(10): </Dynamic>
+            <Dynamic>tinyqv_registers</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(25): </Dynamic>
+            <Dynamic>tinyqv_alu</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(61): </Dynamic>
+            <Dynamic>tinyqv_shifter</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v</Navigation>
+            <Navigation>61</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(95): </Dynamic>
+            <Dynamic>tinyqv_mul</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(147): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v</Navigation>
+            <Navigation>147</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(210): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>2</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v</Navigation>
+            <Navigation>210</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): </Dynamic>
+            <Dynamic>tinyqv_counter(OUTPUT_WIDTH=7)</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): </Dynamic>
+            <Dynamic>tinyqv_counter</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v(12): </Dynamic>
+            <Dynamic>tinyQV_time</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v(6): </Dynamic>
+            <Dynamic>tinyqv_mem_ctrl</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(35): </Dynamic>
+            <Dynamic>qspi_controller</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(140): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>140</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(142): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>142</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(161): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>161</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(179): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>179</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(207): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v</Navigation>
+            <Navigation>207</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(1): </Dynamic>
+            <Dynamic>peripherals_min(CLOCK_MHZ=14)</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): </Dynamic>
+            <Dynamic>uart_tx(CLK_HZ=14000000)</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v</Navigation>
+            <Navigation>85</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(14): </Dynamic>
+            <Dynamic>uart_rx(CLK_HZ=14000000)</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(95): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(101): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v</Navigation>
+            <Navigation>101</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(105): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v</Navigation>
+            <Navigation>105</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): </Dynamic>
+            <Dynamic>uart_tx(BIT_RATE=1000000,CLK_HZ=14000000)</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v</Navigation>
+            <Navigation>85</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(228): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v</Navigation>
+            <Navigation>228</Navigation>
+        </Message>
+        <Message>
+            <ID>35001714</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>qspi_clk_out</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931000</ID>
+            <Severity>Error</Severity>
+            <Dynamic>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(50): </Dynamic>
+            <Dynamic>qspi_clk_out</Dynamic>
+            <Dynamic>i_qspi</Dynamic>
+            <Dynamic>qspi_clk</Dynamic>
+            <Navigation>c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v</Navigation>
+            <Navigation>50</Navigation>
+        </Message>
+    </Task>
+</BaliMessageLog>

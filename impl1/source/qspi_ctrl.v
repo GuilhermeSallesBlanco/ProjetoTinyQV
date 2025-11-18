@@ -33,14 +33,14 @@
 
    */
 module qspi_controller (
-    input clk,
-    input rstn,
+    input wire clk,
+    input wire rstn,
 
     // External SPI interface
-    input      [3:0] spi_data_in,
+    input wire     [3:0] spi_data_in,
     output reg [3:0] spi_data_out,
     output reg [3:0] spi_data_oe,
-    output           spi_clk_out,
+    output wire          spi_clk_out,
 
     output reg       spi_flash_select,
     output reg       spi_ram_a_select,
@@ -51,17 +51,17 @@ module qspi_controller (
     //  0x0000000 - 0x0FFFFFF: Flash
     //  0x1000000 - 0x17FFFFF: RAM A
     //  0x1800000 - 0x1FFFFFF: RAM B
-    input [24:0] addr_in,
-    input  [7:0] data_in,
-    input        start_read,
-    input        start_write,
-    input        stall_txn,
-    input        stop_txn,
+    input wire [24:0] addr_in,
+    input wire [7:0] data_in,
+    input wire       start_read,
+    input wire       start_write,
+    input wire       stall_txn,
+    input wire       stop_txn,
 
-    output [7:0] data_out,
+    output wire [7:0] data_out,
     output reg   data_req,
     output reg   data_ready,
-    output       busy
+    output wire      busy
 );
 
 

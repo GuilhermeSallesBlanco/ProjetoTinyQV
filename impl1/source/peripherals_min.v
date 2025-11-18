@@ -1,123 +1,147 @@
-// -------------------------------------------------------------
-// Minimal peripheral block for TinyQV
-// Provides:
-//   - UART RX/TX
-//   - 8-bit GPIO register
-// -------------------------------------------------------------
+module peripherals_min #(
+    parameter CLOCK_MHZ = 50
+)(
+    input  wire clk,
+    input  wire rst_n,
 
-module peripherals_min (
-    input              clk,
-    input              resetn,
+    // GPIO
+    input  wire [7:0] ui_in,
+    output reg  [7:0] uo_out,
 
-    // Bus interface
-    input       [31:0] addr,
-    input       [31:0] wdata,
-    output reg  [31:0] rdata,
-    input              we,       // write enable
-    input              valid,
-    output reg         ready,
+    // Bus interface from tinyQV core
+    input  wire [10:0] addr_in,
+    input  wire [31:0] data_in,
+    input  wire [1:0]  data_write_n,
+    input  wire [1:0]  data_read_n,
 
-    // UART pins
-    input              uart_rx_pin,
-    output             uart_tx_pin,
+    output reg  [31:0] data_out,
+    output reg         data_ready,
+    input  wire        data_read_complete,
 
-    // GPIO (8-bit)
-    input       [7:0]  gpio_in,
-    output reg  [7:0]  gpio_out
+    output wire [15:2] user_interrupts
 );
 
-    // ---------------------------------------------------------
-    // Address map (simplified)
-    // ---------------------------------------------------------
-    localparam ADDR_UART_TX  = 32'h0000_0000;   // write = send byte
-    localparam ADDR_UART_RX  = 32'h0000_0004;   // read = receive byte
-    localparam ADDR_UART_STATUS = 32'h0000_0008;// [0]=rx_ready, [1]=tx_busy
+    //------------------------------------------------------------
+    // Address decoding (full 32-bit MMIO)
+    //------------------------------------------------------------
+    localparam UART_TX_ADDR  = 32'h4000_0000;
+    localparam UART_RX_ADDR  = 32'h4000_0004;
+    localparam UART_ST_ADDR  = 32'h4000_0008;
+    localparam GPIO_OUT_ADDR = 32'h4000_0010;
+    localparam GPIO_IN_ADDR  = 32'h4000_0014;
 
-    localparam ADDR_GPIO_OUT = 32'h0000_0010;   // write
-    localparam ADDR_GPIO_IN  = 32'h0000_0014;   // read
+    wire write_en = (data_write_n == 2'b10); // tinyQV: write = 10b
+    wire read_en  = (data_read_n  == 2'b10); // tinyQV: read  = 10b
 
-    // ---------------------------------------------------------
-    // UART
-    // ---------------------------------------------------------
-    wire        uart_rx_ready;
-    wire [7:0]  uart_rx_data;
+    // Expand 11-bit addr to 32-bit region
+    wire [31:0] full_addr = {21'b0, addr_in};
 
-    uart_rx uart_rx_inst (
+    //------------------------------------------------------------
+    // UART wires
+    //------------------------------------------------------------
+    wire uart_tx_busy;
+    reg  uart_tx_en;
+    reg  [7:0] uart_tx_data;
+
+    wire uart_rx_valid;
+    wire [7:0] uart_rx_data;
+    reg  uart_rx_read;
+
+    //------------------------------------------------------------
+    // UART TX instance
+    //------------------------------------------------------------
+    uart_tx #(
+        .CLK_HZ(CLOCK_MHZ * 1_000_000),
+        .BIT_RATE(9600)
+    ) UART_TX_I (
         .clk(clk),
-        .resetn(resetn),
-        .rx(uart_rx_pin),
-        .data(uart_rx_data),
-        .valid(uart_rx_ready)
+        .resetn(rst_n),
+        .uart_txd(),            // top level connects elsewhere
+        .uart_tx_busy(uart_tx_busy),
+        .uart_tx_en(uart_tx_en),
+        .uart_tx_data(uart_tx_data)
     );
 
-    reg        uart_tx_start = 0;
-    reg [7:0]  uart_tx_data  = 0;
-    wire       uart_tx_busy;
-
-    uart_tx uart_tx_inst (
+    //------------------------------------------------------------
+    // UART RX instance
+    //------------------------------------------------------------
+    uart_rx #(
+        .CLK_HZ(CLOCK_MHZ * 1_000_000),
+        .BIT_RATE(9600)
+    ) UART_RX_I (
         .clk(clk),
-        .resetn(resetn),
-        .start(uart_tx_start),
-        .data(uart_tx_data),
-        .tx(uart_tx_pin),
-        .busy(uart_tx_busy)
+        .resetn(rst_n),
+        .uart_rxd(ui_in[0]),   // assume GPIO0 = RX input pin
+        .uart_rts(),           // not used
+        .uart_rx_read(uart_rx_read),
+        .uart_rx_valid(uart_rx_valid),
+        .uart_rx_data(uart_rx_data)
     );
 
-    // ---------------------------------------------------------
-    // Peripheral decode
-    // ---------------------------------------------------------
-    always @(posedge clk) begin
-        if (!resetn) begin
-            ready    <= 0;
-            rdata    <= 0;
-            gpio_out <= 0;
-            uart_tx_start <= 0;
+    //------------------------------------------------------------
+    // GPIO OUT register
+    //------------------------------------------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            uo_out <= 8'd0;
+        else if (write_en && full_addr == GPIO_OUT_ADDR)
+            uo_out <= data_in[7:0];
+    end
+
+    //------------------------------------------------------------
+    // UART TX write
+    //------------------------------------------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            uart_tx_en   <= 1'b0;
+            uart_tx_data <= 8'd0;
         end else begin
-            ready <= 0;
-            uart_tx_start <= 0;
+            uart_tx_en <= 1'b0;
 
-            if (valid && !ready) begin
-                ready <= 1;
-
-                // ------------------------------
-                // Writes
-                // ------------------------------
-                if (we) begin
-                    case (addr)
-                        ADDR_UART_TX: begin
-                            if (!uart_tx_busy) begin
-                                uart_tx_data  <= wdata[7:0];
-                                uart_tx_start <= 1;
-                            end
-                        end
-
-                        ADDR_GPIO_OUT: begin
-                            gpio_out <= wdata[7:0];
-                        end
-                    endcase
-                end
-
-                // ------------------------------
-                // Reads
-                // ------------------------------
-                case (addr)
-                    ADDR_UART_RX:
-                        rdata <= {24'd0, uart_rx_data};
-
-                    ADDR_UART_STATUS:
-                        rdata <= {30'd0, uart_tx_busy, uart_rx_ready};
-
-                    ADDR_GPIO_IN:
-                        rdata <= {24'd0, gpio_in};
-
-                    ADDR_GPIO_OUT:
-                        rdata <= {24'd0, gpio_out};
-
-                    default:
-                        rdata <= 32'd0;
-                endcase
+            if (write_en && full_addr == UART_TX_ADDR && !uart_tx_busy) begin
+                uart_tx_en   <= 1'b1;
+                uart_tx_data <= data_in[7:0];
             end
         end
     end
+
+    //------------------------------------------------------------
+    // UART RX read acknowledge
+    //------------------------------------------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            uart_rx_read <= 1'b0;
+        else
+            uart_rx_read <= (read_en && full_addr == UART_RX_ADDR);
+    end
+
+    //------------------------------------------------------------
+    // Read logic
+    //------------------------------------------------------------
+    always @(*) begin
+        data_out = 32'd0;
+
+        case (full_addr)
+            UART_RX_ADDR:  data_out = {24'd0, uart_rx_data};
+            UART_ST_ADDR:  data_out = {30'd0, uart_tx_busy, uart_rx_valid};
+            GPIO_IN_ADDR:  data_out = {24'd0, ui_in};
+            default:       data_out = 32'd0;
+        endcase
+    end
+
+    //------------------------------------------------------------
+    // Immediate read-ready
+    //------------------------------------------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            data_ready <= 1'b0;
+        else
+            data_ready <= read_en;
+    end
+
+    //------------------------------------------------------------
+    // No interrupts
+    //------------------------------------------------------------
+    assign user_interrupts = 0;
 
 endmodule

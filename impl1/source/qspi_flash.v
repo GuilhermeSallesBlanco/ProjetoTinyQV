@@ -23,25 +23,25 @@
    the MSB of the word. 
    */
 module qspi_flash_controller #(parameter DATA_WIDTH_BYTES=2, parameter ADDR_BITS=24) (
-    input clk,
-    input rstn,
+    input wire clk,
+    input wire rstn,
 
     // External SPI interface
-    input      [3:0] spi_data_in,
-    output     [3:0] spi_data_out,
+    input wire     [3:0] spi_data_in,
+    output wire    [3:0] spi_data_out,
     output reg [3:0] spi_data_oe,
-    output           spi_select,
+    output wire          spi_select,
     output reg       spi_clk_out,
 
     // Internal interface for reading/writing data
-    input [ADDR_BITS-1:0]           addr_in,
-    input                           start_read,
-    input                           stall_read,
-    input                           stop_read,
+    input wire [ADDR_BITS-1:0]           addr_in,
+    input wire                          start_read,
+    input wire                          stall_read,
+    input wire                          stop_read,
 
-    output [DATA_WIDTH_BYTES*8-1:0] data_out,
+    output wire [DATA_WIDTH_BYTES*8-1:0] data_out,
     output reg                      data_ready,
-    output                          busy
+    output wire                         busy
 );
 
 

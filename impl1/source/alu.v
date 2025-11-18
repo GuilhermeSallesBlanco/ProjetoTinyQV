@@ -23,13 +23,13 @@
 */
 
 module tinyqv_alu (
-    input [3:0] op,
-    input [3:0] a,
-    input [3:0] b,
-    input cy_in,
-    input cmp_in,
+    input wire [3:0] op,
+    input wire [3:0] a,
+    input wire [3:0] b,
+    input wire cy_in,
+    input wire cmp_in,
     output reg [3:0] d,
-    output cy_out,
+    output wire cy_out,
     output reg cmp_res   // On final cycle, 1 for SLT/SLTU/EQ
 );
 
@@ -59,11 +59,11 @@ module tinyqv_alu (
 endmodule
 
 module tinyqv_shifter (
-    input [3:2] op,
-    input [2:0] counter,
-    input [31:0] a,
-    input [4:0] b,
-    output [3:0] d
+    input wire [3:2] op,
+    input wire [2:0] counter,
+    input wire [31:0] a,
+    input wire [4:0] b,
+    output wire [3:0] d
 );
 
     wire top_bit = op[3] ? a[31] : 1'b0;
@@ -93,12 +93,12 @@ module tinyqv_shifter (
 endmodule
 
 module tinyqv_mul #(parameter B_BITS=16) (
-    input clk,
+    input wire clk,
 
-    input [3:0] a,
-    input [B_BITS-1:0] b,
+    input wire [3:0] a,
+    input wire [B_BITS-1:0] b,
 
-    output [3:0] d
+    output wire [3:0] d
 );
 
     reg [B_BITS-1:0] accum;

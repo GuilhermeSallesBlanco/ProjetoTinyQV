@@ -7,49 +7,49 @@
 
 // TinyQV CPU and QSPI memory controller wrapper
 module tinyQV (
-    input clk,
-    input rstn,
+    input wire clk,
+    input wire rstn,
 
     // Interface for non-memory transactions, implemented by external devices
-    output [27:0] data_addr,
-    output  [1:0] data_write_n, // 11 = no write, 00 = 8-bits, 01 = 16-bits, 10 = 32-bits
-    output  [1:0] data_read_n,  // 11 = no read,  00 = 8-bits, 01 = 16-bits, 10 = 32-bits
-    output        data_read_complete,
-    output [31:0] data_out,    
+    output wire [27:0] data_addr,
+    output wire [1:0] data_write_n, // 11 = no write, 00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+    output wire [1:0] data_read_n,  // 11 = no read,  00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+    output wire       data_read_complete,
+    output wire [31:0] data_out,    
 
-    input         data_ready,  // Transaction complete/data request can be modified.
-    input  [31:0] data_in,
+    input  wire       data_ready,  // Transaction complete/data request can be modified.
+    input  wire [31:0] data_in,
 
     // Interrupt requests: Bottom 2 bits trigger on rising edge, next fourteen are a status
-    input  [15:0] interrupt_req,
-    input         time_pulse,
+    input wire [15:0] interrupt_req,
+    input wire        time_pulse,
 
     // External SPI interface
-    input   [3:0] spi_data_in,
-    output  [3:0] spi_data_out,
-    output  [3:0] spi_data_oe,
-    output        spi_clk_out,
+    input wire  [3:0] spi_data_in,
+    output wire [3:0] spi_data_out,
+    output wire [3:0] spi_data_oe,
+    output wire       spi_clk_out,
 
-    output        spi_flash_select,
-    output        spi_ram_a_select,
-    output        spi_ram_b_select,
+    output wire       spi_flash_select,
+    output wire       spi_ram_a_select,
+    output wire       spi_ram_b_select,
 
     // Debug
-    output        debug_instr_complete,
-    output        debug_instr_ready,
-    output        debug_instr_valid,
-    output        debug_fetch_restart,
-    output        debug_data_ready,
-    output        debug_interrupt_pending,
-    output        debug_branch,
-    output        debug_early_branch,
-    output        debug_ret,
-    output        debug_reg_wen,
-    output        debug_counter_0,
-    output        debug_data_continue,
-    output        debug_stall_txn,
-    output        debug_stop_txn,
-    output  [3:0] debug_rd
+    output wire       debug_instr_complete,
+    output wire       debug_instr_ready,
+    output wire       debug_instr_valid,
+    output wire       debug_fetch_restart,
+    output wire       debug_data_ready,
+    output wire       debug_interrupt_pending,
+    output wire       debug_branch,
+    output wire       debug_early_branch,
+    output wire       debug_ret,
+    output wire       debug_reg_wen,
+    output wire       debug_counter_0,
+    output wire       debug_data_continue,
+    output wire       debug_stall_txn,
+    output wire       debug_stop_txn,
+    output wire [3:0] debug_rd
 );
 
   // CPU to memory controller wiring

@@ -8,22 +8,22 @@
  */
 
 module tinyqv_registers #(parameter NUM_REGS=16, parameter REG_ADDR_BITS=4) (
-    input clk,
-    input rstn,
+    input wire clk,
+    input wire rstn,
 
-    input wr_en,  // Whether to write to rd.
+    input wire wr_en,  // Whether to write to rd.
 
-    input [2:0] counter,
+    input wire [2:0] counter,
 
-    input [REG_ADDR_BITS-1:0] rs1,
-    input [REG_ADDR_BITS-1:0] rs2,
-    input [REG_ADDR_BITS-1:0] rd,
+    input wire [REG_ADDR_BITS-1:0] rs1,
+    input wire [REG_ADDR_BITS-1:0] rs2,
+    input wire [REG_ADDR_BITS-1:0] rd,
 
-    output [3:0] data_rs1,
-    output [3:0] data_rs2,
-    input [3:0] data_rd,
+    output wire [3:0] data_rs1,
+    output wire [3:0] data_rs2,
+    input wire [3:0] data_rd,
 
-    output [23:1] return_addr
+    output wire [23:1] return_addr
 );
 
     reg [31:0] registers [1:NUM_REGS-1];

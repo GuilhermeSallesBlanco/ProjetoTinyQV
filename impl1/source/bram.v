@@ -19,7 +19,7 @@ module BRAM #(parameter ADDR_WIDTH = 10, parameter INIT_FILE="") (
         if (INIT_FILE != "")
             $readmemh(INIT_FILE, mem);
         else
-            for(i = 0; i < (1 << ADDR_WIDTH); i++)
+            for(i = 0; i < (1 << ADDR_WIDTH); i = i + 1)
                 mem[i] <= 8'd0;
     end
 

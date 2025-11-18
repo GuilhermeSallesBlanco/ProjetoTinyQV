@@ -10,18 +10,18 @@
 // To save area, only 32-bit time and timecmp are implemented.
 // To handle wrap, interrupt will trigger if 0 <= time - timecmp < 2^30.
 module tinyQV_time (
-    input         clk,
-    input         rstn,
+    input wire        clk,
+    input wire        rstn,
 
-    input         time_pulse,     // High for one clock once per microsecond.
+    input wire        time_pulse,     // High for one clock once per microsecond.
 
-    input         set_mtime,
-    input         set_mtimecmp,
-    input [3:0]   data_in,
-    input [2:0]   counter,
+    input wire        set_mtime,
+    input wire        set_mtimecmp,
+    input wire [3:0]   data_in,
+    input wire [2:0]   counter,
 
-    input         read_mtimecmp,  // data_out set to mtime if this is low.
-    output [3:0]  data_out,
+    input wire         read_mtimecmp,  // data_out set to mtime if this is low.
+    output wire [3:0]  data_out,
 
     output reg    timer_interrupt
 );
