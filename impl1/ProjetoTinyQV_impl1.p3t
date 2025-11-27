@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "ProjetoTinyQV_impl1.log"
+-o "ProjetoTinyQV_impl1.csv"
+-pr "ProjetoTinyQV_impl1.prf"

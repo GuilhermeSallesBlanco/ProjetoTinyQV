@@ -1,0 +1,20 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Nov 20 15:56:51 2025 *
+NOTE DESIGN NAME: tinyQV_top *
+NOTE DEVICE NAME: LFE5U-45F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS uo_out[4] : L5 : out *
+NOTE PINS ui_in[0] : L18 : in *
+NOTE PINS ui_in[1] : N18 : in *
+NOTE PINS rst_n : A13 : in *
+NOTE PINS clk : B11 : in *
+NOTE PINS uo_out[0] : F16 : out *
+NOTE PINS uo_out[1] : D7 : out *
+NOTE PINS uo_out[2] : K4 : out *
+NOTE PINS uo_out[3] : L4 : out *
+NOTE PINS uo_out[5] : K5 : out *
+NOTE PINS uo_out[6] : L16 : out *
+NOTE PINS uo_out[7] : B18 : out *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

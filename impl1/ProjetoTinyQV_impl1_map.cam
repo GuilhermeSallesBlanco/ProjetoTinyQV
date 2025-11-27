@@ -1,0 +1,54 @@
+[ START MERGED ]
+clk_N_41 clk_c
+n17515 rst_reg_n
+i_tinyqv/mem/q_ctrl/n25374 is_writing
+i_tinyqv/mem/n9278 i_tinyqv/mem/write_qspi_data_byte_idx_1_N_1752_0
+i_tinyqv/cpu/n25424 rst_reg_n_adj_2398
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+_add_1_add_4_add_4_2/S0
+_add_1_add_4_add_4_2/CI
+_add_1_4236_add_4_24/S1
+_add_1_4236_add_4_24/CO
+_add_1_4241_add_4_2/S1
+_add_1_4241_add_4_2/S0
+_add_1_4241_add_4_2/CI
+_add_1_4241_add_4_4/S1
+_add_1_4241_add_4_4/S0
+_add_1_4241_add_4_6/S1
+_add_1_4241_add_4_6/S0
+time_count_3135_add_4_1/S0
+time_count_3135_add_4_1/CI
+_add_1_4241_add_4_8/S1
+_add_1_4241_add_4_8/S0
+_add_1_4233_add_4_21/CO
+_add_1_4241_add_4_10/S1
+_add_1_4241_add_4_10/S0
+_add_1_4236_add_4_2/S0
+_add_1_4236_add_4_2/CI
+_add_1_4241_add_4_12/S1
+_add_1_4241_add_4_12/S0
+_add_1_4241_add_4_14/S1
+_add_1_4241_add_4_14/S0
+_add_1_4241_add_4_16/S1
+_add_1_4241_add_4_16/S0
+_add_1_4241_add_4_18/S1
+_add_1_4241_add_4_18/S0
+time_count_3135_add_4_9/S1
+time_count_3135_add_4_9/CO
+_add_1_4241_add_4_20/S1
+_add_1_4241_add_4_20/S0
+_add_1_4241_add_4_22/S1
+_add_1_4241_add_4_22/CO
+_add_1_4233_add_4_1/S0
+_add_1_4233_add_4_1/CI
+_add_1_add_4_add_4_20/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Thu Nov 20 15:56:32 2025
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

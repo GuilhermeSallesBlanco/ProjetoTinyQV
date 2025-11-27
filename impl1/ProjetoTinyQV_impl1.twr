@@ -1,0 +1,1545 @@
+
+Loading design for application trce from file projetotinyqv_impl1.ncd.
+Design name: tinyQV_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-45F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p45.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.50.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Thu Nov 20 15:56:47 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o ProjetoTinyQV_impl1.twr -gui -msgset C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/promote.xml ProjetoTinyQV_impl1.ncd ProjetoTinyQV_impl1.prf 
+Design file:     projetotinyqv_impl1.ncd
+Preference file: projetotinyqv_impl1.prf
+Device,speed:    LFE5U-45F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 160.668000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 27.536ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+                   FF                        i_tinyqv/mem/q_ctrl/fsm_state__i0
+
+   Delay:              33.887ns  (18.4% logic, 81.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.887ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.536ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39C.C0 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOF_DEL    ---     0.236     R48C39C.C0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C54A.A1 n25154
+CTOF_DEL    ---     0.236     R31C54A.A1 to     R31C54A.F1 i_tinyqv/mem/q_ctrl/SLICE_907
+ROUTE         2     0.603     R31C54A.F1 to     R30C54A.CE i_tinyqv/mem/q_ctrl/clk_c_enable_282 (to clk_c)
+                  --------
+                   33.887   (18.4% logic, 81.6% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R30C54A.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.527ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/spi_clk_pos_225  (to clk_c +)
+
+   Delay:              33.878ns  (18.4% logic, 81.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.878ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.527ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39C.C0 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOF_DEL    ---     0.236     R48C39C.C0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C53D.A0 n25154
+CTOF_DEL    ---     0.236     R31C53D.A0 to     R31C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_902
+ROUTE         1     0.594     R31C53D.F0 to     R31C52B.CE i_tinyqv/mem/q_ctrl/clk_c_enable_95 (to clk_c)
+                  --------
+                   33.878   (18.4% logic, 81.6% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R31C52B.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.465ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+                   FF                        i_tinyqv/mem/q_ctrl/fsm_state__i0
+
+   Delay:              33.816ns  (18.4% logic, 81.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.816ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.465ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.393     R48C40C.F0 to     R48C40C.C1 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R48C40C.C1 to     R48C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         2     0.798     R48C40C.F1 to     R48C39C.A1 i_tinyqv/cpu/i_core/i_alu/n25192
+CTOF_DEL    ---     0.236     R48C39C.A1 to     R48C39C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         3     0.583     R48C39C.F1 to     R48C39C.A0 i_tinyqv/cpu/i_core/i_alu/n26594
+CTOF_DEL    ---     0.236     R48C39C.A0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C54A.A1 n25154
+CTOF_DEL    ---     0.236     R31C54A.A1 to     R31C54A.F1 i_tinyqv/mem/q_ctrl/SLICE_907
+ROUTE         2     0.603     R31C54A.F1 to     R30C54A.CE i_tinyqv/mem/q_ctrl/clk_c_enable_282 (to clk_c)
+                  --------
+                   33.816   (18.4% logic, 81.6% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R30C54A.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.456ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/spi_clk_pos_225  (to clk_c +)
+
+   Delay:              33.807ns  (18.4% logic, 81.6% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.807ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.456ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.393     R48C40C.F0 to     R48C40C.C1 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R48C40C.C1 to     R48C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         2     0.798     R48C40C.F1 to     R48C39C.A1 i_tinyqv/cpu/i_core/i_alu/n25192
+CTOF_DEL    ---     0.236     R48C39C.A1 to     R48C39C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         3     0.583     R48C39C.F1 to     R48C39C.A0 i_tinyqv/cpu/i_core/i_alu/n26594
+CTOF_DEL    ---     0.236     R48C39C.A0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C53D.A0 n25154
+CTOF_DEL    ---     0.236     R31C53D.A0 to     R31C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_902
+ROUTE         1     0.594     R31C53D.F0 to     R31C52B.CE i_tinyqv/mem/q_ctrl/clk_c_enable_95 (to clk_c)
+                  --------
+                   33.807   (18.4% logic, 81.6% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R31C52B.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.362ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/nibbles_remaining__i2  (to clk_c +)
+
+   Delay:              33.713ns  (18.5% logic, 81.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.713ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_555 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.362ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_555:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39C.C0 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOF_DEL    ---     0.236     R48C39C.C0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.120     R30C53D.F0 to     R30C54B.C0 n25154
+CTOF_DEL    ---     0.236     R30C54B.C0 to     R30C54B.F0 SLICE_879
+ROUTE         2     0.835     R30C54B.F0 to     R28C54D.CE clk_c_enable_354 (to clk_c)
+                  --------
+                   33.713   (18.5% logic, 81.5% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_555:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R28C54D.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.350ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+                   FF                        i_tinyqv/mem/q_ctrl/fsm_state__i0
+
+   Delay:              33.701ns  (18.5% logic, 81.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.701ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.350ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.652     R49C40C.F0 to     R48C39C.D1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R48C39C.D1 to     R48C39C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         3     0.583     R48C39C.F1 to     R48C39C.A0 i_tinyqv/cpu/i_core/i_alu/n26594
+CTOF_DEL    ---     0.236     R48C39C.A0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C54A.A1 n25154
+CTOF_DEL    ---     0.236     R31C54A.A1 to     R31C54A.F1 i_tinyqv/mem/q_ctrl/SLICE_907
+ROUTE         2     0.603     R31C54A.F1 to     R30C54A.CE i_tinyqv/mem/q_ctrl/clk_c_enable_282 (to clk_c)
+                  --------
+                   33.701   (18.5% logic, 81.5% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R30C54A.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.341ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/spi_clk_pos_225  (to clk_c +)
+
+   Delay:              33.692ns  (18.5% logic, 81.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.692ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.341ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.652     R49C40C.F0 to     R48C39C.D1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R48C39C.D1 to     R48C39C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         3     0.583     R48C39C.F1 to     R48C39C.A0 i_tinyqv/cpu/i_core/i_alu/n26594
+CTOF_DEL    ---     0.236     R48C39C.A0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C53D.A0 n25154
+CTOF_DEL    ---     0.236     R31C53D.A0 to     R31C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_902
+ROUTE         1     0.594     R31C53D.F0 to     R31C52B.CE i_tinyqv/mem/q_ctrl/clk_c_enable_95 (to clk_c)
+                  --------
+                   33.692   (18.5% logic, 81.5% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R31C52B.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.336ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+                   FF                        i_tinyqv/mem/q_ctrl/fsm_state__i0
+
+   Delay:              33.687ns  (19.0% logic, 81.0% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.687ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.336ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39D.C1 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOOFX_DEL  ---     0.401     R48C39D.C1 to   R48C39D.OFX0 i_tinyqv/cpu/i_core/i_alu/i22178/SLICE_804
+ROUTE         1     1.057   R48C39D.OFX0 to     R43C42C.D0 i_tinyqv/cpu/i_core/n24571
+CTOF_DEL    ---     0.236     R43C42C.D0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C54A.A1 n25154
+CTOF_DEL    ---     0.236     R31C54A.A1 to     R31C54A.F1 i_tinyqv/mem/q_ctrl/SLICE_907
+ROUTE         2     0.603     R31C54A.F1 to     R30C54A.CE i_tinyqv/mem/q_ctrl/clk_c_enable_282 (to clk_c)
+                  --------
+                   33.687   (19.0% logic, 81.0% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_550:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R30C54A.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.327ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/spi_clk_pos_225  (to clk_c +)
+
+   Delay:              33.678ns  (19.0% logic, 81.0% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.678ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.327ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39D.C1 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOOFX_DEL  ---     0.401     R48C39D.C1 to   R48C39D.OFX0 i_tinyqv/cpu/i_core/i_alu/i22178/SLICE_804
+ROUTE         1     1.057   R48C39D.OFX0 to     R43C42C.D0 i_tinyqv/cpu/i_core/n24571
+CTOF_DEL    ---     0.236     R43C42C.D0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C53D.A0 n25154
+CTOF_DEL    ---     0.236     R31C53D.A0 to     R31C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_902
+ROUTE         1     0.594     R31C53D.F0 to     R31C52B.CE i_tinyqv/mem/q_ctrl/clk_c_enable_95 (to clk_c)
+                  --------
+                   33.678   (19.0% logic, 81.0% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/SLICE_569:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R31C52B.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 27.314ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/counter_hi_3136__i2  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/mem/q_ctrl/fsm_state__i1  (to clk_c +)
+
+   Delay:              33.665ns  (18.5% logic, 81.5% route), 23 logic levels.
+
+ Constraint Details:
+
+     33.665ns physical path delay i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_551 exceeds
+      6.224ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 6.351ns) by 27.314ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/SLICE_61 to i_tinyqv/mem/q_ctrl/SLICE_551:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R49C49C.CLK to     R49C49C.Q0 i_tinyqv/cpu/SLICE_61 (from clk_c)
+ROUTE       116     2.908     R49C49C.Q0 to     R44C45B.A1 counter_hi_2
+CTOF_DEL    ---     0.236     R44C45B.A1 to     R44C45B.F1 i_tinyqv/cpu/SLICE_1058
+ROUTE         5     2.080     R44C45B.F1 to     R47C32D.D1 i_tinyqv/cpu/reg_access_4_3
+CTOOFX_DEL  ---     0.401     R47C32D.D1 to   R47C32D.OFX0 i_tinyqv/cpu/i_core/i_registers/i21196/SLICE_777
+ROUTE         1     0.000   R47C32D.OFX0 to    R47C32C.FXA i_tinyqv/cpu/i_core/i_registers/n23471
+FXTOF_DEL   ---     0.239    R47C32C.FXA to   R47C32C.OFX1 i_tinyqv/cpu/i_core/i_registers/i21197/SLICE_791
+ROUTE         1     0.000   R47C32C.OFX1 to    R47C32B.FXA i_tinyqv/cpu/i_core/i_registers/n23475
+FXTOF_DEL   ---     0.239    R47C32B.FXA to   R47C32B.OFX1 i_tinyqv/cpu/i_core/i_registers/i21198/SLICE_792
+ROUTE         8     1.521   R47C32B.OFX1 to     R43C41D.C0 i_tinyqv/cpu/data_rs1_0
+CTOF_DEL    ---     0.236     R43C41D.C0 to     R43C41D.F0 i_tinyqv/cpu/SLICE_961
+ROUTE         1     1.036     R43C41D.F0 to     R43C40D.B1 i_tinyqv/cpu/debug_branch_N_173_28
+CTOF_DEL    ---     0.236     R43C40D.B1 to     R43C40D.F1 i_tinyqv/cpu/SLICE_962
+ROUTE         5     1.326     R43C40D.F1 to     R48C40C.B0 i_tinyqv/cpu/alu_a_in_0
+CTOF_DEL    ---     0.236     R48C40C.B0 to     R48C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_870
+ROUTE         3     0.424     R48C40C.F0 to     R49C40C.D0 i_tinyqv/cpu/i_core/i_alu/n25217
+CTOF_DEL    ---     0.236     R49C40C.D0 to     R49C40C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     0.388     R49C40C.F0 to     R49C40C.C1 i_tinyqv/cpu/i_core/i_alu/n26595
+CTOF_DEL    ---     0.236     R49C40C.C1 to     R49C40C.F1 i_tinyqv/cpu/i_core/i_alu/SLICE_869
+ROUTE         3     1.033     R49C40C.F1 to     R48C39C.C0 i_tinyqv/cpu/i_core/i_alu/n25187
+CTOF_DEL    ---     0.236     R48C39C.C0 to     R48C39C.F0 i_tinyqv/cpu/i_core/i_alu/SLICE_1136
+ROUTE         1     1.422     R48C39C.F0 to     R43C42C.B0 i_tinyqv/cpu/i_core/n24569
+CTOF_DEL    ---     0.236     R43C42C.B0 to     R43C42C.F0 i_tinyqv/cpu/i_core/SLICE_104
+ROUTE         3     0.424     R43C42C.F0 to     R44C42C.D0 i_tinyqv/cpu/i_core/cmp_out
+CTOOFX_DEL  ---     0.401     R44C42C.D0 to   R44C42C.OFX0 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         1     0.000   R44C42C.OFX0 to    R44C42C.FXB i_tinyqv/cpu/i_core/instr_complete_N_1380
+FXTOF_DEL   ---     0.242    R44C42C.FXB to   R44C42C.OFX1 i_tinyqv/cpu/i_core/instr_complete_I_107/SLICE_742
+ROUTE         2     0.973   R44C42C.OFX1 to     R44C43A.B0 i_tinyqv/cpu/i_core/instr_complete_N_1379
+CTOF_DEL    ---     0.236     R44C43A.B0 to     R44C43A.F0 SLICE_464
+ROUTE        13     1.334     R44C43A.F0 to     R36C42D.C1 instr_complete_N_1378
+CTOF_DEL    ---     0.236     R36C42D.C1 to     R36C42D.F1 i_tinyqv/cpu/SLICE_830
+ROUTE        46     0.862     R36C42D.F1 to     R36C42D.C0 i_tinyqv/cpu/n25178
+CTOF_DEL    ---     0.236     R36C42D.C0 to     R36C42D.F0 i_tinyqv/cpu/SLICE_830
+ROUTE         6     1.220     R36C42D.F0 to     R33C45B.C1 i_tinyqv/cpu/n8
+CTOF_DEL    ---     0.236     R33C45B.C1 to     R33C45B.F1 i_tinyqv/cpu/SLICE_970
+ROUTE        11     0.810     R33C45B.F1 to     R33C47A.C0 i_tinyqv/cpu/n20952
+CTOF_DEL    ---     0.236     R33C47A.C0 to     R33C47A.F0 i_tinyqv/cpu/SLICE_939
+ROUTE         1     0.669     R33C47A.F0 to     R33C52D.D1 i_tinyqv/n21800
+CTOOFX_DEL  ---     0.401     R33C52D.D1 to   R33C52D.OFX0 i_tinyqv/mem/SLICE_548
+ROUTE         3     1.039   R33C52D.OFX0 to     R31C52B.A1 i_tinyqv/mem/debug_stop_txn_N_1850
+CTOF_DEL    ---     0.236     R31C52B.A1 to     R31C52B.F1 i_tinyqv/mem/SLICE_569
+ROUTE         7     1.065     R31C52B.F1 to     R30C53D.B0 i_tinyqv/mem/stop_txn_now_N_2094
+CTOF_DEL    ---     0.236     R30C53D.B0 to     R30C53D.F0 i_tinyqv/mem/q_ctrl/SLICE_1152
+ROUTE        13     6.526     R30C53D.F0 to     R31C54A.A1 n25154
+CTOF_DEL    ---     0.236     R31C54A.A1 to     R31C54A.F1 i_tinyqv/mem/q_ctrl/SLICE_907
+ROUTE         2     0.381     R31C54A.F1 to     R31C54D.CE i_tinyqv/mem/q_ctrl/clk_c_enable_282 (to clk_c)
+                  --------
+                   33.665   (18.5% logic, 81.5% route), 23 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R49C49C.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/mem/q_ctrl/SLICE_551:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     2.700      B11.PADDI to    R31C54D.CLK clk_c
+                  --------
+                    2.700   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning:  29.621MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 160.668000 MHz ;  |  160.668 MHz|   29.621 MHz|  23 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+i_tinyqv/cpu/i_core/cmp_out             |       3|    4096|    100.00%
+                                        |        |        |
+i_tinyqv/cpu/reg_access_4_3             |       5|    3973|     97.00%
+                                        |        |        |
+i_tinyqv/cpu/i_core/instr_complete_N_138|        |        |
+0                                       |       1|    3806|     92.92%
+                                        |        |        |
+i_tinyqv/cpu/i_core/instr_complete_N_137|        |        |
+9                                       |       2|    3806|     92.92%
+                                        |        |        |
+instr_complete_N_1378                   |      13|    3806|     92.92%
+                                        |        |        |
+i_tinyqv/mem/stop_txn_now_N_2094        |       7|    3501|     85.47%
+                                        |        |        |
+i_tinyqv/mem/debug_stop_txn_N_1850      |       3|    3501|     85.47%
+                                        |        |        |
+n25154                                  |      13|    3501|     85.47%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_registers/n23475  |       1|    3302|     80.62%
+                                        |        |        |
+i_tinyqv/cpu/alu_a_in_0                 |       5|    3302|     80.62%
+                                        |        |        |
+i_tinyqv/cpu/debug_branch_N_173_28      |       1|    3302|     80.62%
+                                        |        |        |
+i_tinyqv/cpu/data_rs1_0                 |       8|    3302|     80.62%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_registers/n23471  |       1|    3298|     80.52%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n25217        |       3|    2865|     69.95%
+                                        |        |        |
+i_tinyqv/cpu/i_core/n24569              |       1|    2120|     51.76%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n26595        |       3|    2042|     49.85%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n26594        |       3|    1985|     48.46%
+                                        |        |        |
+i_tinyqv/cpu/i_core/n24571              |       1|    1976|     48.24%
+                                        |        |        |
+i_tinyqv/cpu/n8                         |       6|    1864|     45.51%
+                                        |        |        |
+i_tinyqv/n21800                         |       1|    1844|     45.02%
+                                        |        |        |
+counter_hi_2                            |     116|    1844|     45.02%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n25187        |       3|    1737|     42.41%
+                                        |        |        |
+i_tinyqv/cpu/n20952                     |      11|    1602|     39.11%
+                                        |        |        |
+i_tinyqv/cpu/was_early_branch_N_759     |       3|    1480|     36.13%
+                                        |        |        |
+i_tinyqv/n25163                         |       2|    1480|     36.13%
+                                        |        |        |
+i_tinyqv/cpu/n26608                     |      30|    1404|     34.28%
+                                        |        |        |
+i_tinyqv/cpu/n25178                     |      46|    1365|     33.33%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n25192        |       2|    1018|     24.85%
+                                        |        |        |
+i_tinyqv/cpu/n25177                     |      11|     928|     22.66%
+                                        |        |        |
+i_tinyqv/cpu/n26610                     |      21|     842|     20.56%
+                                        |        |        |
+i_tinyqv/mem/q_ctrl/clk_c_enable_282    |       2|     804|     19.63%
+                                        |        |        |
+clk_c_enable_354                        |       2|     691|     16.87%
+                                        |        |        |
+i_tinyqv/cpu/i_core/i_alu/n25200        |       2|     590|     14.40%
+                                        |        |        |
+i_tinyqv/cpu/n21860                     |       1|     571|     13.94%
+                                        |        |        |
+i_tinyqv/cpu/clk_c_enable_392           |      19|     571|     13.94%
+                                        |        |        |
+i_tinyqv/cpu/n3619                      |      37|     571|     13.94%
+                                        |        |        |
+i_tinyqv/cpu/clk_c_enable_69            |      13|     571|     13.94%
+                                        |        |        |
+i_tinyqv/next_instr_write_offset_3      |       3|     443|     10.82%
+                                        |        |        |
+i_tinyqv/mem/q_ctrl/clk_c_enable_95     |       1|     427|     10.42%
+                                        |        |        |
+i_tinyqv/cpu/n25181                     |       9|     418|     10.21%
+                                        |        |        |
+n25175                                  |      28|     418|     10.21%
+                                        |        |        |
+i_tinyqv/cpu/alu_b_in_0                 |       5|     416|     10.16%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 595
+   Covered under: FREQUENCY NET "clk_c" 160.668000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4096  Score: 102674562
+Cumulative negative slack: 102674562
+
+Constraints cover 10903685 paths, 1 nets, and 9083 connections (99.78% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Thu Nov 20 15:56:48 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o ProjetoTinyQV_impl1.twr -gui -msgset C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/promote.xml ProjetoTinyQV_impl1.ncd ProjetoTinyQV_impl1.prf 
+Design file:     projetotinyqv_impl1.ncd
+Preference file: projetotinyqv_impl1.prf
+Device,speed:    LFE5U-45F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 160.668000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_registers/registers_10[[15__747  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_registers/registers_10[[11__751  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_registers/SLICE_150 to i_tinyqv/cpu/i_core/i_registers/SLICE_148 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_registers/SLICE_150 to i_tinyqv/cpu/i_core/i_registers/SLICE_148:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C28A.CLK to     R43C28A.Q1 i_tinyqv/cpu/i_core/i_registers/SLICE_150 (from clk_c)
+ROUTE         1     0.129     R43C28A.Q1 to     R43C28B.M1 i_tinyqv/cpu/i_core/i_registers/registers_10_15 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_150:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R43C28A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_148:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R43C28B.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_registers/registers_10[[27__735  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_registers/registers_10[[23__739  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_registers/SLICE_156 to i_tinyqv/cpu/i_core/i_registers/SLICE_154 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_registers/SLICE_156 to i_tinyqv/cpu/i_core/i_registers/SLICE_154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R44C28A.CLK to     R44C28A.Q1 i_tinyqv/cpu/i_core/i_registers/SLICE_156 (from clk_c)
+ROUTE         1     0.129     R44C28A.Q1 to     R44C28C.M1 i_tinyqv/cpu/i_core/i_registers/registers_10_27 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_156:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R44C28A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R44C28C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_instrret/register_13__70  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_instrret/register_9__74  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_instrret/SLICE_133 to i_tinyqv/cpu/i_core/i_instrret/SLICE_131 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_instrret/SLICE_133 to i_tinyqv/cpu/i_core/i_instrret/SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R42C54C.CLK to     R42C54C.Q1 i_tinyqv/cpu/i_core/i_instrret/SLICE_133 (from clk_c)
+ROUTE         1     0.129     R42C54C.Q1 to     R42C54A.M1 i_tinyqv/cpu/i_core/i_instrret/register_13 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_instrret/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R42C54C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_instrret/SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R42C54A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_cycles/register_22__61  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_cycles/register_18__65  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_cycles/SLICE_123 to i_tinyqv/cpu/i_core/i_cycles/SLICE_121 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_cycles/SLICE_123 to i_tinyqv/cpu/i_core/i_cycles/SLICE_121:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R44C53C.CLK to     R44C53C.Q1 i_tinyqv/cpu/i_core/i_cycles/SLICE_123 (from clk_c)
+ROUTE         1     0.129     R44C53C.Q1 to     R44C53A.M1 i_tinyqv/cpu/i_core/i_cycles/register_22 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_123:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R44C53C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_121:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R44C53A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_instrret/register_17__66  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_instrret/register_13__70  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_instrret/SLICE_135 to i_tinyqv/cpu/i_core/i_instrret/SLICE_133 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_instrret/SLICE_135 to i_tinyqv/cpu/i_core/i_instrret/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R42C54B.CLK to     R42C54B.Q1 i_tinyqv/cpu/i_core/i_instrret/SLICE_135 (from clk_c)
+ROUTE         1     0.129     R42C54B.Q1 to     R42C54C.M1 i_tinyqv/cpu/i_core/i_instrret/register_17 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_instrret/SLICE_135:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R42C54B.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_instrret/SLICE_133:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R42C54C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_registers/registers_11[[15__779  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_registers/registers_11[[11__783  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_registers/SLICE_166 to i_tinyqv/cpu/i_core/i_registers/SLICE_164 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_registers/SLICE_166 to i_tinyqv/cpu/i_core/i_registers/SLICE_164:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R49C31A.CLK to     R49C31A.Q1 i_tinyqv/cpu/i_core/i_registers/SLICE_166 (from clk_c)
+ROUTE         1     0.129     R49C31A.Q1 to     R49C31C.M1 i_tinyqv/cpu/i_core/i_registers/registers_11_15 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_166:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R49C31A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_164:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R49C31C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_cycles/register_20__63  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_cycles/register_16__67  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_cycles/SLICE_122 to i_tinyqv/cpu/i_core/i_cycles/SLICE_120 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_cycles/SLICE_122 to i_tinyqv/cpu/i_core/i_cycles/SLICE_120:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R47C52B.CLK to     R47C52B.Q1 i_tinyqv/cpu/i_core/i_cycles/SLICE_122 (from clk_c)
+ROUTE         1     0.129     R47C52B.Q1 to     R47C52A.M1 i_tinyqv/cpu/i_core/i_cycles/register_20 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_122:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R47C52B.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_120:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R47C52A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_cycles/register_24__59  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_cycles/register_20__63  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_cycles/SLICE_124 to i_tinyqv/cpu/i_core/i_cycles/SLICE_122 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_cycles/SLICE_124 to i_tinyqv/cpu/i_core/i_cycles/SLICE_122:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R47C52D.CLK to     R47C52D.Q1 i_tinyqv/cpu/i_core/i_cycles/SLICE_124 (from clk_c)
+ROUTE         1     0.129     R47C52D.Q1 to     R47C52B.M1 i_tinyqv/cpu/i_core/i_cycles/register_24 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_124:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R47C52D.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_cycles/SLICE_122:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R47C52B.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_registers/registers_12[[19__807  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_registers/registers_12[[15__811  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_registers/SLICE_184 to i_tinyqv/cpu/i_core/i_registers/SLICE_182 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_registers/SLICE_184 to i_tinyqv/cpu/i_core/i_registers/SLICE_182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R48C26C.CLK to     R48C26C.Q1 i_tinyqv/cpu/i_core/i_registers/SLICE_184 (from clk_c)
+ROUTE         1     0.129     R48C26C.Q1 to     R48C26D.M1 i_tinyqv/cpu/i_core/i_registers/registers_12_19 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_184:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R48C26C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R48C26D.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.174ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_tinyqv/cpu/i_core/i_registers/registers_10[[21__741  (from clk_c +)
+   Destination:    FF         Data in        i_tinyqv/cpu/i_core/i_registers/registers_10[[17__745  (to clk_c +)
+
+   Delay:               0.292ns  (55.8% logic, 44.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.292ns physical path delay i_tinyqv/cpu/i_core/i_registers/SLICE_153 to i_tinyqv/cpu/i_core/i_registers/SLICE_151 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.174ns
+
+ Physical Path Details:
+
+      Data path i_tinyqv/cpu/i_core/i_registers/SLICE_153 to i_tinyqv/cpu/i_core/i_registers/SLICE_151:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R52C29C.CLK to     R52C29C.Q1 i_tinyqv/cpu/i_core/i_registers/SLICE_153 (from clk_c)
+ROUTE         1     0.129     R52C29C.Q1 to     R52C29A.M1 i_tinyqv/cpu/i_core/i_registers/registers_10_21 (to clk_c)
+                  --------
+                    0.292   (55.8% logic, 44.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_153:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R52C29C.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to i_tinyqv/cpu/i_core/i_registers/SLICE_151:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       595     0.809      B11.PADDI to    R52C29A.CLK clk_c
+                  --------
+                    0.809   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 160.668000 MHz ;  |     0.000 ns|     0.174 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 595
+   Covered under: FREQUENCY NET "clk_c" 160.668000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 10903685 paths, 1 nets, and 9083 connections (99.78% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 102674562 (setup), 0 (hold)
+Cumulative negative slack: 102674562 (102674562+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

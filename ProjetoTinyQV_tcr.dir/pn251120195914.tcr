@@ -1,0 +1,10 @@
+#Start recording tcl command: 11/20/2025 15:53:28
+#Project Location: C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV; Project name: ProjetoTinyQV
+prj_project open "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/ProjetoTinyQV.ldf"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 11/20/2025 19:59:14
