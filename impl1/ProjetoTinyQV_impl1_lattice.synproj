@@ -49,6 +49,7 @@
 "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/top.v"
 "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_rx.v"
 "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_tx.v"
+"C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/sim_qspi.v"
 -top tinyQV_top
 
 

@@ -4,19 +4,20 @@
 
 module sim_qspi_pmod (
     // External SPI interface
-    input      [3:0] qspi_data_in,
+    input wire     [3:0] qspi_data_in,
     output reg [3:0] qspi_data_out,
-    input            qspi_clk,
+    input wire           qspi_clk,
 
-    input qspi_flash_select,
-    input qspi_ram_a_select,
-    input qspi_ram_b_select
+    input wire qspi_flash_select,
+    input wire qspi_ram_a_select,
+    input wire qspi_ram_b_select
 );
 
     // ROM and RAM size in bytes is 1 << XXX_BITS.
     parameter   ROM_BITS       = 13;
     parameter   RAM_A_BITS     = 12;
     parameter   RAM_B_BITS     = 11;
+	parameter INIT_FILE = "ledstrip.hex"; // Nome do arquivo que será executado
 
     reg [31:0] cmd;
     reg [24:0] addr;
@@ -32,7 +33,7 @@ module sim_qspi_pmod (
 
     wire any_select = qspi_flash_select && qspi_ram_a_select && qspi_ram_b_select;
 
-    BRAM #(.ADDR_WIDTH(ROM_BITS), .INIT_FILE(`PROG_FILE)) rom (
+    BRAM #(.ADDR_WIDTH(ROM_BITS), .INIT_FILE(INIT_FILE)) rom (
         .clk(qspi_clk),
         .data_in({data_buff_in, qspi_data_in}),
         .data_out(rom_buff_out),

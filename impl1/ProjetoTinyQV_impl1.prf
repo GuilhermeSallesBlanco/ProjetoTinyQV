@@ -1,5 +1,5 @@
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Thu Nov 20 15:56:32 2025
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Thu Nov 27 20:51:52 2025
 
 SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
 SCHEMATIC END ;
@@ -9,5 +9,7 @@ COMMERCIAL ;
 
 // No timing preferences found. TRCE invokes auto-generation of timing preferences
 // Section Autogen
-FREQUENCY NET "clk_c" 160.668 MHz ;
+FREQUENCY NET "clk_c" 173.853 MHz ;
+FREQUENCY NET "i_tinyqv/mem/q_ctrl/spi_clk_pos_derived_59" 154.536 MHz ;
+FREQUENCY NET "i_qspi/qspi_clk_N_56" 153.421 MHz ;
 // End Section Autogen

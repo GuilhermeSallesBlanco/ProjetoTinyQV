@@ -25,24 +25,24 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-45FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  11/20/25  15:56:31
+Mapped on:  11/27/25  20:51:51
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:   1015 out of 44457 (2%)
-      PFU registers:         1015 out of 43848 (2%)
+   Number of registers:   1128 out of 44457 (3%)
+      PFU registers:         1128 out of 43848 (3%)
       PIO registers:            0 out of   609 (0%)
-   Number of SLICEs:      1379 out of 21924 (6%)
-      SLICEs as Logic/ROM:   1379 out of 21924 (6%)
+   Number of SLICEs:      1516 out of 21924 (7%)
+      SLICEs as Logic/ROM:   1516 out of 21924 (7%)
       SLICEs as RAM:            0 out of 16443 (0%)
-      SLICEs as Carry:         49 out of 21924 (0%)
-   Number of LUT4s:        1930 out of 43848 (4%)
-      Number used as logic LUTs:        1832
+      SLICEs as Carry:         62 out of 21924 (0%)
+   Number of LUT4s:        2131 out of 43848 (5%)
+      Number used as logic LUTs:        2007
       Number used as distributed RAM:     0
-      Number used as ripple logic:       98
+      Number used as ripple logic:      124
       Number used as shift registers:     0
    Number of PIO sites used: 12 out of 203 (6%)
-   Number of block RAMs:  0 out of 108 (0%)
+   Number of block RAMs:  7 out of 108 (6%)
    Number of GSRs:  1 out of 1 (100%)
    JTAG used :      No
    Readback used :  No
@@ -77,131 +77,151 @@ Mapped on:  11/20/25  15:56:31
    Number of Used DSP MULT Sites:  2 out of 144 (1 %)
    Number of Used DSP ALU Sites:  0 out of 72 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 144 (0 %)
-   Number of clocks:  1
-     Net clk_c: 595 loads, 594 rising, 1 falling (Driver: PIO clk )
-   Number of Clock Enables:  79
-     Net rst_reg_n: 1 loads, 1 LSLICEs
-     Net clk_c_enable_397: 5 loads, 5 LSLICEs
-     Net i_debug_uart_tx/clk_c_enable_108: 1 loads, 1 LSLICEs
-     Net i_debug_uart_tx/clk_c_enable_175: 2 loads, 2 LSLICEs
+   Number of clocks:  3
+     Net clk_c: 616 loads, 614 rising, 2 falling (Driver: PIO clk )
+     Net i_tinyqv/mem/q_ctrl/spi_clk_pos_derived_59: 38 loads, 38 rising, 0
+     falling (Driver: i_tinyqv/mem/q_ctrl/spi_clk_pos_I_0_256_3_lut_rep_703 )
+     Net i_qspi/qspi_clk_N_56: 29 loads, 29 rising, 0 falling (Driver:
+     i_tinyqv/mem/q_ctrl/qspi_clk_I_0_1_lut_3_lut )
+   Number of Clock Enables:  93
+     Net rst_reg_n: 3 loads, 3 LSLICEs
+     Net clk_c_enable_426: 5 loads, 5 LSLICEs
      Net next_bit: 2 loads, 2 LSLICEs
-     Net clk_c_enable_322: 2 loads, 2 LSLICEs
-     Net clk_c_enable_208: 1 loads, 1 LSLICEs
-     Net clk_c_enable_206: 1 loads, 1 LSLICEs
-     Net clk_c_enable_354: 2 loads, 2 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_26: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_43: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_52: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_157: 4 loads, 4 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_134: 4 loads, 4 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_142: 4 loads, 4 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_150: 4 loads, 4 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_193: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/clk_c_enable_103: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_83: 3 loads, 3 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_95: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_358: 6 loads, 6 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_282: 2 loads, 2 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_313: 2 loads, 2 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_191: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/clk_c_enable_355: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_219: 7 loads, 7 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_203: 10 loads, 10 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_15: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_84: 5 loads, 5 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_29: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_393: 22 loads, 22 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_312: 8 loads, 8 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_72: 7 loads, 7 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_38: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_69: 6 loads, 6 LSLICEs
+     Net i_debug_uart_tx/clk_c_enable_362: 2 loads, 2 LSLICEs
+     Net i_debug_uart_tx/clk_c_enable_342: 1 loads, 1 LSLICEs
+     Net clk_c_enable_420: 2 loads, 2 LSLICEs
+     Net clk_c_enable_273: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_5: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_279: 2 loads, 2 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_206: 4 loads, 4 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_291: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_79: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_183: 4 loads, 4 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_191: 4 loads, 4 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_199: 4 loads, 4 LSLICEs
+     Net i_tinyqv/mem/ram_b_block_N_2303: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/clk_c_enable_392: 13 loads, 13 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_97: 3 loads, 3 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_349: 2 loads, 2 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_348: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_419: 4 loads, 4 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_355: 3 loads, 3 LSLICEs
+     Net clk_c_enable_358: 2 loads, 2 LSLICEs
+     Net clk_c_enable_369: 2 loads, 2 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/clk_c_enable_415: 4 loads, 4 LSLICEs
+     Net clk_c_enable_346: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_282: 6 loads, 6 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_26: 5 loads, 5 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_372: 8 loads, 8 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_14: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/address_ready: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_90: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_20: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_227: 19 loads, 19 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_31: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_67: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_40: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_34: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_280: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_49: 2 loads, 2 LSLICEs
+
+     Net i_tinyqv/cpu/clk_c_enable_175: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_272: 15 loads, 15 LSLICEs
      Net i_tinyqv/cpu/clk_c_enable_56: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_93: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_54: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_110: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_74: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_91: 7 loads, 7 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_197: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_102: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_309: 15 loads, 15 LSLICEs
-
-     Net i_tinyqv/cpu/clk_c_enable_216: 7 loads, 7 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_368: 5 loads, 5 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_194: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_324: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_314: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_53: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_60: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_64: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_242: 10 loads, 10 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_100: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_115: 7 loads, 7 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_117: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_142: 7 loads, 7 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_144: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_158: 7 loads, 7 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_160: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_174: 7 loads, 7 LSLICEs
      Net i_tinyqv/cpu/clk_c_enable_209: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_392: 19 loads, 19 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_218: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_328: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_332: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_336: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_340: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_344: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_348: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_352: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_370: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_111: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_205: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/clk_c_enable_170: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_190: 3 loads, 3 LSLICEs
-     Net clk_c_enable_27: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_255: 17 loads, 17 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_161: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_94: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_396: 13 loads, 13 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_279: 4 loads, 4 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_280: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_158: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_162: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_176: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_180: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_184: 3 loads, 3 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_189: 2 loads, 2 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_320: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/clk_c_enable_359: 1 loads, 1 LSLICEs
-   Number of LSRs:  28
+     Net i_tinyqv/cpu/clk_c_enable_278: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_229: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_231: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_245: 5 loads, 5 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_275: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_424: 14 loads, 14 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_423: 22 loads, 22 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_276: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_71: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_422: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_73: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_3: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_91: 4 loads, 4 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_321: 17 loads, 17 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_68: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_289: 3 loads, 3 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_74: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_78: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_83: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_87: 2 loads, 2 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_345: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_101: 1 loads, 1 LSLICEs
+     Net clk_c_enable_350: 2 loads, 2 LSLICEs
+     Net clk_c_enable_367: 4 loads, 4 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_421: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/clk_c_enable_290: 1 loads, 1 LSLICEs
+     Net i_qspi/cmd_31__N_132: 16 loads, 16 LSLICEs
+     Net i_qspi/spi_clk_pos_derived_59_enable_4: 2 loads, 2 LSLICEs
+     Net i_qspi/qspi_clk_N_56_enable_1: 1 loads, 1 LSLICEs
+     Net i_qspi/reading_N_139: 1 loads, 1 LSLICEs
+     Net i_qspi/qspi_clk_N_56_enable_2: 1 loads, 1 LSLICEs
+     Net i_qspi/qspi_clk_N_56_enable_3: 1 loads, 1 LSLICEs
+     Net i_qspi/qspi_clk_N_56_enable_4: 1 loads, 1 LSLICEs
+     Net i_qspi/ram_a_buff_out_7__N_127: 3 loads, 1 LSLICEs
+     Net i_qspi/qspi_clk_N_56_enable_5: 1 loads, 1 LSLICEs
+     Net i_qspi/ram_b_buff_out_7__N_131: 1 loads, 0 LSLICEs
+     Net i_qspi/rom_buff_out_7__N_118: 5 loads, 1 LSLICEs
+   Number of LSRs:  30
      Net rst_reg_n: 10 loads, 10 LSLICEs
-     Net i_debug_uart_tx/n25332: 3 loads, 3 LSLICEs
-     Net i_debug_uart_tx/n25242: 1 loads, 1 LSLICEs
-     Net i_debug_uart_tx/n6894: 2 loads, 2 LSLICEs
-     Net n777: 5 loads, 5 LSLICEs
-     Net n25273: 13 loads, 13 LSLICEs
-     Net rst_reg_n_adj_2398: 98 loads, 98 LSLICEs
-     Net clk_c_enable_206: 1 loads, 1 LSLICEs
-     Net n20097: 1 loads, 1 LSLICEs
-     Net n6595: 1 loads, 1 LSLICEs
-     Net n25154: 10 loads, 10 LSLICEs
-     Net i_tinyqv/mem/qspi_data_byte_idx_1__N_1756: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/n6611: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/instr_active_N_1837: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/write_qspi_data_byte_idx_1_N_1752_0: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/n8460: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/n5278: 1 loads, 1 LSLICEs
-     Net i_tinyqv/mem/q_ctrl/n21583: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/n54: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/n20739: 1 loads, 1 LSLICEs
+     Net i_debug_uart_tx/n27261: 3 loads, 3 LSLICEs
 
-     Net i_tinyqv/cpu/clk_c_enable_205: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_timer/i_mtime/n7696: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/n9319: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/n13946: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/n5287: 1 loads, 1 LSLICEs
-     Net i_tinyqv/cpu/i_core/n9321: 3 loads, 3 LSLICEs
-     Net i_tinyqv/cpu/i_core/n14438: 1 loads, 1 LSLICEs
+     Net i_debug_uart_tx/n27194: 1 loads, 1 LSLICEs
+     Net i_debug_uart_tx/n7228: 2 loads, 2 LSLICEs
+     Net n27218: 13 loads, 13 LSLICEs
+     Net n15210: 1 loads, 1 LSLICEs
+     Net rst_reg_n_adj_2691: 99 loads, 99 LSLICEs
+     Net i_tinyqv/mem/qspi_data_byte_idx_1__N_2025: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/instr_active_N_2106: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/n6942: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/n5423: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/n8804: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/n9702: 2 loads, 2 LSLICEs
+     Net i_tinyqv/mem/write_qspi_data_byte_idx_1_N_2021_0: 1 loads, 1 LSLICEs
+     Net i_tinyqv/mem/q_ctrl/n23033: 1 loads, 1 LSLICEs
+     Net n6930: 1 loads, 1 LSLICEs
+     Net n27083: 11 loads, 11 LSLICEs
+     Net i_tinyqv/cpu/n856: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/n14783: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/n22226: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_276: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/n9675: 3 loads, 3 LSLICEs
+     Net i_tinyqv/cpu/n15206: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/n5434: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/clk_c_enable_71: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_timer/i_mtime/n8128: 1 loads, 1 LSLICEs
+     Net i_tinyqv/cpu/i_core/n9673: 1 loads, 1 LSLICEs
      Net i_tinyqv/cpu/i_core/multiplier/n7: 2 loads, 2 LSLICEs
+     Net n808: 5 loads, 5 LSLICEs
+     Net i_qspi/n9644: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net rst_reg_n_adj_2398: 144 loads
-     Net counter_hi_2: 116 loads
-     Net i_tinyqv/cpu/n25338: 101 loads
-     Net i_tinyqv/cpu/n26598: 81 loads
-     Net i_tinyqv/cpu/n26597: 72 loads
-     Net counter_hi_3: 68 loads
-     Net i_tinyqv/cpu/alu_op_in_2: 67 loads
-     Net debug_instr_valid: 63 loads
-     Net i_tinyqv/cpu/n25279: 61 loads
-     Net i_tinyqv/cpu/n25284: 60 loads
+     Net rst_reg_n_adj_2691: 144 loads
+     Net counter_hi_2: 130 loads
+     Net i_tinyqv/cpu/n27260: 101 loads
+     Net i_tinyqv/cpu/n28563: 84 loads
+     Net i_tinyqv/cpu/alu_op_2: 76 loads
+     Net counter_hi_3: 73 loads
+     Net i_tinyqv/cpu/n27209: 70 loads
+     Net i_tinyqv/cpu/n28564: 67 loads
+     Net i_tinyqv/cpu/n27211: 65 loads
+     Net i_tinyqv/cpu/n27179: 59 loads
 
 
 
@@ -220,6 +240,7 @@ WARNING - map: input pad net 'ui_in[6]' has no legal load.
 WARNING - map: input pad net 'ui_in[5]' has no legal load.
 WARNING - map: input pad net 'ui_in[4]' has no legal load.
 WARNING - map: input pad net 'ui_in[3]' has no legal load.
+
 WARNING - map: input pad net 'ui_in[2]' has no legal load.
 WARNING - map: IO buffer missing for top level port ui_in[7:0](7)...logic will
      be discarded.
@@ -241,9 +262,6 @@ WARNING - map: IO buffer missing for top level port ui_in[7:0](2)...logic will
 +---------------------+-----------+-----------+------------+
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
-
-+---------------------+-----------+-----------+------------+
-| uo_out[4]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | ui_in[0]            | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -259,11 +277,13 @@ WARNING - map: IO buffer missing for top level port ui_in[7:0](2)...logic will
 +---------------------+-----------+-----------+------------+
 | uo_out[2]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| uo_out[3]           | OUTPUT    | LVCMOS25  |            |
+| uo_out[4]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | uo_out[5]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | uo_out[6]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uo_out[3]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | uo_out[7]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -272,61 +292,103 @@ WARNING - map: IO buffer missing for top level port ui_in[7:0](2)...logic will
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Signal clk_N_41 was merged into signal clk_c
-Signal i_tinyqv/cpu/n25424 was merged into signal rst_reg_n_adj_2398
-Signal n17515 was merged into signal rst_reg_n
-Signal i_tinyqv/mem/n9278 was merged into signal
-     i_tinyqv/mem/write_qspi_data_byte_idx_1_N_1752_0
-Signal i_tinyqv/mem/q_ctrl/n25374 was merged into signal is_writing
+Signal clk_N_45 was merged into signal clk_c
+Signal i_tinyqv/cpu/n27326 was merged into signal rst_reg_n_adj_2691
+Signal i_tinyqv/mem/n9653 was merged into signal
+     i_tinyqv/mem/write_qspi_data_byte_idx_1_N_2021_0
+Signal i_tinyqv/mem/q_ctrl/n27370 was merged into signal is_writing
+Signal clk_c_enable_341 was merged into signal rst_reg_n
 Signal VCC_net undriven or does not drive anything - clipped.
+
+Signal i_qspi/start_count_3235_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal i_qspi/start_count_3235_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal i_qspi/start_count_3235_add_4_7/S1 undriven or does not drive anything -
+     clipped.
+Signal i_qspi/start_count_3235_add_4_7/CO undriven or does not drive anything -
+     clipped.
+Signal time_count_3234_add_4_9/S1 undriven or does not drive anything - clipped.
+     
+Signal time_count_3234_add_4_9/CO undriven or does not drive anything - clipped.
+     
+Signal _add_1_4399_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_4399_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_4399_add_4_21/CO undriven or does not drive anything - clipped.
+Signal _add_1_4396_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_4396_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_4396_add_4_15/CO undriven or does not drive anything - clipped.
+Signal _add_1_4407_add_4_23/S1 undriven or does not drive anything - clipped.
+Signal _add_1_4407_add_4_23/CO undriven or does not drive anything - clipped.
 Signal _add_1_add_4_add_4_2/S0 undriven or does not drive anything - clipped.
 Signal _add_1_add_4_add_4_2/CI undriven or does not drive anything - clipped.
-Signal _add_1_4236_add_4_24/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4236_add_4_24/CO undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_2/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_2/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_2/CI undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_4/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_4/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_6/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_6/S0 undriven or does not drive anything - clipped.
-Signal time_count_3135_add_4_1/S0 undriven or does not drive anything - clipped.
-     
-Signal time_count_3135_add_4_1/CI undriven or does not drive anything - clipped.
-     
-Signal _add_1_4241_add_4_8/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_8/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4233_add_4_21/CO undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_10/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_10/S0 undriven or does not drive anything - clipped.
-
-Signal _add_1_4236_add_4_2/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4236_add_4_2/CI undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_12/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_12/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_14/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_14/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_16/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_16/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_18/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_18/S0 undriven or does not drive anything - clipped.
-Signal time_count_3135_add_4_9/S1 undriven or does not drive anything - clipped.
-     
-Signal time_count_3135_add_4_9/CO undriven or does not drive anything - clipped.
-     
-Signal _add_1_4241_add_4_20/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_20/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_22/S1 undriven or does not drive anything - clipped.
-Signal _add_1_4241_add_4_22/CO undriven or does not drive anything - clipped.
-Signal _add_1_4233_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal _add_1_4233_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_4402_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_4402_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_4407_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_4407_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_4407_add_4_1/CI undriven or does not drive anything - clipped.
 Signal _add_1_add_4_add_4_20/CO undriven or does not drive anything - clipped.
-Block i23149 was optimized away.
-Block i_tinyqv/cpu/i_timer/i_mtime/rstn_I_0_1_lut_rep_688 was optimized away.
-Block i_tinyqv/mem/q_ctrl/i1_2_lut_1_lut_1_lut was optimized away.
-Block i_tinyqv/mem/q_ctrl/i7014_1_lut was optimized away.
-Block i_tinyqv/mem/q_ctrl/i8005_1_lut_rep_638 was optimized away.
+Signal _add_1_4402_add_4_24/S1 undriven or does not drive anything - clipped.
+Signal _add_1_4402_add_4_24/CO undriven or does not drive anything - clipped.
+Signal time_count_3234_add_4_1/S0 undriven or does not drive anything - clipped.
+     
+Signal time_count_3234_add_4_1/CI undriven or does not drive anything - clipped.
+     
+Block i24965 was optimized away.
+Block i_tinyqv/cpu/i_timer/i_mtime/rstn_I_0_1_lut_rep_701 was optimized away.
+Block i_tinyqv/mem/q_ctrl/i7306_1_lut was optimized away.
+Block i_tinyqv/mem/q_ctrl/is_writing_I_0_1_lut_rep_745 was optimized away.
+Block i_tinyqv/mem/q_ctrl/rst_n_I_0_1_lut_rep_739 was optimized away.
 Block i2 was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+/i_qspi/ram_a:
+    EBRs: 2
+    RAM SLICEs: 0
+    Logic SLICEs: 1
+    PFU Registers: 1
+    -Contains EBR mem1:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR mem0:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+
+         READBEFOREWRITE,  GSR= DISABLED
+/i_qspi/ram_b:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR mem0:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+/i_qspi/rom:
+    EBRs: 4
+    RAM SLICEs: 0
+    Logic SLICEs: 1
+    PFU Registers: 2
+    -Contains EBR mem0:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR mem2:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR mem3:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR mem1:  TYPE= DP16KD,  Width_B= 8,  Depth_A= 2048,  Depth_B=
+         2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
 
 
 
@@ -353,11 +415,11 @@ Data
 		A		    	   	    	A Data In
 		B		    	   	    	B Data In
 		C		    	   	    	N/A
+
 	Cascaded Match
 
      	Pipeline Registers	CLK	CE	RST
 	--------------------------------------------
-
 		Pipe		    	   	    
 
      	Output Register		CLK	CE	RST
@@ -388,6 +450,20 @@ Other
 
 Instance Name: i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_mult_2
          Type: MULT18X18D
+Instance Name: i_qspi/rom/mem0
+         Type: DP16KD
+Instance Name: i_qspi/rom/mem2
+         Type: DP16KD
+Instance Name: i_qspi/rom/mem3
+         Type: DP16KD
+Instance Name: i_qspi/rom/mem1
+         Type: DP16KD
+Instance Name: i_qspi/ram_b/mem0
+         Type: DP16KD
+Instance Name: i_qspi/ram_a/mem1
+         Type: DP16KD
+Instance Name: i_qspi/ram_a/mem0
+         Type: DP16KD
 
 
 
@@ -396,10 +472,11 @@ Instance Name: i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_mult_2
 
 GSR Component:
    The Global Set Reset (GSR) resource has been used to implement a global reset
-        of the design. The reset signal used for GSR control is 'rst_reg_n'.
+        of the design. The reset signal used for GSR control is 'n27335'.
         
 
      GSR Property:
+
    The design components with GSR property set to ENABLED will respond to global
         set reset while the components with GSR property set to DISABLED will
         not.
@@ -409,73 +486,57 @@ GSR Component:
 -------------------------------------
 
      These components have the GSR property set to DISABLED. The components will
-     not respond to the reset signal 'rst_reg_n' via the GSR component.
+     not respond to the reset signal 'n27335' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 1015 
-   MULT18X18D = 1
+   Register = 1058 
+   MULT18X18D = 1, DP16KD = 7 
 
      Type and instance name of component: 
    Register : debug_rd_r_i0
-   Register : rst_reg_n_52
-
+   Register : rst_reg_n_53
    Register : i_debug_uart_tx/txd_reg_46
-   Register : i_debug_uart_tx/data_to_send__i5
-   Register : i_debug_uart_tx/cycle_counter__i0
-   Register : i_debug_uart_tx/data_to_send__i6
    Register : i_debug_uart_tx/data_to_send__i7
+   Register : i_debug_uart_tx/cycle_counter__i0
    Register : i_debug_uart_tx/fsm_state__i0
-   Register : i_debug_uart_tx/cycle_counter__i4
-   Register : i_debug_uart_tx/cycle_counter__i3
-   Register : i_debug_uart_tx/cycle_counter__i2
-   Register : i_debug_uart_tx/cycle_counter__i1
-   Register : i_debug_uart_tx/data_to_send__i0
    Register : i_debug_uart_tx/data_to_send__i1
-   Register : i_debug_uart_tx/fsm_state__i1
-   Register : i_debug_uart_tx/fsm_state__i2
-   Register : i_debug_uart_tx/fsm_state__i3
+   Register : i_debug_uart_tx/data_to_send__i0
    Register : i_debug_uart_tx/data_to_send__i2
    Register : i_debug_uart_tx/data_to_send__i3
    Register : i_debug_uart_tx/data_to_send__i4
-   Register : time_count_3135__i0
+   Register : i_debug_uart_tx/fsm_state__i1
+   Register : i_debug_uart_tx/fsm_state__i2
+   Register : i_debug_uart_tx/fsm_state__i3
+   Register : i_debug_uart_tx/cycle_counter__i1
+   Register : i_debug_uart_tx/cycle_counter__i2
+   Register : i_debug_uart_tx/cycle_counter__i3
+   Register : i_debug_uart_tx/cycle_counter__i4
+   Register : i_debug_uart_tx/data_to_send__i5
+   Register : i_debug_uart_tx/data_to_send__i6
+   Register : i_peripherals/data_ready_51
    Register : gpio_out_sel_i7
    Register : ui_in_sync_i2
    Register : ui_in_sync0_i2
-   Register : ui_in_sync0_i1
-   Register : debug_register_data_57
+   Register : debug_register_data_58
    Register : debug_rd_r_i3
-   Register : debug_rd_r_i2
-   Register : debug_rd_r_i1
-   Register : time_count_3135__i1
-   Register : time_count_3135__i2
-   Register : time_count_3135__i3
-   Register : time_count_3135__i4
-   Register : time_count_3135__i5
-   Register : time_count_3135__i6
-   Register : time_count_3135__i7
-   Register : gpio_out_sel_i6
-   Register : ui_in_sync_i1
-   Register : i_peripherals/data_ready_51
    Register : i_tinyqv/rst_reg_n_16
-   Register : i_tinyqv/rst_reg_n_16_rep_712
-   Register : i_tinyqv/mem/qspi_data_byte_idx__i1
-   Register : i_tinyqv/mem/qspi_data_byte_idx__i0
-   Register : i_tinyqv/mem/instr_fetch_stopped_182
-   Register : i_tinyqv/mem/data_txn_len_i0_i1
-   Register : i_tinyqv/mem/data_txn_len_i0_i0
+   Register : i_tinyqv/rst_reg_n_16_rep_766
+   Register : i_tinyqv/mem/continue_txn_187
    Register : i_tinyqv/mem/qspi_write_done_185
-   Register : i_tinyqv/mem/instr_active_180
+   Register : i_tinyqv/mem/data_txn_len_i0_i0
    Register : i_tinyqv/mem/qspi_data_buf_i1
+   Register : i_tinyqv/mem/qspi_data_byte_idx__i0
+   Register : i_tinyqv/mem/instr_active_180
    Register : i_tinyqv/mem/qspi_data_buf_i32
    Register : i_tinyqv/mem/qspi_data_buf_i31
    Register : i_tinyqv/mem/qspi_data_buf_i30
    Register : i_tinyqv/mem/qspi_data_buf_i29
    Register : i_tinyqv/mem/qspi_data_buf_i28
    Register : i_tinyqv/mem/qspi_data_buf_i27
+
    Register : i_tinyqv/mem/qspi_data_buf_i26
    Register : i_tinyqv/mem/qspi_data_buf_i25
    Register : i_tinyqv/mem/qspi_data_buf_i24
-
    Register : i_tinyqv/mem/qspi_data_buf_i23
    Register : i_tinyqv/mem/qspi_data_buf_i22
    Register : i_tinyqv/mem/qspi_data_buf_i21
@@ -498,129 +559,137 @@ GSR Component:
    Register : i_tinyqv/mem/qspi_data_buf_i4
    Register : i_tinyqv/mem/qspi_data_buf_i3
    Register : i_tinyqv/mem/qspi_data_buf_i2
+   Register : i_tinyqv/mem/instr_fetch_stopped_182
    Register : i_tinyqv/mem/instr_fetch_started_181
-   Register : i_tinyqv/mem/continue_txn_187
+   Register : i_tinyqv/mem/data_txn_len_i0_i1
+   Register : i_tinyqv/mem/qspi_data_byte_idx__i1
    Register : i_tinyqv/mem/data_stall_188
-   Register : i_tinyqv/mem/q_ctrl/spi_flash_select_227
-   Register : i_tinyqv/mem/q_ctrl/spi_ram_a_select_228
-   Register : i_tinyqv/mem/q_ctrl/spi_ram_b_select_229
-   Register : i_tinyqv/mem/q_ctrl/spi_clk_pos_225
-   Register : i_tinyqv/mem/q_ctrl/is_writing_222
-   Register : i_tinyqv/mem/q_ctrl/data_i1
-   Register : i_tinyqv/mem/q_ctrl/stop_txn_reg_218
-   Register : i_tinyqv/mem/q_ctrl/fsm_state__i0
-   Register : i_tinyqv/mem/q_ctrl/read_cycles_count__i0
-   Register : i_tinyqv/mem/q_ctrl/spi_in_buffer__i1
-   Register : i_tinyqv/mem/q_ctrl/nibbles_remaining__i0
+   Register : i_tinyqv/mem/q_ctrl/data_req_230
    Register : i_tinyqv/mem/q_ctrl/data_ready_224
+   Register : i_tinyqv/mem/q_ctrl/spi_flash_select_227
+   Register : i_tinyqv/mem/q_ctrl/spi_ram_b_select_229
+   Register : i_tinyqv/mem/q_ctrl/delay_cycles_cfg_i0_i0
+   Register : i_tinyqv/mem/q_ctrl/spi_ram_a_select_228
+   Register : i_tinyqv/mem/q_ctrl/is_writing_222
+   Register : i_tinyqv/mem/q_ctrl/read_cycles_count__i0
+   Register : i_tinyqv/mem/q_ctrl/stop_txn_reg_218
+   Register : i_tinyqv/mem/q_ctrl/spi_in_buffer_i0_i0
+   Register : i_tinyqv/mem/q_ctrl/nibbles_remaining__i0
+   Register : i_tinyqv/mem/q_ctrl/fsm_state__i0
+   Register : i_tinyqv/mem/q_ctrl/data_i1
    Register : i_tinyqv/mem/q_ctrl/last_ram_a_sel_235
    Register : i_tinyqv/mem/q_ctrl/last_ram_b_sel_236
-   Register : i_tinyqv/mem/q_ctrl/data_req_230
-   Register : i_tinyqv/mem/q_ctrl/data_i6
-   Register : i_tinyqv/mem/q_ctrl/data_i4
-   Register : i_tinyqv/mem/q_ctrl/data_i3
-   Register : i_tinyqv/mem/q_ctrl/fsm_state__i1
-   Register : i_tinyqv/mem/q_ctrl/fsm_state__i2
+   Register : i_tinyqv/mem/q_ctrl/spi_clk_neg_237
+   Register : i_tinyqv/mem/q_ctrl/spi_clk_use_neg_220
+   Register : i_tinyqv/mem/q_ctrl/addr_i0
+   Register : i_tinyqv/mem/q_ctrl/addr_i3
+   Register : i_tinyqv/mem/q_ctrl/addr_i2
+   Register : i_tinyqv/mem/q_ctrl/addr_i1
+   Register : i_tinyqv/mem/q_ctrl/delay_cycles_cfg_i0_i1
+   Register : i_tinyqv/mem/q_ctrl/spi_data_oe__i3
+   Register : i_tinyqv/mem/q_ctrl/spi_clk_pos_225
    Register : i_tinyqv/mem/q_ctrl/read_cycles_count__i1
+   Register : i_tinyqv/mem/q_ctrl/spi_in_buffer_i0_i1
+
+   Register : i_tinyqv/mem/q_ctrl/spi_in_buffer_i0_i2
+   Register : i_tinyqv/mem/q_ctrl/spi_in_buffer_i0_i3
    Register : i_tinyqv/mem/q_ctrl/nibbles_remaining__i1
    Register : i_tinyqv/mem/q_ctrl/nibbles_remaining__i2
+   Register : i_tinyqv/mem/q_ctrl/fsm_state__i1
+   Register : i_tinyqv/mem/q_ctrl/fsm_state__i2
+   Register : i_tinyqv/mem/q_ctrl/addr_i4
+   Register : i_tinyqv/mem/q_ctrl/addr_i5
+   Register : i_tinyqv/mem/q_ctrl/addr_i6
+   Register : i_tinyqv/mem/q_ctrl/addr_i7
+   Register : i_tinyqv/mem/q_ctrl/addr_i8
+   Register : i_tinyqv/mem/q_ctrl/addr_i9
+   Register : i_tinyqv/mem/q_ctrl/addr_i10
+   Register : i_tinyqv/mem/q_ctrl/addr_i11
+   Register : i_tinyqv/mem/q_ctrl/addr_i12
+   Register : i_tinyqv/mem/q_ctrl/addr_i13
+   Register : i_tinyqv/mem/q_ctrl/addr_i14
+   Register : i_tinyqv/mem/q_ctrl/addr_i15
+   Register : i_tinyqv/mem/q_ctrl/addr_i16
+   Register : i_tinyqv/mem/q_ctrl/addr_i17
+   Register : i_tinyqv/mem/q_ctrl/addr_i18
+   Register : i_tinyqv/mem/q_ctrl/addr_i19
+   Register : i_tinyqv/mem/q_ctrl/addr_i20
+   Register : i_tinyqv/mem/q_ctrl/addr_i21
+   Register : i_tinyqv/mem/q_ctrl/addr_i22
+   Register : i_tinyqv/mem/q_ctrl/addr_i23
    Register : i_tinyqv/mem/q_ctrl/data_i2
+   Register : i_tinyqv/mem/q_ctrl/data_i3
+   Register : i_tinyqv/mem/q_ctrl/data_i4
    Register : i_tinyqv/mem/q_ctrl/data_i5
+   Register : i_tinyqv/mem/q_ctrl/data_i6
    Register : i_tinyqv/mem/q_ctrl/data_i7
    Register : i_tinyqv/mem/q_ctrl/data_i8
-   Register : i_tinyqv/cpu/instr_data_3__i47
-   Register : i_tinyqv/cpu/instr_data_3__i46
-   Register : i_tinyqv/cpu/instr_data_3__i45
-   Register : i_tinyqv/cpu/instr_data_3__i44
-
-   Register : i_tinyqv/cpu/instr_data_3__i43
-   Register : i_tinyqv/cpu/instr_data_3__i42
-   Register : i_tinyqv/cpu/instr_data_3__i41
-   Register : i_tinyqv/cpu/instr_data_3__i40
-   Register : i_tinyqv/cpu/is_store_396
-   Register : i_tinyqv/cpu/instr_data_3__i39
-   Register : i_tinyqv/cpu/data_ready_latch_416
-   Register : i_tinyqv/cpu/is_load_393
-   Register : i_tinyqv/cpu/instr_data_3__i38
-   Register : i_tinyqv/cpu/instr_data_3__i37
-   Register : i_tinyqv/cpu/instr_data_3__i36
-   Register : i_tinyqv/cpu/instr_data_3__i35
-   Register : i_tinyqv/cpu/alu_op__i3
-   Register : i_tinyqv/cpu/alu_op__i2
-   Register : i_tinyqv/cpu/alu_op__i0
-   Register : i_tinyqv/cpu/instr_data_3__i34
-   Register : i_tinyqv/cpu/instr_data_3__i33
-   Register : i_tinyqv/cpu/pc_offset__i10
-   Register : i_tinyqv/cpu/pc_offset__i11
-   Register : i_tinyqv/cpu/rd_i0_i0
-   Register : i_tinyqv/cpu/instr_data_3__i32
-   Register : i_tinyqv/cpu/instr_data_3__i31
-   Register : i_tinyqv/cpu/instr_data_3__i30
-   Register : i_tinyqv/cpu/instr_len_i1
-   Register : i_tinyqv/cpu/instr_data_3__i29
-   Register : i_tinyqv/cpu/mem_op_i0_i0
-   Register : i_tinyqv/cpu/rs1_i0_i0
-   Register : i_tinyqv/cpu/data_read_n_i0_i0
-   Register : i_tinyqv/cpu/instr_data_3__i28
-   Register : i_tinyqv/cpu/alu_op__i1
-   Register : i_tinyqv/cpu/instr_data_3__i27
-   Register : i_tinyqv/cpu/pc_offset__i12
-   Register : i_tinyqv/cpu/instr_data_3__i26
-   Register : i_tinyqv/cpu/instr_data_3__i1
-   Register : i_tinyqv/cpu/instr_data_3__i25
-   Register : i_tinyqv/cpu/instr_write_offset__i1
-   Register : i_tinyqv/cpu/additional_mem_ops__i0
-   Register : i_tinyqv/cpu/load_started_422
-   Register : i_tinyqv/cpu/instr_valid_392
-   Register : i_tinyqv/cpu/data_read_n_i0_i1
-   Register : i_tinyqv/cpu/pc_offset__i13
-   Register : i_tinyqv/cpu/rs1_i0_i3
-   Register : i_tinyqv/cpu/instr_data_3__i24
-   Register : i_tinyqv/cpu/instr_data_3__i23
-   Register : i_tinyqv/cpu/rs1_i0_i2
-   Register : i_tinyqv/cpu/instr_data_3__i22
    Register : i_tinyqv/cpu/rs1_i0_i1
    Register : i_tinyqv/cpu/mem_op_i0_i2
    Register : i_tinyqv/cpu/mem_op_i0_i1
-   Register : i_tinyqv/cpu/instr_data_3__i21
-   Register : i_tinyqv/cpu/instr_data_3__i20
-   Register : i_tinyqv/cpu/instr_data_3__i19
-   Register : i_tinyqv/cpu/instr_data_3__i18
-   Register : i_tinyqv/cpu/instr_data_3__i17
-   Register : i_tinyqv/cpu/instr_data_3__i16
-   Register : i_tinyqv/cpu/instr_data_3__i15
-
-   Register : i_tinyqv/cpu/instr_data_3__i14
-   Register : i_tinyqv/cpu/instr_data_3__i13
-   Register : i_tinyqv/cpu/instr_data_3__i12
-   Register : i_tinyqv/cpu/instr_data_3__i11
-   Register : i_tinyqv/cpu/instr_data_3__i10
    Register : i_tinyqv/cpu/instr_len_i2
-   Register : i_tinyqv/cpu/instr_data_3__i9
-   Register : i_tinyqv/cpu/instr_data_3__i8
-   Register : i_tinyqv/cpu/instr_data_3__i7
-   Register : i_tinyqv/cpu/instr_data_3__i6
-   Register : i_tinyqv/cpu/instr_data_3__i5
-   Register : i_tinyqv/cpu/instr_data_3__i4
-   Register : i_tinyqv/cpu/instr_data_3__i3
-   Register : i_tinyqv/cpu/was_early_branch_424
-   Register : i_tinyqv/cpu/instr_data_3__i2
-   Register : i_tinyqv/cpu/is_branch_399
    Register : i_tinyqv/cpu/rd_i0_i3
    Register : i_tinyqv/cpu/rd_i0_i2
    Register : i_tinyqv/cpu/rd_i0_i1
-   Register : i_tinyqv/cpu/instr_fetch_running_429
-   Register : i_tinyqv/cpu/pc_offset__i14
+   Register : i_tinyqv/cpu/alu_op__i3
+   Register : i_tinyqv/cpu/alu_op__i2
+   Register : i_tinyqv/cpu/alu_op__i1
+   Register : i_tinyqv/cpu/data_ready_latch_416
+   Register : i_tinyqv/cpu/load_started_422
    Register : i_tinyqv/cpu/interrupt_core_408
-   Register : i_tinyqv/cpu/data_ready_sync_415
-   Register : i_tinyqv/cpu/is_alu_imm_394
-   Register : i_tinyqv/cpu/pc_offset__i1
+   Register : i_tinyqv/cpu/data_out__i31
+   Register : i_tinyqv/cpu/imm_i0_i0
+   Register : i_tinyqv/cpu/data_out__i30
+   Register : i_tinyqv/cpu/data_out__i29
+   Register : i_tinyqv/cpu/data_out__i28
+   Register : i_tinyqv/cpu/data_out__i27
+   Register : i_tinyqv/cpu/data_out__i0
+   Register : i_tinyqv/cpu/alu_op__i0
+   Register : i_tinyqv/cpu/data_out__i26
+   Register : i_tinyqv/cpu/rd_i0_i0
+
+   Register : i_tinyqv/cpu/data_out__i25
+   Register : i_tinyqv/cpu/data_out__i24
+   Register : i_tinyqv/cpu/data_out__i23
+   Register : i_tinyqv/cpu/data_out__i22
+   Register : i_tinyqv/cpu/instr_len_i1
+   Register : i_tinyqv/cpu/mem_op_i0_i0
+   Register : i_tinyqv/cpu/rs1_i0_i0
+   Register : i_tinyqv/cpu/data_read_n_i0_i0
+   Register : i_tinyqv/cpu/data_out__i21
+   Register : i_tinyqv/cpu/data_out__i20
+   Register : i_tinyqv/cpu/data_out__i19
+   Register : i_tinyqv/cpu/data_out__i18
+   Register : i_tinyqv/cpu/additional_mem_ops__i0
+   Register : i_tinyqv/cpu/instr_data_3__i1
+   Register : i_tinyqv/cpu/data_out__i17
+   Register : i_tinyqv/cpu/data_out__i16
+   Register : i_tinyqv/cpu/instr_write_offset__i1
    Register : i_tinyqv/cpu/data_addr__i0
-   Register : i_tinyqv/cpu/rs2_i0_i0
+   Register : i_tinyqv/cpu/data_out__i15
+   Register : i_tinyqv/cpu/data_out__i14
+   Register : i_tinyqv/cpu/data_continue_420
+   Register : i_tinyqv/cpu/data_out__i13
+   Register : i_tinyqv/cpu/data_out__i12
+   Register : i_tinyqv/cpu/data_out__i11
+   Register : i_tinyqv/cpu/data_out__i10
+   Register : i_tinyqv/cpu/data_out__i9
+   Register : i_tinyqv/cpu/data_out__i8
+   Register : i_tinyqv/cpu/data_out__i7
+   Register : i_tinyqv/cpu/data_out__i6
+   Register : i_tinyqv/cpu/data_out__i5
+   Register : i_tinyqv/cpu/data_out__i4
+   Register : i_tinyqv/cpu/data_out__i3
+   Register : i_tinyqv/cpu/counter_hi_3236__i2
+   Register : i_tinyqv/cpu/data_out__i2
+   Register : i_tinyqv/cpu/data_out__i1
+   Register : i_tinyqv/cpu/addr_offset_3237__i2
+   Register : i_tinyqv/cpu/instr_valid_392
+   Register : i_tinyqv/cpu/is_alu_imm_394
+   Register : i_tinyqv/cpu/is_jalr_400
+   Register : i_tinyqv/cpu/was_early_branch_424
+   Register : i_tinyqv/cpu/data_ready_sync_415
    Register : i_tinyqv/cpu/instr_data_3__i64
-   Register : i_tinyqv/cpu/pc_offset__i2
-   Register : i_tinyqv/cpu/pc_offset__i3
-   Register : i_tinyqv/cpu/pc_offset__i4
    Register : i_tinyqv/cpu/instr_data_3__i63
    Register : i_tinyqv/cpu/instr_data_3__i62
    Register : i_tinyqv/cpu/instr_data_3__i61
@@ -628,150 +697,176 @@ GSR Component:
    Register : i_tinyqv/cpu/instr_data_3__i59
    Register : i_tinyqv/cpu/instr_data_3__i58
    Register : i_tinyqv/cpu/instr_data_3__i57
-   Register : i_tinyqv/cpu/is_auipc_395
-   Register : i_tinyqv/cpu/counter_hi_3136__i2
-   Register : i_tinyqv/cpu/pc_offset__i5
-   Register : i_tinyqv/cpu/pc_offset__i6
-   Register : i_tinyqv/cpu/pc_offset__i7
-   Register : i_tinyqv/cpu/additional_mem_ops__i2
-   Register : i_tinyqv/cpu/additional_mem_ops__i1
-   Register : i_tinyqv/cpu/instr_write_offset__i3
-   Register : i_tinyqv/cpu/instr_write_offset__i2
-   Register : i_tinyqv/cpu/addr_offset_3137__i2
-   Register : i_tinyqv/cpu/is_alu_reg_397
-   Register : i_tinyqv/cpu/is_jalr_400
-   Register : i_tinyqv/cpu/data_continue_420
-   Register : i_tinyqv/cpu/is_jal_401
-   Register : i_tinyqv/cpu/data_out__i0
-   Register : i_tinyqv/cpu/no_write_in_progress_419
-   Register : i_tinyqv/cpu/pc_offset__i15
-   Register : i_tinyqv/cpu/data_write_n_i0
-
-   Register : i_tinyqv/cpu/pc_offset__i16
-   Register : i_tinyqv/cpu/is_system_402
-   Register : i_tinyqv/cpu/is_lui_398
-   Register : i_tinyqv/cpu/pc_offset__i17
-   Register : i_tinyqv/cpu/pc_offset__i18
-   Register : i_tinyqv/cpu/mem_op_increment_reg_413
    Register : i_tinyqv/cpu/instr_data_3__i56
    Register : i_tinyqv/cpu/instr_data_3__i55
-   Register : i_tinyqv/cpu/imm_i0_i0
    Register : i_tinyqv/cpu/instr_data_3__i54
    Register : i_tinyqv/cpu/instr_data_3__i53
    Register : i_tinyqv/cpu/instr_data_3__i52
    Register : i_tinyqv/cpu/instr_data_3__i51
    Register : i_tinyqv/cpu/instr_data_3__i50
+
    Register : i_tinyqv/cpu/instr_data_3__i49
    Register : i_tinyqv/cpu/instr_data_3__i48
-   Register : i_tinyqv/cpu/pc_offset__i9
-   Register : i_tinyqv/cpu/pc_offset__i19
-   Register : i_tinyqv/cpu/pc_offset__i20
-   Register : i_tinyqv/cpu/data_addr__i1
-   Register : i_tinyqv/cpu/data_addr__i2
-   Register : i_tinyqv/cpu/data_addr__i3
-   Register : i_tinyqv/cpu/data_addr__i4
-   Register : i_tinyqv/cpu/data_addr__i5
-   Register : i_tinyqv/cpu/data_addr__i6
-   Register : i_tinyqv/cpu/data_addr__i7
-   Register : i_tinyqv/cpu/data_addr__i8
-   Register : i_tinyqv/cpu/data_addr__i9
-   Register : i_tinyqv/cpu/data_addr__i10
-   Register : i_tinyqv/cpu/data_addr__i11
-   Register : i_tinyqv/cpu/data_addr__i12
-   Register : i_tinyqv/cpu/data_addr__i13
-   Register : i_tinyqv/cpu/data_addr__i14
-   Register : i_tinyqv/cpu/data_addr__i15
-   Register : i_tinyqv/cpu/data_addr__i16
-   Register : i_tinyqv/cpu/data_addr__i17
-   Register : i_tinyqv/cpu/data_addr__i18
-   Register : i_tinyqv/cpu/data_addr__i19
-   Register : i_tinyqv/cpu/data_addr__i20
-   Register : i_tinyqv/cpu/data_addr__i21
-   Register : i_tinyqv/cpu/data_addr__i22
-   Register : i_tinyqv/cpu/data_addr__i23
-   Register : i_tinyqv/cpu/data_addr__i24
-   Register : i_tinyqv/cpu/data_addr__i25
-   Register : i_tinyqv/cpu/data_addr__i26
+   Register : i_tinyqv/cpu/instr_data_3__i47
+   Register : i_tinyqv/cpu/instr_data_3__i46
+   Register : i_tinyqv/cpu/instr_data_3__i45
+   Register : i_tinyqv/cpu/instr_data_3__i44
+   Register : i_tinyqv/cpu/instr_data_3__i43
+   Register : i_tinyqv/cpu/instr_data_3__i42
+   Register : i_tinyqv/cpu/instr_data_3__i41
+   Register : i_tinyqv/cpu/instr_data_3__i40
+   Register : i_tinyqv/cpu/instr_data_3__i39
+   Register : i_tinyqv/cpu/instr_data_3__i38
+   Register : i_tinyqv/cpu/instr_data_3__i37
+   Register : i_tinyqv/cpu/instr_data_3__i36
+   Register : i_tinyqv/cpu/imm_i0_i31
+   Register : i_tinyqv/cpu/imm_i0_i30
+   Register : i_tinyqv/cpu/imm_i0_i29
+   Register : i_tinyqv/cpu/imm_i0_i28
+   Register : i_tinyqv/cpu/imm_i0_i27
+   Register : i_tinyqv/cpu/imm_i0_i26
+   Register : i_tinyqv/cpu/imm_i0_i25
+   Register : i_tinyqv/cpu/imm_i0_i24
+   Register : i_tinyqv/cpu/is_alu_reg_397
+   Register : i_tinyqv/cpu/imm_i0_i23
+   Register : i_tinyqv/cpu/instr_data_3__i35
+   Register : i_tinyqv/cpu/instr_data_3__i34
+   Register : i_tinyqv/cpu/instr_data_3__i33
+   Register : i_tinyqv/cpu/instr_data_3__i32
+   Register : i_tinyqv/cpu/instr_data_3__i31
+   Register : i_tinyqv/cpu/instr_data_3__i30
+   Register : i_tinyqv/cpu/instr_data_3__i29
+   Register : i_tinyqv/cpu/instr_data_3__i28
+   Register : i_tinyqv/cpu/instr_data_3__i27
+   Register : i_tinyqv/cpu/instr_data_3__i26
+   Register : i_tinyqv/cpu/instr_data_3__i25
+   Register : i_tinyqv/cpu/instr_data_3__i24
+   Register : i_tinyqv/cpu/instr_data_3__i23
+   Register : i_tinyqv/cpu/instr_data_3__i22
+   Register : i_tinyqv/cpu/instr_data_3__i21
+   Register : i_tinyqv/cpu/instr_data_3__i20
+   Register : i_tinyqv/cpu/instr_data_3__i19
+   Register : i_tinyqv/cpu/instr_data_3__i18
+   Register : i_tinyqv/cpu/instr_data_3__i17
+   Register : i_tinyqv/cpu/instr_data_3__i16
+   Register : i_tinyqv/cpu/instr_data_3__i15
+   Register : i_tinyqv/cpu/instr_data_3__i14
+   Register : i_tinyqv/cpu/instr_data_3__i13
+   Register : i_tinyqv/cpu/instr_data_3__i12
+   Register : i_tinyqv/cpu/instr_data_3__i11
+   Register : i_tinyqv/cpu/instr_data_3__i10
+   Register : i_tinyqv/cpu/instr_data_3__i9
+   Register : i_tinyqv/cpu/instr_data_3__i8
+   Register : i_tinyqv/cpu/instr_data_3__i7
+   Register : i_tinyqv/cpu/instr_data_3__i6
+   Register : i_tinyqv/cpu/instr_data_3__i5
+   Register : i_tinyqv/cpu/instr_data_3__i4
+
+   Register : i_tinyqv/cpu/instr_data_3__i3
+   Register : i_tinyqv/cpu/instr_data_3__i2
+   Register : i_tinyqv/cpu/additional_mem_ops__i2
+   Register : i_tinyqv/cpu/additional_mem_ops__i1
+   Register : i_tinyqv/cpu/imm_i0_i22
+   Register : i_tinyqv/cpu/is_auipc_395
+   Register : i_tinyqv/cpu/instr_fetch_running_429
+   Register : i_tinyqv/cpu/imm_i0_i21
+   Register : i_tinyqv/cpu/is_system_402
+   Register : i_tinyqv/cpu/imm_i0_i20
+   Register : i_tinyqv/cpu/imm_i0_i19
+   Register : i_tinyqv/cpu/imm_i0_i18
+   Register : i_tinyqv/cpu/imm_i0_i17
+   Register : i_tinyqv/cpu/data_write_n_i1
+   Register : i_tinyqv/cpu/imm_i0_i16
+   Register : i_tinyqv/cpu/imm_i0_i15
+   Register : i_tinyqv/cpu/imm_i0_i14
+   Register : i_tinyqv/cpu/imm_i0_i13
+   Register : i_tinyqv/cpu/imm_i0_i12
+   Register : i_tinyqv/cpu/imm_i0_i11
+   Register : i_tinyqv/cpu/is_lui_398
+   Register : i_tinyqv/cpu/is_store_396
+   Register : i_tinyqv/cpu/imm_i0_i10
+   Register : i_tinyqv/cpu/imm_i0_i9
+   Register : i_tinyqv/cpu/imm_i0_i8
+   Register : i_tinyqv/cpu/no_write_in_progress_419
+   Register : i_tinyqv/cpu/is_branch_399
+   Register : i_tinyqv/cpu/rs2_i0_i0
+   Register : i_tinyqv/cpu/imm_i0_i7
+   Register : i_tinyqv/cpu/imm_i0_i6
+   Register : i_tinyqv/cpu/imm_i0_i5
+   Register : i_tinyqv/cpu/imm_i0_i4
+   Register : i_tinyqv/cpu/is_load_393
+   Register : i_tinyqv/cpu/is_jal_401
+   Register : i_tinyqv/cpu/imm_i0_i3
+   Register : i_tinyqv/cpu/imm_i0_i2
+   Register : i_tinyqv/cpu/imm_i0_i1
    Register : i_tinyqv/cpu/data_addr__i27
+   Register : i_tinyqv/cpu/data_addr__i26
+   Register : i_tinyqv/cpu/data_addr__i25
+   Register : i_tinyqv/cpu/data_addr__i24
+   Register : i_tinyqv/cpu/data_addr__i23
+   Register : i_tinyqv/cpu/data_addr__i22
+   Register : i_tinyqv/cpu/data_addr__i21
+   Register : i_tinyqv/cpu/data_addr__i20
+   Register : i_tinyqv/cpu/data_addr__i19
+   Register : i_tinyqv/cpu/data_addr__i18
+   Register : i_tinyqv/cpu/data_addr__i17
+   Register : i_tinyqv/cpu/data_addr__i16
+   Register : i_tinyqv/cpu/data_addr__i15
+   Register : i_tinyqv/cpu/data_addr__i14
+   Register : i_tinyqv/cpu/data_addr__i13
+   Register : i_tinyqv/cpu/data_addr__i12
+   Register : i_tinyqv/cpu/data_addr__i11
+   Register : i_tinyqv/cpu/data_addr__i10
+   Register : i_tinyqv/cpu/data_addr__i9
+
+   Register : i_tinyqv/cpu/data_addr__i8
+   Register : i_tinyqv/cpu/data_addr__i7
+   Register : i_tinyqv/cpu/data_addr__i6
+   Register : i_tinyqv/cpu/data_addr__i5
+   Register : i_tinyqv/cpu/data_addr__i4
+   Register : i_tinyqv/cpu/data_addr__i3
+   Register : i_tinyqv/cpu/data_addr__i2
+   Register : i_tinyqv/cpu/data_addr__i1
+   Register : i_tinyqv/cpu/instr_write_offset__i3
+   Register : i_tinyqv/cpu/instr_write_offset__i2
+   Register : i_tinyqv/cpu/mem_op_increment_reg_413
+   Register : i_tinyqv/cpu/data_write_n_i0
+   Register : i_tinyqv/cpu/data_read_n_i0_i1
+   Register : i_tinyqv/cpu/rs1_i0_i3
+   Register : i_tinyqv/cpu/rs1_i0_i2
+   Register : i_tinyqv/cpu/counter_hi_3236__i3
+   Register : i_tinyqv/cpu/pc_offset__i23
+   Register : i_tinyqv/cpu/counter_hi_3236__i4
+   Register : i_tinyqv/cpu/addr_offset_3237__i3
+   Register : i_tinyqv/cpu/pc_offset__i1
    Register : i_tinyqv/cpu/rs2_i0_i1
    Register : i_tinyqv/cpu/rs2_i0_i2
    Register : i_tinyqv/cpu/rs2_i0_i3
-   Register : i_tinyqv/cpu/counter_hi_3136__i3
-   Register : i_tinyqv/cpu/counter_hi_3136__i4
-   Register : i_tinyqv/cpu/addr_offset_3137__i3
-   Register : i_tinyqv/cpu/data_write_n_i1
-   Register : i_tinyqv/cpu/pc_offset__i21
    Register : i_tinyqv/cpu/pc_offset__i22
-   Register : i_tinyqv/cpu/pc_offset__i23
-
-   Register : i_tinyqv/cpu/data_out__i1
-   Register : i_tinyqv/cpu/data_out__i2
-   Register : i_tinyqv/cpu/data_out__i3
-   Register : i_tinyqv/cpu/data_out__i4
-   Register : i_tinyqv/cpu/data_out__i5
-   Register : i_tinyqv/cpu/data_out__i6
-   Register : i_tinyqv/cpu/data_out__i7
-   Register : i_tinyqv/cpu/data_out__i8
-   Register : i_tinyqv/cpu/data_out__i9
-   Register : i_tinyqv/cpu/data_out__i10
-   Register : i_tinyqv/cpu/data_out__i11
-   Register : i_tinyqv/cpu/data_out__i12
-   Register : i_tinyqv/cpu/data_out__i13
-   Register : i_tinyqv/cpu/data_out__i14
-   Register : i_tinyqv/cpu/data_out__i15
-   Register : i_tinyqv/cpu/data_out__i16
-   Register : i_tinyqv/cpu/data_out__i17
-   Register : i_tinyqv/cpu/data_out__i18
-   Register : i_tinyqv/cpu/data_out__i19
-   Register : i_tinyqv/cpu/data_out__i20
-   Register : i_tinyqv/cpu/data_out__i21
-   Register : i_tinyqv/cpu/data_out__i22
-   Register : i_tinyqv/cpu/data_out__i23
-   Register : i_tinyqv/cpu/data_out__i24
-   Register : i_tinyqv/cpu/data_out__i25
-   Register : i_tinyqv/cpu/data_out__i26
-   Register : i_tinyqv/cpu/data_out__i27
-   Register : i_tinyqv/cpu/data_out__i28
-   Register : i_tinyqv/cpu/data_out__i29
-   Register : i_tinyqv/cpu/data_out__i30
-   Register : i_tinyqv/cpu/data_out__i31
-   Register : i_tinyqv/cpu/imm_i0_i1
-   Register : i_tinyqv/cpu/imm_i0_i2
-   Register : i_tinyqv/cpu/imm_i0_i3
-   Register : i_tinyqv/cpu/imm_i0_i4
-   Register : i_tinyqv/cpu/imm_i0_i5
-   Register : i_tinyqv/cpu/imm_i0_i6
-   Register : i_tinyqv/cpu/imm_i0_i7
-   Register : i_tinyqv/cpu/imm_i0_i8
-   Register : i_tinyqv/cpu/imm_i0_i9
-   Register : i_tinyqv/cpu/imm_i0_i10
-   Register : i_tinyqv/cpu/imm_i0_i11
-   Register : i_tinyqv/cpu/imm_i0_i12
-   Register : i_tinyqv/cpu/imm_i0_i13
-   Register : i_tinyqv/cpu/imm_i0_i14
-   Register : i_tinyqv/cpu/imm_i0_i15
-   Register : i_tinyqv/cpu/imm_i0_i16
-   Register : i_tinyqv/cpu/imm_i0_i17
-   Register : i_tinyqv/cpu/imm_i0_i18
-   Register : i_tinyqv/cpu/imm_i0_i19
-   Register : i_tinyqv/cpu/imm_i0_i20
-   Register : i_tinyqv/cpu/imm_i0_i21
-   Register : i_tinyqv/cpu/imm_i0_i22
-   Register : i_tinyqv/cpu/imm_i0_i23
-   Register : i_tinyqv/cpu/imm_i0_i24
-   Register : i_tinyqv/cpu/imm_i0_i25
-
-   Register : i_tinyqv/cpu/imm_i0_i26
-   Register : i_tinyqv/cpu/imm_i0_i27
-   Register : i_tinyqv/cpu/imm_i0_i28
-   Register : i_tinyqv/cpu/imm_i0_i29
-   Register : i_tinyqv/cpu/imm_i0_i30
-   Register : i_tinyqv/cpu/imm_i0_i31
+   Register : i_tinyqv/cpu/pc_offset__i21
+   Register : i_tinyqv/cpu/pc_offset__i20
+   Register : i_tinyqv/cpu/pc_offset__i19
+   Register : i_tinyqv/cpu/pc_offset__i18
+   Register : i_tinyqv/cpu/pc_offset__i17
+   Register : i_tinyqv/cpu/pc_offset__i16
+   Register : i_tinyqv/cpu/pc_offset__i15
+   Register : i_tinyqv/cpu/pc_offset__i14
+   Register : i_tinyqv/cpu/pc_offset__i13
+   Register : i_tinyqv/cpu/pc_offset__i12
+   Register : i_tinyqv/cpu/pc_offset__i11
+   Register : i_tinyqv/cpu/pc_offset__i10
+   Register : i_tinyqv/cpu/pc_offset__i9
    Register : i_tinyqv/cpu/pc_offset__i8
-   Register : i_tinyqv/cpu/counter_hi_3136__i3_rep_710
-   Register : i_tinyqv/cpu/counter_hi_3136__i4_rep_708
+   Register : i_tinyqv/cpu/pc_offset__i7
+   Register : i_tinyqv/cpu/pc_offset__i6
+   Register : i_tinyqv/cpu/pc_offset__i5
+   Register : i_tinyqv/cpu/pc_offset__i4
+   Register : i_tinyqv/cpu/pc_offset__i3
+   Register : i_tinyqv/cpu/pc_offset__i2
+   Register : i_tinyqv/cpu/counter_hi_3236__i3_rep_764
+   Register : i_tinyqv/cpu/counter_hi_3236__i4_rep_762
+   Register : i_tinyqv/cpu/i_timer/mtimecmp_2__90
    Register : i_tinyqv/cpu/i_timer/mtimecmp_1__91
-   Register : i_tinyqv/cpu/i_timer/mtimecmp_3__89
    Register : i_tinyqv/cpu/i_timer/mtimecmp_0__92
    Register : i_tinyqv/cpu/i_timer/time_pulse_r_95
    Register : i_tinyqv/cpu/i_timer/mtimecmp_30__62
@@ -780,6 +875,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_timer/mtimecmp_27__65
    Register : i_tinyqv/cpu/i_timer/mtimecmp_26__66
    Register : i_tinyqv/cpu/i_timer/mtimecmp_25__67
+
    Register : i_tinyqv/cpu/i_timer/mtimecmp_24__68
    Register : i_tinyqv/cpu/i_timer/mtimecmp_23__69
    Register : i_tinyqv/cpu/i_timer/mtimecmp_22__70
@@ -803,7 +899,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_timer/mtimecmp_4__88
    Register : i_tinyqv/cpu/i_timer/cy_93
    Register : i_tinyqv/cpu/i_timer/mtimecmp_31__61
-   Register : i_tinyqv/cpu/i_timer/mtimecmp_2__90
+   Register : i_tinyqv/cpu/i_timer/mtimecmp_3__89
    Register : i_tinyqv/cpu/i_timer/timer_interrupt_94
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_2__48
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_1__49
@@ -817,7 +913,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_26__57
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_25__58
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_24__59
-
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_23__60
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_22__61
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_21__62
@@ -837,34 +932,23 @@ GSR Component:
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_7__76
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_6__77
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_5__78
+
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_4__79
    Register : i_tinyqv/cpu/i_timer/i_mtime/register_3__47
-   Register : i_tinyqv/cpu/i_core/mie__i2
-   Register : i_tinyqv/cpu/i_core/mie__i1
-   Register : i_tinyqv/cpu/i_core/mip_reg__i17
-   Register : i_tinyqv/cpu/i_core/mip_reg__i16
-   Register : i_tinyqv/cpu/i_core/mie__i0
-   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i29
-   Register : i_tinyqv/cpu/i_core/shift_amt__i1
-   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i28
-   Register : i_tinyqv/cpu/i_core/instr_retired_518
-   Register : i_tinyqv/cpu/i_core/time_hi__i0
-   Register : i_tinyqv/cpu/i_core/cycle__i1
-   Register : i_tinyqv/cpu/i_core/cmp_511
-   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i0
-   Register : i_tinyqv/cpu/i_core/mepc_i0_i0
-   Register : i_tinyqv/cpu/i_core/mcause__i0
-   Register : i_tinyqv/cpu/i_core/last_interrupt_req_i0_i0
-   Register : i_tinyqv/cpu/i_core/cy_510
-   Register : i_tinyqv/cpu/i_core/mstatus_mte_523
-   Register : i_tinyqv/cpu/i_core/shift_amt__i5
-   Register : i_tinyqv/cpu/i_core/shift_amt__i4
-   Register : i_tinyqv/cpu/i_core/shift_amt__i3
-   Register : i_tinyqv/cpu/i_core/shift_amt__i2
    Register : i_tinyqv/cpu/i_core/mstatus_mpie_525
+   Register : i_tinyqv/cpu/i_core/mepc_i0_i21
+   Register : i_tinyqv/cpu/i_core/mie__i0
+   Register : i_tinyqv/cpu/i_core/mepc_i0_i20
+   Register : i_tinyqv/cpu/i_core/time_hi__i0
+   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i29
+   Register : i_tinyqv/cpu/i_core/load_done_515
+   Register : i_tinyqv/cpu/i_core/instr_retired_518
+   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i28
+   Register : i_tinyqv/cpu/i_core/cycle__i1
+   Register : i_tinyqv/cpu/i_core/shift_amt__i1
+   Register : i_tinyqv/cpu/i_core/is_double_fault_r_520
    Register : i_tinyqv/cpu/i_core/time_hi__i2
    Register : i_tinyqv/cpu/i_core/time_hi__i1
-   Register : i_tinyqv/cpu/i_core/is_double_fault_r_520
    Register : i_tinyqv/cpu/i_core/mie__i16
    Register : i_tinyqv/cpu/i_core/mie__i15
    Register : i_tinyqv/cpu/i_core/mie__i14
@@ -874,15 +958,27 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/mie__i10
    Register : i_tinyqv/cpu/i_core/mie__i9
    Register : i_tinyqv/cpu/i_core/mie__i8
-
    Register : i_tinyqv/cpu/i_core/mie__i7
    Register : i_tinyqv/cpu/i_core/mie__i6
    Register : i_tinyqv/cpu/i_core/mie__i5
    Register : i_tinyqv/cpu/i_core/mie__i4
    Register : i_tinyqv/cpu/i_core/mie__i3
-   Register : i_tinyqv/cpu/i_core/load_done_515
+   Register : i_tinyqv/cpu/i_core/mie__i2
+   Register : i_tinyqv/cpu/i_core/mie__i1
+   Register : i_tinyqv/cpu/i_core/cmp_511
+   Register : i_tinyqv/cpu/i_core/tmp_data_i0_i0
+   Register : i_tinyqv/cpu/i_core/mepc_i0_i0
+   Register : i_tinyqv/cpu/i_core/last_interrupt_req_i0_i0
+   Register : i_tinyqv/cpu/i_core/cy_510
+   Register : i_tinyqv/cpu/i_core/mstatus_mte_523
+   Register : i_tinyqv/cpu/i_core/mip_reg__i16
+   Register : i_tinyqv/cpu/i_core/mcause__i0
+   Register : i_tinyqv/cpu/i_core/shift_amt__i2
+   Register : i_tinyqv/cpu/i_core/shift_amt__i3
+   Register : i_tinyqv/cpu/i_core/shift_amt__i4
+   Register : i_tinyqv/cpu/i_core/shift_amt__i5
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i1
-   Register : i_tinyqv/cpu/i_core/mepc_i0_i23
+   Register : i_tinyqv/cpu/i_core/mepc_i0_i22
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i2
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i3
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i4
@@ -893,6 +989,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i9
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i10
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i11
+
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i12
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i13
    Register : i_tinyqv/cpu/i_core/tmp_data_i0_i14
@@ -930,19 +1027,17 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/mepc_i0_i17
    Register : i_tinyqv/cpu/i_core/mepc_i0_i18
    Register : i_tinyqv/cpu/i_core/mepc_i0_i19
+   Register : i_tinyqv/cpu/i_core/last_interrupt_req_i0_i1
+   Register : i_tinyqv/cpu/i_core/mip_reg__i17
    Register : i_tinyqv/cpu/i_core/mcause__i1
-
    Register : i_tinyqv/cpu/i_core/mcause__i2
    Register : i_tinyqv/cpu/i_core/mcause__i3
    Register : i_tinyqv/cpu/i_core/mcause__i4
    Register : i_tinyqv/cpu/i_core/mcause__i5
-   Register : i_tinyqv/cpu/i_core/last_interrupt_req_i0_i1
    Register : i_tinyqv/cpu/i_core/mstatus_mie_524
    Register : i_tinyqv/cpu/i_core/load_top_bit_513
+   Register : i_tinyqv/cpu/i_core/mepc_i0_i23
    Register : i_tinyqv/cpu/i_core/cycle__i0
-   Register : i_tinyqv/cpu/i_core/mepc_i0_i22
-   Register : i_tinyqv/cpu/i_core/mepc_i0_i21
-   Register : i_tinyqv/cpu/i_core/mepc_i0_i20
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i0
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i12
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i1
@@ -951,6 +1046,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i4
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i5
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i6
+
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i7
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i8
    Register : i_tinyqv/cpu/i_core/multiplier/accum_i9
@@ -988,7 +1084,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_1[[8__530
    Register : i_tinyqv/cpu/i_core/i_registers/registers_1[[7__531
    Register : i_tinyqv/cpu/i_core/i_registers/registers_1[[6__532
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_1[[5__533
    Register : i_tinyqv/cpu/i_core/i_registers/registers_1[[4__534
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[3__535
@@ -1008,6 +1103,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[21__549
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[20__550
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[19__551
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[18__552
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[17__553
    Register : i_tinyqv/cpu/i_core/i_registers/registers_2[[16__554
@@ -1045,7 +1141,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[16__586
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[15__587
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[14__588
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[13__589
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[12__590
    Register : i_tinyqv/cpu/i_core/i_registers/registers_5[[11__591
@@ -1065,6 +1160,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[29__605
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[28__606
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[27__607
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[26__608
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[25__609
    Register : i_tinyqv/cpu/i_core/i_registers/registers_6[[24__610
@@ -1102,7 +1198,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[24__642
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[23__643
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[22__644
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[21__645
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[20__646
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[19__647
@@ -1122,6 +1217,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[5__661
    Register : i_tinyqv/cpu/i_core/i_registers/registers_7[[4__662
    Register : i_tinyqv/cpu/i_core/i_registers/registers_8[[3__663
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_8[[2__664
    Register : i_tinyqv/cpu/i_core/i_registers/registers_8[[1__665
    Register : i_tinyqv/cpu/i_core/i_registers/registers_8[[0__666
@@ -1159,7 +1255,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[0__698
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[31__699
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[30__700
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[29__701
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[28__702
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[27__703
@@ -1179,6 +1274,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[13__717
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[12__718
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[11__719
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[10__720
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[9__721
    Register : i_tinyqv/cpu/i_core/i_registers/registers_9[[8__722
@@ -1216,7 +1312,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_10[[8__754
    Register : i_tinyqv/cpu/i_core/i_registers/registers_10[[7__755
    Register : i_tinyqv/cpu/i_core/i_registers/registers_10[[6__756
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_10[[5__757
    Register : i_tinyqv/cpu/i_core/i_registers/registers_10[[4__758
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[3__759
@@ -1236,6 +1331,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[21__773
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[20__774
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[19__775
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[18__776
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[17__777
    Register : i_tinyqv/cpu/i_core/i_registers/registers_11[[16__778
@@ -1273,7 +1369,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[16__810
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[15__811
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[14__812
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[13__813
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[12__814
    Register : i_tinyqv/cpu/i_core/i_registers/registers_12[[11__815
@@ -1293,6 +1388,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[29__829
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[28__830
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[27__831
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[26__832
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[25__833
    Register : i_tinyqv/cpu/i_core/i_registers/registers_13[[24__834
@@ -1330,7 +1426,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[24__866
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[23__867
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[22__868
-
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[21__869
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[20__870
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[19__871
@@ -1350,6 +1445,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[5__885
    Register : i_tinyqv/cpu/i_core/i_registers/registers_14[[4__886
    Register : i_tinyqv/cpu/i_core/i_registers/registers_15[[3__887
+
    Register : i_tinyqv/cpu/i_core/i_registers/registers_15[[2__888
    Register : i_tinyqv/cpu/i_core/i_registers/registers_15[[1__889
    Register : i_tinyqv/cpu/i_core/i_registers/registers_15[[0__890
@@ -1387,7 +1483,6 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_instrret/register_1__49
    Register : i_tinyqv/cpu/i_core/i_instrret/register_0__50
    Register : i_tinyqv/cpu/i_core/i_instrret/register_31__52
-
    Register : i_tinyqv/cpu/i_core/i_instrret/register_30__53
    Register : i_tinyqv/cpu/i_core/i_instrret/register_29__54
    Register : i_tinyqv/cpu/i_core/i_instrret/register_28__55
@@ -1407,6 +1502,7 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_instrret/register_14__69
    Register : i_tinyqv/cpu/i_core/i_instrret/register_13__70
    Register : i_tinyqv/cpu/i_core/i_instrret/register_12__71
+
    Register : i_tinyqv/cpu/i_core/i_instrret/register_11__72
    Register : i_tinyqv/cpu/i_core/i_instrret/register_10__73
    Register : i_tinyqv/cpu/i_core/i_instrret/register_9__74
@@ -1444,13 +1540,58 @@ GSR Component:
    Register : i_tinyqv/cpu/i_core/i_cycles/register_10__73
    Register : i_tinyqv/cpu/i_core/i_cycles/register_9__74
    Register : i_tinyqv/cpu/i_core/i_cycles/register_8__75
-
    Register : i_tinyqv/cpu/i_core/i_cycles/register_7__76
    Register : i_tinyqv/cpu/i_core/i_cycles/register_6__77
    Register : i_tinyqv/cpu/i_core/i_cycles/register_5__78
    Register : i_tinyqv/cpu/i_core/i_cycles/register_4__79
    Register : i_tinyqv/cpu/i_core/i_cycles/register_3__47
+   Register : debug_rd_r_i2
+   Register : ui_in_sync0_i1
+   Register : debug_rd_r_i1
+   Register : time_count_3234__i0
+   Register : gpio_out_sel_i6
+   Register : time_count_3234__i1
+   Register : time_count_3234__i2
+   Register : time_count_3234__i3
+   Register : time_count_3234__i4
+   Register : time_count_3234__i5
+   Register : time_count_3234__i6
+   Register : time_count_3234__i7
+   Register : ui_in_sync_i1
+   Register : i_qspi/qspi_data_out_i0
+
+   Register : i_qspi/qspi_data_out_i3
+   Register : i_qspi/qspi_data_out_i2
+   Register : i_qspi/qspi_data_out_i1
+   Register : i_qspi/data_buff_in_i0_i0
+   Register : i_qspi/data_buff_in_i0_i1
+   Register : i_qspi/data_buff_in_i0_i2
+   Register : i_qspi/data_buff_in_i0_i3
+   Register : i_qspi/rom/i3589
+   Register : i_qspi/rom/i3607
+   Register : i_qspi/ram_a/i3614
    MULT18X18D : i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_mult_2
+   DP16KD : i_qspi/rom/mem0
+   DP16KD : i_qspi/rom/mem2
+   DP16KD : i_qspi/rom/mem3
+   DP16KD : i_qspi/rom/mem1
+   DP16KD : i_qspi/ram_b/mem0
+   DP16KD : i_qspi/ram_a/mem1
+   DP16KD : i_qspi/ram_a/mem0
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'n27335' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 1 
+
+     Type and instance name of component: 
+   Register : i_qspi/addr_i0
 
 
 
@@ -1459,34 +1600,8 @@ GSR Component:
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 88 MB
+   Peak Memory Usage: 91 MB
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

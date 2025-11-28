@@ -39,15 +39,15 @@ module tinyQV_top (
     wire       qspi_ram_a_select;
     wire       qspi_ram_b_select;
 
-    //sim_qspi_pmod i_qspi (
-    //    .qspi_data_in(qspi_data_out & qspi_data_oe),
-    //    .qspi_data_out(qspi_data_in),
-    //    .qspi_clk(qspi_clk_out),
+    sim_qspi_pmod i_qspi (
+        .qspi_data_in(qspi_data_out & qspi_data_oe),
+        .qspi_data_out(qspi_data_in),
+        .qspi_clk(qspi_clk_out),
 
-    //    .qspi_flash_select(qspi_flash_select),
-    //    .qspi_ram_a_select(qspi_ram_a_select),
-    //    .qspi_ram_b_select(qspi_ram_b_select)
-    //);
+        .qspi_flash_select(qspi_flash_select),
+        .qspi_ram_a_select(qspi_ram_a_select),
+        .qspi_ram_b_select(qspi_ram_b_select)
+    );
 
     wire [27:0] addr;
     wire  [1:0] write_n;
