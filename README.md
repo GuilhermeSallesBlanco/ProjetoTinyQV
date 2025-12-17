@@ -1,4 +1,4 @@
-# Introdução
+<img width="1366" height="104" alt="image" src="https://github.com/user-attachments/assets/5f101bca-1bc8-424f-b2d3-9f47052d3013" /># Introdução
 [explicar propósito do projeto e relevância do TinyTapeout]
 
 # Alterações feitas
@@ -30,3 +30,7 @@ O programa de exemplo do repositório do TinyQV (ledstrip.hex) foi adicionado ao
 <img width="815" height="574" alt="image" src="https://github.com/user-attachments/assets/7dd90058-b5e8-4276-9fcd-912cf7d8391b" />
 <img width="987" height="409" alt="image" src="https://github.com/user-attachments/assets/f18c0ec2-40a0-4a11-b1cc-0afb1de152fb" />
 bram.v também teve que ser alterado por conta de incompatibilidade de alguns comandos com o Lattice Diamond.
+
+## 15/12 - 17/12: Instalação do riscv-gnu-toolchain 
+<img width="1366" height="104" alt="image" src="https://github.com/user-attachments/assets/db470c67-7c8b-4566-994d-d0cbf42a3c45" />
+Repositório do toolchain: https://github.com/MichaelBell/riscv-gnu-toolchain
