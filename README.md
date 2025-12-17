@@ -34,3 +34,4 @@ bram.v também teve que ser alterado por conta de incompatibilidade de alguns co
 ## 15/12 - 17/12: Instalação do riscv-gnu-toolchain 
 <img width="1366" height="104" alt="image" src="https://github.com/user-attachments/assets/db470c67-7c8b-4566-994d-d0cbf42a3c45" />
 Repositório do toolchain: https://github.com/MichaelBell/riscv-gnu-toolchain
+Foi utilizado o RISC-V GNU Toolchain customizado para o TinyQV, compilado a partir do repositório oficial riscv-gnu-toolchain, configurado para a arquitetura rv32ec_zcb_zicond e ABI ilp32e. O compilador riscv32-unknown-elf-gcc foi gerado com sucesso.
