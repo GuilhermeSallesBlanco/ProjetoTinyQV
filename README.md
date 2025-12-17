@@ -1,4 +1,4 @@
-<img width="1366" height="104" alt="image" src="https://github.com/user-attachments/assets/5f101bca-1bc8-424f-b2d3-9f47052d3013" /># Introdução
+# Introdução
 [explicar propósito do projeto e relevância do TinyTapeout]
 
 # Alterações feitas
