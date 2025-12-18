@@ -17,7 +17,7 @@ module BRAM #(parameter ADDR_WIDTH = 10, parameter INIT_FILE="") (
 
 	initial begin
 		if (INIT_FILE != "")
-			$readmemh(INIT_FILE, mem);   // carrega ROM
+			$readmemh(INIT_FILE, mem);   // carrega ROM, foi retirado um else daqui que estava dando problema
 	end
 
     always@(posedge clk) begin

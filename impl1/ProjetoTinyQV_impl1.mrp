@@ -17,7 +17,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-45FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  11/27/25  20:51:51
+Mapped on:  12/01/25  20:04:54
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Design Summary (cont)
 ---------------------
@@ -198,7 +198,7 @@ Design Summary (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Design Summary (cont)
 ---------------------
@@ -264,7 +264,7 @@ WARNING - map: input pad net 'ui_in[3]' has no legal load.
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Design Errors/Warnings (cont)
 -----------------------------
@@ -330,7 +330,7 @@ Signal VCC_net undriven or does not drive anything - clipped.
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Removed logic (cont)
 --------------------
@@ -396,7 +396,7 @@ Memory Usage
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 Memory Usage (cont)
 -------------------
@@ -462,7 +462,7 @@ Data
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 DSP Component Details (cont)
 ----------------------------
@@ -528,7 +528,7 @@ GSR Component:
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -594,7 +594,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -660,7 +660,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -726,7 +726,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -792,7 +792,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -858,7 +858,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -924,7 +924,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -990,7 +990,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1056,7 +1056,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1122,7 +1122,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1188,7 +1188,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1254,7 +1254,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1320,7 +1320,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1386,7 +1386,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1452,7 +1452,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1518,7 +1518,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1584,7 +1584,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1650,7 +1650,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1716,7 +1716,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1782,7 +1782,7 @@ GSR Usage (cont)
 
 
 
-Design:  tinyQV_top                                    Date:  11/27/25  20:51:51
+Design:  tinyQV_top                                    Date:  12/01/25  20:04:54
 
 GSR Usage (cont)
 ----------------
@@ -1824,7 +1824,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 91 MB
+   Peak Memory Usage: 92 MB
         
 
 

@@ -1,0 +1,7 @@
+#Start recording tcl command: 11/27/2025 20:43:26
+#Project Location: C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV; Project name: ProjetoTinyQV
+prj_project open "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/ProjetoTinyQV.ldf"
+prj_src add "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/sim_qspi.v"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 11/27/2025 21:17:51

@@ -1,0 +1,9 @@
+~/tinyqv/TinyQVSDK/toolchain/bin/riscv32-unknown-elf-gcc \
+  -march=rv32ec \
+  -mabi=ilp32e \
+  -nostdlib \
+  -ffreestanding \
+  -O2 \
+  start.S main.c \
+  -T linker.ld \
+  -o main.elf

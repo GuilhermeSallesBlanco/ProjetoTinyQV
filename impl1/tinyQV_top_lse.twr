@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Nov 27 20:51:50 2025
+Mon Dec 01 20:04:53 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -49,9 +49,9 @@ LUT4        ---     0.166              B to Z              \i_qspi/i1_4_lut_adj_
 Route         1   e 1.020                                  \i_qspi/n24304
 LUT4        ---     0.166              C to Z              \i_qspi/i1_4_lut
 Route        20   e 1.619                                  \i_qspi/writing_N_151
-LUT4        ---     0.166              A to Z              \i_qspi/i1_4_lut_then_4_lut
-Route         1   e 0.020                                  \i_qspi/n27384
-MUXL5       ---     0.116           ALUT to Z              \i_qspi/i24339
+LUT4        ---     0.166              A to Z              \i_qspi/i1_4_lut_else_4_lut
+Route         1   e 0.020                                  \i_qspi/n27383
+MUXL5       ---     0.116           BLUT to Z              \i_qspi/i24339
 Route         1   e 1.020                                  \i_qspi/n27385
 LUT4        ---     0.166              A to Z              \i_qspi/i23551_4_lut
 Route         1   e 1.020                                  \i_qspi/qspi_clk_N_56_enable_4
@@ -85,9 +85,9 @@ LUT4        ---     0.166              B to Z              \i_qspi/i1_4_lut_adj_
 Route         1   e 1.020                                  \i_qspi/n24304
 LUT4        ---     0.166              C to Z              \i_qspi/i1_4_lut
 Route        20   e 1.619                                  \i_qspi/writing_N_151
-LUT4        ---     0.166              A to Z              \i_qspi/i1_4_lut_else_4_lut
-Route         1   e 0.020                                  \i_qspi/n27383
-MUXL5       ---     0.116           BLUT to Z              \i_qspi/i24339
+LUT4        ---     0.166              A to Z              \i_qspi/i1_4_lut_then_4_lut
+Route         1   e 0.020                                  \i_qspi/n27384
+MUXL5       ---     0.116           ALUT to Z              \i_qspi/i24339
 Route         1   e 1.020                                  \i_qspi/n27385
 LUT4        ---     0.166              A to Z              \i_qspi/i23551_4_lut
 Route         1   e 1.020                                  \i_qspi/qspi_clk_N_56_enable_4
@@ -176,9 +176,9 @@ LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/
 Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_alu/n27155
 LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i4697_4_lut_rep_757
 Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28561
-LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i4066_2_lut_rep_494_3_lut_4_lut
-Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n27119
-LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/i4687_4_lut_rep_756
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28560
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
 Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n26483
 MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i23980
 Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n26484
@@ -256,9 +256,9 @@ LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/
 Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_alu/n27155
 LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i4697_4_lut_rep_757
 Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28561
-LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/i4687_4_lut_rep_756
-Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28560
-LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i4066_2_lut_rep_494_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n27119
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
 Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n26483
 MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i23980
 Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n26484
@@ -336,9 +336,9 @@ LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/
 Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_alu/n27155
 LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i4697_4_lut_rep_757
 Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28561
-LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/i4687_4_lut_rep_756
-Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n28560
-LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i4066_2_lut_rep_494_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n27119
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_alu/n6205_bdd_4_lut
 Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n26483
 MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i23980
 Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n26484
@@ -608,5 +608,5 @@ Timing errors: 4165  Score: 115710828
 Constraints cover  13893573 paths, 3556 nets, and 10990 connections (95.3% coverage)
 
 
-Peak memory: 155406336 bytes, TRCE: 18153472 bytes, DLYMAN: 983040 bytes
+Peak memory: 156999680 bytes, TRCE: 18386944 bytes, DLYMAN: 983040 bytes
 CPU_TIME_REPORT: 0 secs 

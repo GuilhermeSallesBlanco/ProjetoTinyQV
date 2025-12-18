@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Nov 27 20:51:53 2025
+Mon Dec 01 20:04:56 2025
 
 C:/lscc/diamond/3.14/ispfpga\bin\nt64\par -f ProjetoTinyQV_impl1.p2t
 ProjetoTinyQV_impl1_map.ncd ProjetoTinyQV_impl1.dir ProjetoTinyQV_impl1.prf

@@ -7,7 +7,7 @@
             <Options/>
         </Source>
         <Source name="impl1/source/bram.v" type="Verilog" type_short="Verilog">
-            <Options top_module="BRAM"/>
+            <Options/>
         </Source>
         <Source name="impl1/source/core.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -52,6 +52,9 @@
             <Options/>
         </Source>
         <Source name="impl1/source/uart_tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/sim_qspi.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="ProjetoTinyQV.lpf" type="Logic Preference" type_short="LPF">
