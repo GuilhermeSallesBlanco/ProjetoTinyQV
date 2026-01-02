@@ -1,8 +1,8 @@
 RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-toolchain
 TINYQV_SDK      = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main
 
-PROJECT_NAME ?= teste7
-PROJECT_SOURCES ?= teste7.c
+PROJECT_NAME ?= teste8
+PROJECT_SOURCES ?= $(PROJECT_NAME).c
 
 CC = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-gcc
 AS = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-as

@@ -1,14 +1,16 @@
-RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-toolchain
-TINYQV_SDK      = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main
+PROJECT_NAME ?= example
 
-PROJECT_NAME ?= teste7
-PROJECT_SOURCES ?= teste7.c
+PROJECT_SOURCES ?= main.c
+
+RISCV_TOOLCHAIN ?= /opt/tinyQV
 
 CC = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-gcc
 AS = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-as
 AR = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-ar
 LD = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-ld
 OBJCOPY = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-objcopy
+
+TINYQV_SDK ?= ../../tinyQV-sdk
 
 all: $(PROJECT_NAME).bin $(PROJECT_NAME).hex
 
