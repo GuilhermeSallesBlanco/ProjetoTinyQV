@@ -38,3 +38,10 @@ bram.v também teve que ser alterado por conta de incompatibilidade de alguns co
 Repositório do toolchain: https://github.com/MichaelBell/riscv-gnu-toolchain
 
 Foi utilizado o RISC-V GNU Toolchain customizado para o TinyQV, compilado a partir do repositório oficial riscv-gnu-toolchain, configurado para a arquitetura rv32ec_zcb_zicond e ABI ilp32e. O compilador riscv32-unknown-elf-gcc foi gerado com sucesso. Assim, foi possível criar os arquivos .hex, .elf e .bin necessários para a inclusão do programa no TinyQV.
+
+## 29/12 - 01/01: Correção do toolchain, instalação do SDK e mais testes
+Durante a etapa de testes de outros programas criados para o TinyQV (https://github.com/MichaelBell/tinyQV-projects), percebeu-se que nenhum deles estavam sendo compilados corretamente. Isso foi por conta do fato do SDK não ter sido instalado corretamente, e o Makefile antigo apresentava alguns problemas. Após instalar o SDK e fazer vários ajustes ao Makefile, verificou-se que o toolchain previamente instalado veio com alguns problemas (o toolchain havia sido compilado para RV32I com ABI ilp32, enquanto o TinyQV requer  a arquitetura RV32EC com ABI ilp32e), e que teria de ser instalado novamente. 
+
+Da última vez, eu não tinha percebido que o toolchain (https://github.com/MichaelBell/riscv-gnu-toolchain) havia uma página de "releases", que facilitou muito o processo de instalação. Assim feita essa instalação "semi-automática", foi possível compilar programas que utilizavam do SDK do TinyQV (especialmente os programas que usam bibliotecas presentes no SDK).
+
+Os próximos passos envolvem mais testes com mais bibliotecas, inclusão de periféricos no projeto Verilog para comunicação com a FPGA e colocar o TinyQV na FPGA (após ter certeza de que ele foi corretamente inserido no projeto Verilog).
