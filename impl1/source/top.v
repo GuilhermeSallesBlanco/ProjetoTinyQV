@@ -9,8 +9,8 @@ module tinyQV_top (
         input wire clk,
         input wire rst_n,
 
-        input wire [7:0] ui_in,
-        output wire [7:0] uo_out
+        input wire [7:0] ui_in, // Pinos de entrada
+        output wire [7:0] uo_out // Pinos de saída
 
 );
     localparam CLOCK_MHZ = 14;

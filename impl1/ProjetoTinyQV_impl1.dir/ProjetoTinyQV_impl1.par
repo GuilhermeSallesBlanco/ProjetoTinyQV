@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec 01 20:04:56 2025
+Wed Jan 07 19:44:59 2026
 
 C:/lscc/diamond/3.14/ispfpga\bin\nt64\par -f ProjetoTinyQV_impl1.p2t
 ProjetoTinyQV_impl1_map.ncd ProjetoTinyQV_impl1.dir ProjetoTinyQV_impl1.prf
@@ -17,11 +17,11 @@ Preference file: ProjetoTinyQV_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -            -            -            -            15           Completed
+5_1   *      0            34.089       0            0.176        0            10           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 15 secs 
+Total (real) run time for 1-seed: 10 secs 
 
 par done!
 

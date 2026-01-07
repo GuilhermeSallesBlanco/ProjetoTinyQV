@@ -1,0 +1,44 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do {C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/TinyQVSIM/TinyQVSIM.mdo}
+# Loading project TinyQVSIM
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 19:28:06 on Jan 07,2026
+# vlog -reportprogress 300 "+incdir+C:/Users/Guilherme" Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source -work work C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/latch_reg.v 
+# ** Error: (vlog-7) Failed to open design unit file "Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 19:28:06 on Jan 07,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/lscc/diamond/3.14/questasim/win64/vlog failed.
+# Error in macro C:\Users\Guilherme Blanco\Desktop\College\EmbarcatechFase3\ProjetoTinyQV\ProjetoTinyQV\TinyQVSIM\TinyQVSIM.mdo line 47
+# C:/lscc/diamond/3.14/questasim/win64/vlog failed.
+#     while executing
+# "vlog  +incdir+C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source  -work work  "C:/Users/Guilherme Bla..."
+#     invoked from within
+# "if {![file exists "C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/TinyQVSIM/TinyQVSIM.mpf"]} { 
+# 	project new "..."
+vsim -gui ec.ageb2(v)
+# vsim -gui ec.ageb2(v) 
+# Start time: 19:28:55 on Jan 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading work.ageb2(v)#1
+# End time: 19:29:09 on Jan 07,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 22

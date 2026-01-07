@@ -1,0 +1,78 @@
+Results of NGD DRC are available in led_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'data_in[31]' has no load.
+WARNING - synthesis: input pad net 'data_in[31]' has no legal load.
+WARNING - synthesis: logical net 'data_in[30]' has no load.
+WARNING - synthesis: input pad net 'data_in[30]' has no legal load.
+WARNING - synthesis: logical net 'data_in[29]' has no load.
+WARNING - synthesis: input pad net 'data_in[29]' has no legal load.
+WARNING - synthesis: logical net 'data_in[28]' has no load.
+WARNING - synthesis: input pad net 'data_in[28]' has no legal load.
+WARNING - synthesis: logical net 'data_in[27]' has no load.
+WARNING - synthesis: input pad net 'data_in[27]' has no legal load.
+WARNING - synthesis: logical net 'data_in[26]' has no load.
+WARNING - synthesis: input pad net 'data_in[26]' has no legal load.
+WARNING - synthesis: logical net 'data_in[25]' has no load.
+WARNING - synthesis: input pad net 'data_in[25]' has no legal load.
+WARNING - synthesis: logical net 'data_in[24]' has no load.
+WARNING - synthesis: input pad net 'data_in[24]' has no legal load.
+WARNING - synthesis: logical net 'data_in[23]' has no load.
+WARNING - synthesis: input pad net 'data_in[23]' has no legal load.
+WARNING - synthesis: logical net 'data_in[22]' has no load.
+WARNING - synthesis: input pad net 'data_in[22]' has no legal load.
+WARNING - synthesis: logical net 'data_in[21]' has no load.
+WARNING - synthesis: input pad net 'data_in[21]' has no legal load.
+WARNING - synthesis: logical net 'data_in[20]' has no load.
+WARNING - synthesis: input pad net 'data_in[20]' has no legal load.
+WARNING - synthesis: logical net 'data_in[19]' has no load.
+WARNING - synthesis: input pad net 'data_in[19]' has no legal load.
+WARNING - synthesis: logical net 'data_in[18]' has no load.
+WARNING - synthesis: input pad net 'data_in[18]' has no legal load.
+WARNING - synthesis: logical net 'data_in[17]' has no load.
+WARNING - synthesis: input pad net 'data_in[17]' has no legal load.
+WARNING - synthesis: logical net 'data_in[16]' has no load.
+WARNING - synthesis: input pad net 'data_in[16]' has no legal load.
+WARNING - synthesis: logical net 'data_in[15]' has no load.
+WARNING - synthesis: input pad net 'data_in[15]' has no legal load.
+WARNING - synthesis: logical net 'data_in[14]' has no load.
+WARNING - synthesis: input pad net 'data_in[14]' has no legal load.
+WARNING - synthesis: logical net 'data_in[13]' has no load.
+WARNING - synthesis: input pad net 'data_in[13]' has no legal load.
+WARNING - synthesis: logical net 'data_in[12]' has no load.
+WARNING - synthesis: input pad net 'data_in[12]' has no legal load.
+WARNING - synthesis: logical net 'data_in[11]' has no load.
+WARNING - synthesis: input pad net 'data_in[11]' has no legal load.
+WARNING - synthesis: logical net 'data_in[10]' has no load.
+WARNING - synthesis: input pad net 'data_in[10]' has no legal load.
+WARNING - synthesis: logical net 'data_in[9]' has no load.
+WARNING - synthesis: input pad net 'data_in[9]' has no legal load.
+WARNING - synthesis: logical net 'data_in[8]' has no load.
+WARNING - synthesis: input pad net 'data_in[8]' has no legal load.
+WARNING - synthesis: logical net 'data_in[7]' has no load.
+WARNING - synthesis: input pad net 'data_in[7]' has no legal load.
+WARNING - synthesis: logical net 'data_in[6]' has no load.
+WARNING - synthesis: input pad net 'data_in[6]' has no legal load.
+WARNING - synthesis: logical net 'data_in[5]' has no load.
+WARNING - synthesis: input pad net 'data_in[5]' has no legal load.
+WARNING - synthesis: logical net 'data_in[4]' has no load.
+WARNING - synthesis: input pad net 'data_in[4]' has no legal load.
+WARNING - synthesis: logical net 'data_in[3]' has no load.
+WARNING - synthesis: input pad net 'data_in[3]' has no legal load.
+WARNING - synthesis: logical net 'data_in[2]' has no load.
+WARNING - synthesis: input pad net 'data_in[2]' has no legal load.
+WARNING - synthesis: logical net 'data_in[1]' has no load.
+WARNING - synthesis: input pad net 'data_in[1]' has no legal load.
+WARNING - synthesis: DRC complete with 62 warnings.
+
+Design Results:
+     51 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file ProjetoTinyQV_impl1.ngd.

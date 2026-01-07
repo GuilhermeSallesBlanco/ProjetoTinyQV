@@ -1,0 +1,1 @@
+C:/lscc/diamond/3.14/bin/nt64/moduleparser.exe -PROJ TinyQVSIM -pf C:/lscc/diamond/3.14/cae_library/synthesis/vhdl/ecp5u.vhd -lib ecp5u -pf C:/lscc/diamond/3.14/cae_library/synthesis/verilog/ecp5u.v -pkg C:/lscc/diamond/3.14/cae_library/vhdl_packages/vdbs -lst C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/TinyQVSIM/source_files.lst

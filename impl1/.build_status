@@ -3,40 +3,43 @@
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
-            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1767825909"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1764630317"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1767825914"/>
             <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1764630296">
-            <Task name="Map" build_result="2" update_result="0" update_time="1764630296"/>
+        <Milestone name="Map" build_result="2" build_time="1767825899">
+            <Task name="Map" build_result="2" update_result="0" update_time="1767825899"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1764630311">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1764630311"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1764630313"/>
+        <Milestone name="PAR" build_result="2" build_time="1767825909">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1767825909"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1767825910"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1764630294">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1764630294"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1764630317"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1767825897">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1767825897"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1767825914"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1764627300"/>
-            <Task name="BKM" build_result="0" update_result="2" update_time="1764627300"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1767825894"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1767825893"/>
             <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/ProjetoTinyQV_impl1_map.vdb" last_build_time="1764630296" last_build_size="782292"/>
-        <Report name="ProjetoTinyQV_impl1.bgn" last_build_time="1764630317" last_build_size="4777"/>
-        <Report name="ProjetoTinyQV_impl1.bit" last_build_time="1764630317" last_build_size="1034953"/>
-        <Report name="ProjetoTinyQV_impl1.lsedata" last_build_time="1764630289" last_build_size="3246757"/>
-        <Report name="ProjetoTinyQV_impl1.ncd" last_build_time="1764630311" last_build_size="2686355"/>
-        <Report name="ProjetoTinyQV_impl1.ngd" last_build_time="1764630294" last_build_size="1973752"/>
-        <Report name="ProjetoTinyQV_impl1.twr" last_build_time="1764630313" last_build_size="174450"/>
-        <Report name="ProjetoTinyQV_impl1_map.ncd" last_build_time="1764630295" last_build_size="1868650"/>
+        <Report name=".vdbs/ProjetoTinyQV_impl1_map.vdb" last_build_time="1767825899" last_build_size="55711"/>
+        <Report name="ProjetoTinyQV_impl1.bgn" last_build_time="1767825914" last_build_size="4774"/>
+        <Report name="ProjetoTinyQV_impl1.bit" last_build_time="1767825914" last_build_size="1032635"/>
+        <Report name="ProjetoTinyQV_impl1.lsedata" last_build_time="1767825897" last_build_size="80316"/>
+        <Report name="ProjetoTinyQV_impl1.ncd" last_build_time="1767825909" last_build_size="79627"/>
+        <Report name="ProjetoTinyQV_impl1.ngd" last_build_time="1767825897" last_build_size="61035"/>
+        <Report name="ProjetoTinyQV_impl1.twr" last_build_time="1767825910" last_build_size="44174"/>
+        <Report name="ProjetoTinyQV_impl1_map.ncd" last_build_time="1767825898" last_build_size="57319"/>
+        <Report name="ProjetoTinyQV_impl1_vo.sdf" last_build_time="1767824833" last_build_size="51955"/>
+        <Report name="ProjetoTinyQV_impl1_vo.vo" last_build_time="1767824833" last_build_size="27142"/>
     </Strategy>
 </BuildStatus>
+        

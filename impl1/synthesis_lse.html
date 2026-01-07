@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec 01 20:04:48 2025
+Wed Jan 07 19:44:57 2026
 
 
 Command Line:  synthesis -f ProjetoTinyQV_impl1_lattice.synproj -gui -msgset C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/promote.xml 
@@ -44,7 +44,7 @@ Using performance grade 6.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Timing
-Top-level module name = tinyQV_top.
+Top-level module name = uart_rx.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -92,6 +92,7 @@ Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3
 Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_rx.v
 Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/uart_tx.v
 Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/impl1/source/sim_qspi.v
+Verilog design file = C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/led.v
 NGD file = ProjetoTinyQV_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -120,329 +121,70 @@ Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase
 Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v. VERI-1482
 Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v. VERI-1482
 Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/sim_qspi.v. VERI-1482
+Analyzing Verilog file c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/led.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.14/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
-Top module name (Verilog): tinyQV_top
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(8): compiling module tinyQV_top. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/sim_qspi.v(5): compiling module sim_qspi_pmod. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/bram.v(3): compiling module BRAM(ADDR_WIDTH=13,INIT_FILE="ledstrip.hex"). VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/bram.v(3): compiling module BRAM(ADDR_WIDTH=12). VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/bram.v(3): compiling module BRAM(ADDR_WIDTH=11). VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/sim_qspi.v(61): expression size 32 truncated to fit in target size 6. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/sim_qspi.v(87): expression size 32 truncated to fit in target size 25. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(9): compiling module tinyQV. VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/tinyqv.v(86): expression size 32 truncated to fit in target size 1. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(6): compiling module tinyqv_cpu. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/decode.v(6): compiling module tinyqv_decoder. VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/cpu.v(241): expression size 32 truncated to fit in target size 3. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(6): compiling module tinyqv_core. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/register.v(10): compiling module tinyqv_registers. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(25): compiling module tinyqv_alu. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(61): compiling module tinyqv_shifter. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(95): compiling module tinyqv_mul. VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(147): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/core.v(210): expression size 32 truncated to fit in target size 2. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): compiling module tinyqv_counter(OUTPUT_WIDTH=7). VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/counter.v(3): compiling module tinyqv_counter. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/time.v(12): compiling module tinyQV_time. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/mem_ctrl.v(6): compiling module tinyqv_mem_ctrl. VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(35): compiling module qspi_controller. VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(140): expression size 32 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(142): expression size 32 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(161): expression size 32 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(179): expression size 32 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/qspi_ctrl.v(207): expression size 32 truncated to fit in target size 3. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(1): compiling module peripherals_min(CLOCK_MHZ=14). VERI-1018
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): compiling module uart_tx(CLK_HZ=14000000). VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): expression size 32 truncated to fit in target size 4. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(14): compiling module uart_rx(CLK_HZ=14000000). VERI-1018
+Top module name (Verilog): uart_rx
+INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(14): compiling module uart_rx. VERI-1018
 WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(95): expression size 32 truncated to fit in target size 4. VERI-1209
 WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(101): expression size 32 truncated to fit in target size 4. VERI-1209
 WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_rx.v(105): expression size 32 truncated to fit in target size 4. VERI-1209
-INFO - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(14): compiling module uart_tx(BIT_RATE=1000000,CLK_HZ=14000000). VERI-1018
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/uart_tx.v(85): expression size 32 truncated to fit in target size 4. VERI-1209
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/top.v(228): expression size 32 truncated to fit in target size 8. VERI-1209
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'sa5p45.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
 Package Status:                     Final          Version 1.50.
-Top-level module name = tinyQV_top.
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(105): Register \i_peripherals/uart_tx_en_48 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(115): Register \i_peripherals/uart_rx_read_50 is stuck at Zero. VDB-5013
-INFO - synthesis: Extracted state machine for register '\i_peripherals/UART_TX_I/fsm_state' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 0000 -> 0000000000000001
-
- 0001 -> 0000000000000010
-
- 0010 -> 0000000000000100
-
- 0011 -> 0000000000001000
-
- 0100 -> 0000000000010000
-
- 0101 -> 0000000000100000
-
- 0110 -> 0000000001000000
-
- 0111 -> 0000000010000000
-
- 1000 -> 0000000100000000
-
- 1001 -> 0000001000000000
-
- 1010 -> 0000010000000000
-
- 1011 -> 0000100000000000
-
- 1100 -> 0001000000000000
-
- 1101 -> 0010000000000000
-
- 1110 -> 0100000000000000
-
- 1111 -> 1000000000000000
+Top-level module name = uart_rx.
 
 
 
-
-######## Found 3 RTL RAMs in the design.
-######## Mapping RTL RAM \i_qspi/rom/mem to 4 EBR blocks in PSEUDO_DUAL_PORT Mode
-
-######## Mapping RTL RAM \i_qspi/ram_a/mem to 2 EBR blocks in PSEUDO_DUAL_PORT Mode
-
-######## Mapping RTL RAM \i_qspi/ram_b/mem to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
-
-
-
-######### Begin FIR Info ########
-
-
-Number of FIR filters recognized: 1
-
-
-
-######### End FIR Info ########
-
-
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/alu.v(105): Register _add_1_i3 clock is stuck at Zero. VDB-5035
-WARNING - synthesis: Bit 19 of Register _add_1_e1 is stuck at Zero
-WARNING - synthesis: Bit 18 of Register _add_1_e1 is stuck at Zero
-WARNING - synthesis: Bit 17 of Register _add_1_e1 is stuck at Zero
-WARNING - synthesis: Bit 16 of Register _add_1_e1 is stuck at Zero
-WARNING - synthesis: Bit 15 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 14 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 12 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 11 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 10 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 9 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 8 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e2 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e1 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e1 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e1 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e1 is stuck at Zero
-WARNING - synthesis: Bit 19 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 18 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 17 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 16 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 15 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 14 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 12 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 11 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 10 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 9 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 8 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \i_tinyqv/cpu/i_core/multiplier/a_3__I_0_11_e3 is stuck at Zero
-WARNING - synthesis: Bit 19 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 18 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 17 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 16 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 15 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 14 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 13 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 12 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 11 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 10 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 9 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 8 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 7 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 6 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 5 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 4 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register add_4402_e3 is stuck at Zero
-WARNING - synthesis: Bit 19 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 18 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 17 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 16 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 15 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 14 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 13 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 12 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 11 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 10 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 9 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 8 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 7 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 6 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 5 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 4 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register add_4402_e2 is stuck at Zero
-WARNING - synthesis: Bit 19 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 18 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 17 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 16 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 15 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 14 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 13 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 12 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 11 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 10 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 9 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 8 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 7 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 6 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 5 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 4 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 3 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 2 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 1 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: Bit 0 of Register _add_1_e3 is stuck at Zero
-WARNING - synthesis: I/O Port ui_in[7] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ui_in[6] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ui_in[5] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ui_in[4] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ui_in[3] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port ui_in[2] 's net has no driver and is unused.
-WARNING - synthesis: c:/users/guilherme blanco/desktop/college/embarcatechfase3/projetotinyqv/projetotinyqv/impl1/source/peripherals_min.v(88): Register \i_peripherals/uo_out_i1 is stuck at Zero. VDB-5013
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i0 is a one-to-one match with \i_qspi/addr_res3_i0_i0.
-Duplicate register/latch removal. \i_qspi/addr_res1_i0_i0 is a one-to-one match with \i_qspi/addr_res2_i0_i0.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i11 is a one-to-one match with \i_qspi/addr_res1_i0_i11.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i10 is a one-to-one match with \i_qspi/addr_res1_i0_i10.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i9 is a one-to-one match with \i_qspi/addr_res1_i0_i9.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i8 is a one-to-one match with \i_qspi/addr_res1_i0_i8.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i7 is a one-to-one match with \i_qspi/addr_res1_i0_i7.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i6 is a one-to-one match with \i_qspi/addr_res1_i0_i6.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i5 is a one-to-one match with \i_qspi/addr_res1_i0_i5.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i4 is a one-to-one match with \i_qspi/addr_res1_i0_i4.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i3 is a one-to-one match with \i_qspi/addr_res1_i0_i3.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i2 is a one-to-one match with \i_qspi/addr_res1_i0_i2.
-Duplicate register/latch removal. \i_qspi/addr_res2_i0_i1 is a one-to-one match with \i_qspi/addr_res1_i0_i1.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i1 is a one-to-one match with \i_qspi/addr_res2_i0_i1.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i2 is a one-to-one match with \i_qspi/addr_res2_i0_i2.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i3 is a one-to-one match with \i_qspi/addr_res2_i0_i3.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i4 is a one-to-one match with \i_qspi/addr_res2_i0_i4.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i5 is a one-to-one match with \i_qspi/addr_res2_i0_i5.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i6 is a one-to-one match with \i_qspi/addr_res2_i0_i6.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i7 is a one-to-one match with \i_qspi/addr_res2_i0_i7.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i8 is a one-to-one match with \i_qspi/addr_res2_i0_i8.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i9 is a one-to-one match with \i_qspi/addr_res2_i0_i9.
-Duplicate register/latch removal. \i_qspi/addr_res3_i0_i10 is a one-to-one match with \i_qspi/addr_res2_i0_i10.
-GSR instance connected to net n811.
-Duplicate register/latch removal. \i_tinyqv/mem/q_ctrl/spi_data_oe__i0 is a one-to-one match with \i_tinyqv/mem/q_ctrl/spi_data_oe__i1.
-Duplicate register/latch removal. \i_tinyqv/mem/q_ctrl/spi_data_oe__i2 is a one-to-one match with \i_tinyqv/mem/q_ctrl/spi_data_oe__i0.
-Duplicate register/latch removal. \i_tinyqv/mem/q_ctrl/spi_data_oe__i3 is a one-to-one match with \i_tinyqv/mem/q_ctrl/spi_data_oe__i2.
+GSR will not be inferred because no asynchronous signal was found in the netlist.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
-Results of NGD DRC are available in tinyQV_top_drc.log.
+Results of NGD DRC are available in uart_rx_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'ui_in[7]' has no load.
-WARNING - synthesis: input pad net 'ui_in[7]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[6]' has no load.
-WARNING - synthesis: input pad net 'ui_in[6]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[5]' has no load.
-WARNING - synthesis: input pad net 'ui_in[5]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[4]' has no load.
-WARNING - synthesis: input pad net 'ui_in[4]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[3]' has no load.
-WARNING - synthesis: input pad net 'ui_in[3]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[2]' has no load.
-WARNING - synthesis: input pad net 'ui_in[2]' has no legal load.
-WARNING - synthesis: DRC complete with 12 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file ProjetoTinyQV_impl1.ngd.
 
-################### Begin Area Report (tinyQV_top)######################
-Number of register bits => 1128 of 44457 (2 % )
-CCU2C => 62
-DP16KD => 7
-FD1P3AX => 299
-FD1P3BX => 1
-FD1P3IX => 173
-FD1P3JX => 4
-FD1S3AX => 591
-FD1S3DX => 1
-FD1S3IX => 55
-FD1S3JX => 4
+################### Begin Area Report (uart_rx)######################
+Number of register bits => 28 of 44457 (0 % )
+CCU2C => 8
+FD1P3AX => 8
+FD1P3IX => 1
+FD1S3IX => 18
+FD1S3JX => 1
 GSR => 1
 IB => 4
-INV => 1
-L6MUX21 => 57
-LUT4 => 2009
-MULT18X18D => 1
-OB => 8
-PFUMX => 277
+LUT4 => 57
+OB => 10
+PFUMX => 1
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 3
-  Net : clk_c, loads : 1046
-  Net : i_tinyqv/mem/q_ctrl/spi_clk_pos_derived_59, loads : 59
-  Net : i_tinyqv/mem/q_ctrl/qspi_clk_N_56, loads : 36
+Number of Clocks: 1
+  Net : clk_c, loads : 28
 Clock Enable Nets
-Number of Clock Enables: 94
-Top 10 highest fanout Clock Enables:
-  Net : i_tinyqv/cpu/i_core/clk_c_enable_321, loads : 33
-  Net : i_qspi/cmd_31__N_132, loads : 32
-  Net : i_tinyqv/cpu/clk_c_enable_227, loads : 23
-  Net : i_tinyqv/cpu/clk_c_enable_115, loads : 14
-  Net : i_tinyqv/cpu/clk_c_enable_174, loads : 14
-  Net : i_tinyqv/cpu/clk_c_enable_142, loads : 14
-  Net : i_tinyqv/cpu/clk_c_enable_282, loads : 14
-  Net : i_tinyqv/cpu/clk_c_enable_158, loads : 14
-  Net : i_tinyqv/cpu/clk_c_enable_34, loads : 13
-  Net : i_tinyqv/cpu/clk_c_enable_372, loads : 11
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
+  Net : uart_rx_data_7__N_83, loads : 8
+  Net : clk_c_enable_1, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : i_tinyqv/cpu/i_timer/i_mtime/n27326, loads : 142
-  Net : i_tinyqv/cpu/counter_hi_2, loads : 128
-  Net : i_tinyqv/cpu/n27260, loads : 101
-  Net : i_tinyqv/cpu/n28563, loads : 84
-  Net : i_tinyqv/cpu/alu_op_2, loads : 76
-  Net : i_tinyqv/cpu/counter_hi_3, loads : 71
-  Net : i_tinyqv/cpu/n27209, loads : 71
-  Net : i_tinyqv/cpu/n28564, loads : 68
-  Net : i_tinyqv/cpu/n27211, loads : 65
-  Net : i_tinyqv/cpu/n27179, loads : 59
+  Net : n318, loads : 14
+  Net : fsm_state_1, loads : 12
+  Net : cycle_counter_13, loads : 9
+  Net : fsm_state_2, loads : 9
+  Net : fsm_state_0, loads : 9
+  Net : cycle_counter_6, loads : 8
+  Net : fsm_state_3, loads : 8
+  Net : uart_rx_data_7__N_83, loads : 8
+  Net : cycle_counter_12, loads : 7
+  Net : cycle_counter_10, loads : 7
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -452,24 +194,18 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets qspi_clk_N_56]           |  200.000 MHz|  121.818 MHz|     7 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets clk_c]                   |  200.000 MHz|   27.857 MHz|    29 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets spi_clk_pos_derived_59]  |  200.000 MHz|  297.442 MHz|     5  
+clk0 [get_nets clk_c]                   |  200.000 MHz|  126.088 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-2 constraints not met.
+1 constraints not met.
 
 
-Peak Memory Usage: 151.293  MB
+Peak Memory Usage: 91.117  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 4.422  secs
+Elapsed CPU time for LSE flow : 0.406  secs
 --------------------------------------------------------------
 
 

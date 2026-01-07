@@ -1,0 +1,25 @@
+<BaliSimProject version="1.3" path="." stage="0" language="-1" name="TinyQVSIM" simType="QuestaSim">
+    <Source worklib="work" path="impl1/source/latch_reg.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="led.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/peripherals_min.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/qspi_flash.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/uart_tx.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/qspi_ctrl.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/mem_ctrl.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/counter.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/time.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/alu.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/register.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/core.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/decode.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/cpu.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/tinyqv.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/bram.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/sim_qspi.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/top.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <Source worklib="work" path="impl1/source/uart_rx.v" type="VERILOG" langstandard="Verilog 2001" include="none"/>
+    <SimLib value="pmi_work ovi_ecp5u"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule instance="" language="VERILOG" name="tinyQV_top"/>
+</BaliSimProject>

@@ -17,7 +17,7 @@ module sim_qspi_pmod (
     parameter   ROM_BITS       = 13;
     parameter   RAM_A_BITS     = 12;
     parameter   RAM_B_BITS     = 11;
-	parameter INIT_FILE = "ledstrip.hex"; // Nome do arquivo que será executado
+	parameter INIT_FILE = ""; // Nome do arquivo que será executado
 
     reg [31:0] cmd;
     reg [24:0] addr;

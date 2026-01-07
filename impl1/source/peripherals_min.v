@@ -1,147 +1,220 @@
-module peripherals_min #(
-    parameter CLOCK_MHZ = 50
-)(
-    input  wire clk,
-    input  wire rst_n,
+/*
+ * Copyright (c) 2025 Michael Bell
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-    // GPIO
-    input  wire [7:0] ui_in,
-    output reg  [7:0] uo_out,
+`default_nettype none
 
-    // Bus interface from tinyQV core
-    input  wire [10:0] addr_in,
-    input  wire [31:0] data_in,
-    input  wire [1:0]  data_write_n,
-    input  wire [1:0]  data_read_n,
+// Wrapper for all TinyQV peripherals
+//
+// Address space:
+// 0x800_0000 - 03f: Reserved by project wrapper (time, debug, etc)
+// 0x800_0040 - 07f: GPIO configuration
+// 0x800_0080 - 0bf: UART TX
+// 0x800_00c0 - 0ff: UART RX
+// 0x800_0100 - 3ff: 12 user peripherals (64 bytes each, word and halfword access supported, each has an interrupt)
+// 0x800_0400 - 4ff: 16 simple peripherals (16 bytes each, byte access only)
+module tinyQV_peripherals #(parameter CLOCK_MHZ=64) (
+    input wire        clk,
+    input wire        rst_n,
 
-    output reg  [31:0] data_out,
-    output reg         data_ready,
-    input  wire        data_read_complete,
+    input wire [7:0]  ui_in,        // The input PMOD, always available
+    output wire [7:0]  uo_out,       // The output PMOD.  Each wire is only connected if this peripheral is selected
 
-    output wire [15:2] user_interrupts
+    input wire [10:0]  addr_in,
+    input wire [31:0]  data_in,      // Data in to the peripheral, bottom 8, 16 or all 32 bits are valid on write.
+
+    // Data read and write requests from the TinyQV core.
+    input wire [1:0]   data_write_n, // 11 = no write, 00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+    input wire [1:0]   data_read_n,  // 11 = no read,  00 = 8-bits, 01 = 16-bits, 10 = 32-bits
+
+    output wire[31:0] data_out,     // Data out from the peripheral, bottom 8, 16 or all 32 bits are valid on read when data_ready is high.
+    output wire       data_ready,
+
+    input wire        data_read_complete,  // Set by TinyQV when a read is complete
+
+    output reg [15:2] user_interrupts  // User peripherals get interrupts 2-15
 );
 
-    //------------------------------------------------------------
-    // Address decoding (full 32-bit MMIO)
-    //------------------------------------------------------------
-    localparam UART_TX_ADDR  = 32'h4000_0000;
-    localparam UART_RX_ADDR  = 32'h4000_0004;
-    localparam UART_ST_ADDR  = 32'h4000_0008;
-    localparam GPIO_OUT_ADDR = 32'h4000_0010;
-    localparam GPIO_IN_ADDR  = 32'h4000_0014;
+    // Registered data out to TinyQV
+    reg  [31:0] data_out_r;
+    reg         data_out_hold;
+    reg         data_ready_r;
 
-    wire write_en = (data_write_n == 2'b10); // tinyQV: write = 10b
-    wire read_en  = (data_read_n  == 2'b10); // tinyQV: read  = 10b
+    wire        read_req = data_read_n != 2'b11;
 
-    // Expand 11-bit addr to 32-bit region
-    wire [31:0] full_addr = {21'b0, addr_in};
+    // Muxed data out direct from selected peripheral
+    reg [31:0] data_from_peri;
+    reg        data_ready_from_peri;
 
-    //------------------------------------------------------------
-    // UART wires
-    //------------------------------------------------------------
-    wire uart_tx_busy;
-    reg  uart_tx_en;
-    reg  [7:0] uart_tx_data;
+    // Must mask the data_read_n to avoid extra read while
+    // buffering the result
+    wire [1:0] data_read_n_peri;
+    assign data_read_n_peri = data_read_n | {2{data_ready_r}};
 
-    wire uart_rx_valid;
-    wire [7:0] uart_rx_data;
-    reg  uart_rx_read;
+    wire [31:0] data_from_user_peri   [0:15];
+    wire [7:0]  data_from_simple_peri [0:15];
+    wire        data_ready_from_user_peri   [0:15];
 
-    //------------------------------------------------------------
-    // UART TX instance
-    //------------------------------------------------------------
-    uart_tx #(
-        .CLK_HZ(CLOCK_MHZ * 1_000_000),
-        .BIT_RATE(9600)
-    ) UART_TX_I (
-        .clk(clk),
-        .resetn(rst_n),
-        .uart_txd(),            // top level connects elsewhere
-        .uart_tx_busy(uart_tx_busy),
-        .uart_tx_en(uart_tx_en),
-        .uart_tx_data(uart_tx_data)
-    );
+    wire [7:0]  uo_out_from_user_peri   [0:15];
+    wire [7:0]  uo_out_from_simple_peri [0:15];
+    reg [7:0] uo_out_comb;
+    assign uo_out = uo_out_comb;
 
-    //------------------------------------------------------------
-    // UART RX instance
-    //------------------------------------------------------------
-    uart_rx #(
-        .CLK_HZ(CLOCK_MHZ * 1_000_000),
-        .BIT_RATE(9600)
-    ) UART_RX_I (
-        .clk(clk),
-        .resetn(rst_n),
-        .uart_rxd(ui_in[0]),   // assume GPIO0 = RX input pin
-        .uart_rts(),           // not used
-        .uart_rx_read(uart_rx_read),
-        .uart_rx_valid(uart_rx_valid),
-        .uart_rx_data(uart_rx_data)
-    );
+    // Register the data output from the peripheral.  This improves timing and
+    // also simplifies the peripheral interface (no need for the peripheral to care
+    // about holding data_out until data_read_complete - it looks like it is read
+    // synchronously).
+    always @(posedge clk) begin
+        if (!rst_n) begin
+            data_out_hold <= 0;
+        end else begin
+            if (data_read_complete) data_out_hold <= 0;
 
-    //------------------------------------------------------------
-    // GPIO OUT register
-    //------------------------------------------------------------
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            uo_out <= 8'd0;
-        else if (write_en && full_addr == GPIO_OUT_ADDR)
-            uo_out <= data_in[7:0];
+            if (!data_out_hold && data_ready_from_peri && data_read_n != 2'b11) begin
+                data_out_hold <= 1;
+                data_out_r <= data_from_peri;
+            end
+
+            // Data ready must be registered because data_out is.
+            data_ready_r <= read_req && data_ready_from_peri;
+        end
     end
 
-    //------------------------------------------------------------
-    // UART TX write
-    //------------------------------------------------------------
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            uart_tx_en   <= 1'b0;
-            uart_tx_data <= 8'd0;
-        end else begin
-            uart_tx_en <= 1'b0;
+    assign data_out = data_out_r;
+    assign data_ready = data_ready_r || data_write_n != 2'b11;
 
-            if (write_en && full_addr == UART_TX_ADDR && !uart_tx_busy) begin
-                uart_tx_en   <= 1'b1;
-                uart_tx_data <= data_in[7:0];
+    // --------------------------------------------------------------------- //
+    // Decode the address to select the active peripheral
+
+    localparam PERI_GPIO = 1;
+    localparam PERI_UART = 2;
+	localparam PERI_LED = 4;
+
+    reg [15:0] peri_user;
+    reg [15:0] peri_simple;
+
+    always @(*) begin
+        peri_user = 0;
+        peri_simple = 0;
+
+        if (addr_in[10]) begin
+            peri_simple[addr_in[7:4]] = 1;
+            data_from_peri = {24'h0, data_from_simple_peri[addr_in[7:4]]};
+            data_ready_from_peri = 1;
+        end else begin
+            peri_user[addr_in[9:6]] = 1;
+            data_from_peri = data_from_user_peri[addr_in[9:6]];
+            data_ready_from_peri = data_ready_from_user_peri[addr_in[9:6]];
+        end
+    end
+
+    assign data_from_user_peri[0] = 32'h0;
+    assign data_ready_from_user_peri[0] = 0;
+    assign uo_out_from_user_peri[0] = 8'h0;
+
+    // --------------------------------------------------------------------- //
+    // GPIO
+
+    reg [4:0] gpio_out_func_sel [0:7];
+    reg [7:0] gpio_out;
+
+    always @(posedge clk) begin
+        if (!rst_n) begin
+            gpio_out <= 0;
+        end else if (peri_user[PERI_GPIO]) begin
+            if (addr_in[5:0] == 6'h0) begin
+                if (data_write_n != 2'b11) gpio_out <= data_in[7:0];
             end
         end
     end
 
-    //------------------------------------------------------------
-    // UART RX read acknowledge
-    //------------------------------------------------------------
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            uart_rx_read <= 1'b0;
-        else
-            uart_rx_read <= (read_en && full_addr == UART_RX_ADDR);
-    end
+    assign data_from_user_peri[PERI_GPIO] = (addr_in[5:0] == 6'h0) ? {24'h0, gpio_out} :
+                                            (addr_in[5:0] == 6'h4) ? {24'h0, ui_in}    :
+                                            ({addr_in[5], addr_in[1:0]} == 3'b100) ? {27'h0, gpio_out_func_sel[addr_in[4:2]]} :
+                                            32'h0;
+    assign data_ready_from_user_peri[PERI_GPIO] = 1;
+    assign uo_out_from_user_peri[PERI_GPIO] = gpio_out;
 
-    //------------------------------------------------------------
-    // Read logic
-    //------------------------------------------------------------
-    always @(*) begin
-        data_out = 32'd0;
+    genvar i;
+    generate
+        for (i = 0; i < 8; i = i + 1) begin
+            always @(posedge clk) begin
+                if (!rst_n) begin
+                    gpio_out_func_sel[i] <= (i == 0 || i == 1) ? PERI_UART : PERI_GPIO;
+                end else if (peri_user[PERI_GPIO]) begin
+                    if ({addr_in[5], addr_in[1:0]} == 3'b100 && addr_in[4:2] == i) begin
+                        if (data_write_n != 2'b11) gpio_out_func_sel[i] <= data_in[4:0];
+                    end
+                end
+            end
 
-        case (full_addr)
-            UART_RX_ADDR:  data_out = {24'd0, uart_rx_data};
-            UART_ST_ADDR:  data_out = {30'd0, uart_tx_busy, uart_rx_valid};
-            GPIO_IN_ADDR:  data_out = {24'd0, ui_in};
-            default:       data_out = 32'd0;
-        endcase
-    end
+            always @(*) begin
+                uo_out_comb[i] = 0;
 
-    //------------------------------------------------------------
-    // Immediate read-ready
-    //------------------------------------------------------------
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            data_ready <= 1'b0;
-        else
-            data_ready <= read_en;
-    end
+                if (gpio_out_func_sel[i][4]) begin
+                    uo_out_comb[i] = uo_out_from_simple_peri[gpio_out_func_sel[i][3:0]][i];
+                end else begin
+                    uo_out_comb[i] = uo_out_from_user_peri[gpio_out_func_sel[i][3:0]][i];
+                end
+            end
+        end
+    endgenerate
 
-    //------------------------------------------------------------
-    // No interrupts
-    //------------------------------------------------------------
-    assign user_interrupts = 0;
+    // --------------------------------------------------------------------- //
+    // UART
+
+    tqvp_uart_wrapper #(.CLOCK_MHZ(CLOCK_MHZ)) i_uart (
+        .clk(clk),
+        .rst_n(rst_n),
+
+        .ui_in(ui_in),
+        .uo_out(uo_out_from_user_peri[PERI_UART]),
+
+        .address(addr_in[5:0]),
+        .data_in(data_in),
+
+        .data_write_n(data_write_n    | {2{~peri_user[PERI_UART]}}),
+        .data_read_n(data_read_n_peri | {2{~peri_user[PERI_UART]}}),
+
+        .data_out(data_from_user_peri[PERI_UART]),
+        .data_ready(data_ready_from_user_peri[PERI_UART]),
+
+        .user_interrupt(user_interrupts[PERI_UART+1:PERI_UART])
+    );
+
+    // There is no peripheral 3, UART uses its interrupt.
+    assign uo_out_from_user_peri[3] = 8'h0;
+    assign data_from_user_peri[3] = 32'h0;
+    assign data_ready_from_user_peri[3] = 1;
+
+    // --------------------------------------------------------------------- //
+    
+	// Integracao do periferico de LED
+	// Seu endereco eh supostamente 0x800_0200
+	wire 		 led_out;
+	wire [31:0] led_data_out;
+	
+	led i_led (
+		.clk(clk),
+		.rst_n(rst_n),
+
+		.address(addr_in[3:0]),
+		.write_en(peri_user[PERI_LED] && data_write_n != 2'b11),
+		.read_en (peri_user[PERI_LED] && data_read_n  != 2'b11),
+
+		.data_in(data_in),
+		.data_out(led_data_out),
+
+		.led(led_out)
+	);
+	
+	assign data_from_user_peri[PERI_LED] = led_data_out;
+	assign data_ready_from_user_peri[PERI_LED] = 1'b1;
+	assign uo_out_from_user_peri[PERI_LED] = {7'b0, ~led_out};
+	
+	assign data_from_user_peri[PERI_LED+1] = 32'h0;
+	assign data_ready_from_user_peri[PERI_LED+1] = 1'b0;
+	assign uo_out_from_user_peri[PERI_LED+1] = 8'h0;
 
 endmodule
