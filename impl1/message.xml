@@ -40,7 +40,7 @@
         <Message>
             <ID>1100644</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/ProjetoTinyQV.lpf(9): Semantic error in &quot;IOBUF PORT &quot;uo_out[0]&quot; IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/ProjetoTinyQV.lpf(9): Semantic error in &quot;IOBUF PORT &quot;uo_out[0]&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
             <Dynamic>uo_out[0]</Dynamic>
             <Navigation>C:/Users/Guilherme Blanco/Desktop/College/EmbarcatechFase3/ProjetoTinyQV/ProjetoTinyQV/ProjetoTinyQV.lpf</Navigation>
             <Navigation>9</Navigation>
