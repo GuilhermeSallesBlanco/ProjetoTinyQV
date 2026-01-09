@@ -6,34 +6,39 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.50
 
-Wed Jan 07 19:48:31 2026
+Thu Jan 08 21:52:35 2026
 
 Pinout by Port Name:
-+-----------------+----------+--------------+-------+-----------+-----------------------------------+
-| Port Name       | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
-+-----------------+----------+--------------+-------+-----------+-----------------------------------+
-| clk             | P3/6     | LVCMOS33_IN  | PL68C |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| resetn          | K19/2    | LVCMOS25_IN  | PR32B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| uart_rts        | L19/3    | LVCMOS25_OUT | PR35C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[0] | F20/2    | LVCMOS25_OUT | PR26C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[1] | F19/2    | LVCMOS25_OUT | PR26B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[2] | G20/2    | LVCMOS25_OUT | PR26D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[3] | E20/2    | LVCMOS25_OUT | PR26A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[4] | J18/2    | LVCMOS25_OUT | PR29C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[5] | K18/2    | LVCMOS25_OUT | PR29D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[6] | G19/2    | LVCMOS25_OUT | PR29A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_data[7] | H20/2    | LVCMOS25_OUT | PR29B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rx_read    | J19/2    | LVCMOS25_IN  | PR32A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| uart_rx_valid   | K20/2    | LVCMOS25_OUT | PR32D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| uart_rxd        | J20/2    | LVCMOS25_IN  | PR32C |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-+-----------------+----------+--------------+-------+-----------+-----------------------------------+
++-----------+----------+--------------+-------+-----------+-----------------------------------+
+| Port Name | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
++-----------+----------+--------------+-------+-----------+-----------------------------------+
+| clk       | P3/6     | LVCMOS33_IN  | PL68C |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| rst_n     | J18/2    | LVCMOS33_IN  | PR29C |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[0]  | J3/6     | LVCMOS25_IN  | PL38C |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[1]  | J5/6     | LVCMOS25_IN  | PL38B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[2]  | A13/1    | LVCMOS25_IN  | PT49B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[3]  | B13/1    | LVCMOS25_IN  | PT51A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[4]  | E12/1    | LVCMOS25_IN  | PT47B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[5]  | A12/1    | LVCMOS25_IN  | PT49A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[6]  | E13/1    | LVCMOS25_IN  | PT53B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| ui_in[7]  | D12/1    | LVCMOS25_IN  | PT47A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| uo_out[0] | J16/2    | LVCMOS33_OUT | PR20D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[1] | E11/1    | LVCMOS25_OUT | PT42B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[2] | C12/1    | LVCMOS25_OUT | PT44B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[3] | D11/1    | LVCMOS25_OUT | PT42A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[4] | B11/0    | LVCMOS25_OUT | PT38A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[5] | B12/1    | LVCMOS25_OUT | PT44A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[6] | A10/0    | LVCMOS25_OUT | PT36A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uo_out[7] | C11/0    | LVCMOS25_OUT | PT38B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
++-----------+----------+--------------+-------+-----------+-----------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 2    | 2.5V  |
-| 3    | 2.5V  |
+| 0    | 2.5V  |
+| 1    | 2.5V  |
+| 2    | 3.3V  |
 | 6    | 3.3V  |
 +------+-------+
 
@@ -55,10 +60,10 @@ Pinout by Pin Number:
 | A7/0     |     unused, PULL:DOWN |            |              | PT18A |                          |           |
 | A8/0     |     unused, PULL:DOWN |            |              | PT18B |                          |           |
 | A9/0     |     unused, PULL:DOWN |            |              | PT33A | GR_PCLK0_1               |           |
-| A10/0    |     unused, PULL:DOWN |            |              | PT36A | PCLKT0_1                 |           |
+| A10/0    | uo_out[6]             |            | LVCMOS25_OUT | PT36A | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |              | PT36B |                          |           |
-| A12/1    |     unused, PULL:DOWN |            |              | PT49A |                          |           |
-| A13/1    |     unused, PULL:DOWN |            |              | PT49B |                          |           |
+| A12/1    | ui_in[5]              |            | LVCMOS25_IN  | PT49A |                          |           |
+| A13/1    | ui_in[2]              |            | LVCMOS25_IN  | PT49B |                          |           |
 | A14/1    |     unused, PULL:DOWN |            |              | PT56A |                          |           |
 | A15/1    |     unused, PULL:DOWN |            |              | PT67A |                          |           |
 | A16/1    |     unused, PULL:DOWN |            |              | PT74A |                          |           |
@@ -74,9 +79,9 @@ Pinout by Pin Number:
 | B8/0     |     unused, PULL:DOWN |            |              | PT15B |                          |           |
 | B9/0     |     unused, PULL:DOWN |            |              | PT31A |                          |           |
 | B10/0    |     unused, PULL:DOWN |            |              | PT33B | GR_PCLK0_0               |           |
-| B11/0    |     unused, PULL:DOWN |            |              | PT38A | PCLKT0_0                 |           |
-| B12/1    |     unused, PULL:DOWN |            |              | PT44A | PCLKT1_0                 |           |
-| B13/1    |     unused, PULL:DOWN |            |              | PT51A |                          |           |
+| B11/0    | uo_out[4]             |            | LVCMOS25_OUT | PT38A | PCLKT0_0                 |           |
+| B12/1    | uo_out[5]             |            | LVCMOS25_OUT | PT44A | PCLKT1_0                 |           |
+| B13/1    | ui_in[3]              |            | LVCMOS25_IN  | PT51A |                          |           |
 | B15/1    |     unused, PULL:DOWN |            |              | PT69A |                          |           |
 | B16/1    |     unused, PULL:DOWN |            |              | PT74B |                          |           |
 | B17/1    |     unused, PULL:DOWN |            |              | PT78A |                          |           |
@@ -93,8 +98,8 @@ Pinout by Pin Number:
 | C8/0     |     unused, PULL:DOWN |            |              | PT15A |                          |           |
 | C9/0     |     unused, PULL:DOWN |            |              | PT27A |                          |           |
 | C10/0    |     unused, PULL:DOWN |            |              | PT31B |                          |           |
-| C11/0    |     unused, PULL:DOWN |            |              | PT38B |                          |           |
-| C12/1    |     unused, PULL:DOWN |            |              | PT44B |                          |           |
+| C11/0    | uo_out[7]             |            | LVCMOS25_OUT | PT38B |                          |           |
+| C12/1    | uo_out[2]             |            | LVCMOS25_OUT | PT44B |                          |           |
 | C13/1    |     unused, PULL:DOWN |            |              | PT51B |                          |           |
 | C14/1    |     unused, PULL:DOWN |            |              | PT56B |                          |           |
 | C15/1    |     unused, PULL:DOWN |            |              | PT69B |                          |           |
@@ -112,8 +117,8 @@ Pinout by Pin Number:
 | D8/0     |     unused, PULL:DOWN |            |              | PT13B |                          |           |
 | D9/0     |     unused, PULL:DOWN |            |              | PT20A |                          |           |
 | D10/0    |     unused, PULL:DOWN |            |              | PT29A |                          |           |
-| D11/1    |     unused, PULL:DOWN |            |              | PT42A | PCLKT1_1                 |           |
-| D12/1    |     unused, PULL:DOWN |            |              | PT47A | GR_PCLK1_0               |           |
+| D11/1    | uo_out[3]             |            | LVCMOS25_OUT | PT42A | PCLKT1_1                 |           |
+| D12/1    | ui_in[7]              |            | LVCMOS25_IN  | PT47A | GR_PCLK1_0               |           |
 | D13/1    |     unused, PULL:DOWN |            |              | PT53A |                          |           |
 | D14/1    |     unused, PULL:DOWN |            |              | PT58A |                          |           |
 | D15/1    |     unused, PULL:DOWN |            |              | PT71A |                          |           |
@@ -132,16 +137,16 @@ Pinout by Pin Number:
 | E8/0     |     unused, PULL:DOWN |            |              | PT13A |                          |           |
 | E9/0     |     unused, PULL:DOWN |            |              | PT20B |                          |           |
 | E10/0    |     unused, PULL:DOWN |            |              | PT29B |                          |           |
-| E11/1    |     unused, PULL:DOWN |            |              | PT42B |                          |           |
-| E12/1    |     unused, PULL:DOWN |            |              | PT47B | GR_PCLK1_1               |           |
-| E13/1    |     unused, PULL:DOWN |            |              | PT53B |                          |           |
+| E11/1    | uo_out[1]             |            | LVCMOS25_OUT | PT42B |                          |           |
+| E12/1    | ui_in[4]              |            | LVCMOS25_IN  | PT47B | GR_PCLK1_1               |           |
+| E13/1    | ui_in[6]              |            | LVCMOS25_IN  | PT53B |                          |           |
 | E14/1    |     unused, PULL:DOWN |            |              | PT58B |                          |           |
 | E15/1    |     unused, PULL:DOWN |            |              | PT71B |                          |           |
 | E16/2    |     unused, PULL:DOWN |            |              | PR11C | RDQ17                    |           |
 | E17/2    |     unused, PULL:DOWN |            |              | PR14B | RDQ17                    |           |
 | E18/2    |     unused, PULL:DOWN |            |              | PR14C | RDQ17                    |           |
 | E19/2    |     unused, PULL:DOWN |            |              | PR23D | RDQ29                    |           |
-| E20/2    | uart_rx_data[3]       |            | LVCMOS25_OUT | PR26A | RDQ29                    |           |
+| E20/2    |     unused, PULL:DOWN |            |              | PR26A | RDQ29                    |           |
 | F1/6     |     unused, PULL:DOWN |            |              | PL35B | PCLKC6_1/LDQ41           |           |
 | F2/7     |     unused, PULL:DOWN |            |              | PL32C | PCLKT7_0/LDQ29           |           |
 | F3/7     |     unused, PULL:DOWN |            |              | PL32B | PCLKC7_1/LDQ29           |           |
@@ -150,16 +155,16 @@ Pinout by Pin Number:
 | F16/2    |     unused, PULL:DOWN |            |              | PR11D | RDQ17                    |           |
 | F17/2    |     unused, PULL:DOWN |            |              | PR17A | RDQS17                   |           |
 | F18/2    |     unused, PULL:DOWN |            |              | PR14D | RDQ17                    |           |
-| F19/2    | uart_rx_data[1]       |            | LVCMOS25_OUT | PR26B | RDQ29                    |           |
-| F20/2    | uart_rx_data[0]       |            | LVCMOS25_OUT | PR26C | RDQ29                    |           |
+| F19/2    |     unused, PULL:DOWN |            |              | PR26B | RDQ29                    |           |
+| F20/2    |     unused, PULL:DOWN |            |              | PR26C | RDQ29                    |           |
 | G1/6     |     unused, PULL:DOWN |            |              | PL35D | PCLKC6_0/LDQ41           |           |
 | G2/6     |     unused, PULL:DOWN |            |              | PL35A | PCLKT6_1/LDQ41           |           |
 | G3/7     |     unused, PULL:DOWN |            |              | PL32A | PCLKT7_1/LDQ29           |           |
 | G5/7     |     unused, PULL:DOWN |            |              | PL29B | LDQSN29                  |           |
 | G16/2    |     unused, PULL:DOWN |            |              | PR17C | RDQ17                    |           |
 | G18/2    |     unused, PULL:DOWN |            |              | PR17B | RDQSN17                  |           |
-| G19/2    | uart_rx_data[6]       |            | LVCMOS25_OUT | PR29A | GR_PCLK2_1/RDQS29        |           |
-| G20/2    | uart_rx_data[2]       |            | LVCMOS25_OUT | PR26D | RDQ29                    |           |
+| G19/2    |     unused, PULL:DOWN |            |              | PR29A | GR_PCLK2_1/RDQS29        |           |
+| G20/2    |     unused, PULL:DOWN |            |              | PR26D | RDQ29                    |           |
 | H1/6     |     unused, PULL:DOWN |            |              | PL41C | LDQ41                    |           |
 | H2/6     |     unused, PULL:DOWN |            |              | PL35C | PCLKT6_0/LDQ41           |           |
 | H3/7     |     unused, PULL:DOWN |            |              | PL29D | LDQ29                    |           |
@@ -168,24 +173,24 @@ Pinout by Pin Number:
 | H16/2    |     unused, PULL:DOWN |            |              | PR17D | RDQ17                    |           |
 | H17/2    |     unused, PULL:DOWN |            |              | PR20B | RDQ17                    |           |
 | H18/2    |     unused, PULL:DOWN |            |              | PR20A | RDQ17                    |           |
-| H20/2    | uart_rx_data[7]       |            | LVCMOS25_OUT | PR29B | RDQSN29                  |           |
+| H20/2    |     unused, PULL:DOWN |            |              | PR29B | RDQSN29                  |           |
 | J1/6     |     unused, PULL:DOWN |            |              | PL41B | LDQSN41                  |           |
-| J3/6     |     unused, PULL:DOWN |            |              | PL38C | GR_PCLK6_1/LDQ41         |           |
+| J3/6     | ui_in[0]              |            | LVCMOS25_IN  | PL38C | GR_PCLK6_1/LDQ41         |           |
 | J4/6     |     unused, PULL:DOWN |            |              | PL38A | GR_PCLK6_0/LDQ41         |           |
-| J5/6     |     unused, PULL:DOWN |            |              | PL38B | LDQ41                    |           |
-| J16/2    |     unused, PULL:DOWN |            |              | PR20D | RDQ17                    |           |
+| J5/6     | ui_in[1]              |            | LVCMOS25_IN  | PL38B | LDQ41                    |           |
+| J16/2    | uo_out[0]             | LOCATED    | LVCMOS33_OUT | PR20D | RDQ17                    |           |
 | J17/2    |     unused, PULL:DOWN |            |              | PR20C | RDQ17                    |           |
-| J18/2    | uart_rx_data[4]       |            | LVCMOS25_OUT | PR29C | GR_PCLK2_0/RDQ29         |           |
-| J19/2    | uart_rx_read          |            | LVCMOS25_IN  | PR32A | PCLKT2_1/RDQ29           |           |
-| J20/2    | uart_rxd              |            | LVCMOS25_IN  | PR32C | PCLKT2_0/RDQ29           |           |
+| J18/2    | rst_n                 | LOCATED    | LVCMOS33_IN  | PR29C | GR_PCLK2_0/RDQ29         |           |
+| J19/2    |     unused, PULL:DOWN |            |              | PR32A | PCLKT2_1/RDQ29           |           |
+| J20/2    |     unused, PULL:DOWN |            |              | PR32C | PCLKT2_0/RDQ29           |           |
 | K1/6     |     unused, PULL:DOWN |            |              | PL41D | LDQ41                    |           |
 | K2/6     |     unused, PULL:DOWN |            |              | PL41A | LDQS41                   |           |
 | K3/6     |     unused, PULL:DOWN |            |              | PL38D | LDQ41                    |           |
 | K4/6     |     unused, PULL:DOWN |            |              | PL44A | LDQ41                    |           |
 | K5/6     |     unused, PULL:DOWN |            |              | PL44B | VREF1_6/LDQ41            |           |
-| K18/2    | uart_rx_data[5]       |            | LVCMOS25_OUT | PR29D | RDQ29                    |           |
-| K19/2    | resetn                |            | LVCMOS25_IN  | PR32B | PCLKC2_1/RDQ29           |           |
-| K20/2    | uart_rx_valid         |            | LVCMOS25_OUT | PR32D | PCLKC2_0/RDQ29           |           |
+| K18/2    |     unused, PULL:DOWN |            |              | PR29D | RDQ29                    |           |
+| K19/2    |     unused, PULL:DOWN |            |              | PR32B | PCLKC2_1/RDQ29           |           |
+| K20/2    |     unused, PULL:DOWN |            |              | PR32D | PCLKC2_0/RDQ29           |           |
 | L1/6     |     unused, PULL:DOWN |            |              | PL65C | LDQ65                    |           |
 | L2/6     |     unused, PULL:DOWN |            |              | PL62D | LDQ65                    |           |
 | L3/6     |     unused, PULL:DOWN |            |              | PL62C | LDQ65                    |           |
@@ -194,7 +199,7 @@ Pinout by Pin Number:
 | L16/3    |     unused, PULL:DOWN |            |              | PR38A | GR_PCLK3_0/RDQ41         |           |
 | L17/3    |     unused, PULL:DOWN |            |              | PR38B | RDQ41                    |           |
 | L18/3    |     unused, PULL:DOWN |            |              | PR38C | GR_PCLK3_1/RDQ41         |           |
-| L19/3    | uart_rts              |            | LVCMOS25_OUT | PR35C | PCLKT3_0/RDQ41           |           |
+| L19/3    |     unused, PULL:DOWN |            |              | PR35C | PCLKT3_0/RDQ41           |           |
 | L20/3    |     unused, PULL:DOWN |            |              | PR35A | PCLKT3_1/RDQ41           |           |
 | M1/6     |     unused, PULL:DOWN |            |              | PL65B | LDQSN65                  |           |
 | M3/6     |     unused, PULL:DOWN |            |              | PL62B | LDQ65                    |           |
@@ -304,19 +309,23 @@ List of All Pins' Locate Preferences Based on Final Placement After PAR
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
 LOCATE  COMP  "clk"  SITE  "P3";
-LOCATE  COMP  "resetn"  SITE  "K19";
-LOCATE  COMP  "uart_rts"  SITE  "L19";
-LOCATE  COMP  "uart_rx_data[0]"  SITE  "F20";
-LOCATE  COMP  "uart_rx_data[1]"  SITE  "F19";
-LOCATE  COMP  "uart_rx_data[2]"  SITE  "G20";
-LOCATE  COMP  "uart_rx_data[3]"  SITE  "E20";
-LOCATE  COMP  "uart_rx_data[4]"  SITE  "J18";
-LOCATE  COMP  "uart_rx_data[5]"  SITE  "K18";
-LOCATE  COMP  "uart_rx_data[6]"  SITE  "G19";
-LOCATE  COMP  "uart_rx_data[7]"  SITE  "H20";
-LOCATE  COMP  "uart_rx_read"  SITE  "J19";
-LOCATE  COMP  "uart_rx_valid"  SITE  "K20";
-LOCATE  COMP  "uart_rxd"  SITE  "J20";
+LOCATE  COMP  "rst_n"  SITE  "J18";
+LOCATE  COMP  "ui_in[0]"  SITE  "J3";
+LOCATE  COMP  "ui_in[1]"  SITE  "J5";
+LOCATE  COMP  "ui_in[2]"  SITE  "A13";
+LOCATE  COMP  "ui_in[3]"  SITE  "B13";
+LOCATE  COMP  "ui_in[4]"  SITE  "E12";
+LOCATE  COMP  "ui_in[5]"  SITE  "A12";
+LOCATE  COMP  "ui_in[6]"  SITE  "E13";
+LOCATE  COMP  "ui_in[7]"  SITE  "D12";
+LOCATE  COMP  "uo_out[0]"  SITE  "J16";
+LOCATE  COMP  "uo_out[1]"  SITE  "E11";
+LOCATE  COMP  "uo_out[2]"  SITE  "C12";
+LOCATE  COMP  "uo_out[3]"  SITE  "D11";
+LOCATE  COMP  "uo_out[4]"  SITE  "B11";
+LOCATE  COMP  "uo_out[5]"  SITE  "B12";
+LOCATE  COMP  "uo_out[6]"  SITE  "A10";
+LOCATE  COMP  "uo_out[7]"  SITE  "C11";
 
 
 
@@ -328,5 +337,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jan 07 19:48:31 2026
+Thu Jan 08 21:52:35 2026
 

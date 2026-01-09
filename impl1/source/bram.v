@@ -1,6 +1,6 @@
 // Loosely based on https://tinlethax.wordpress.com/2022/05/07/ice40-bram-101-probably-the-correct-way-to-use-ice40-block-ram/
 
-module BRAM #(parameter ADDR_WIDTH = 10, parameter INIT_FILE="") (
+module BRAM #(parameter ADDR_WIDTH = 10, parameter INIT_FILE="novoled.hex") (
 	input clk,
 	
 	input [7:0] data_in,

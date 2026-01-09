@@ -1,5 +1,5 @@
 // Copyright (c) 2021 Ben Marshall
-// Changes Copyright (c) 2023 Michael Bell
+// Changes Copyright (c) 2023-2025 Michael Bell
 // MIT License
 
 // 
@@ -11,9 +11,8 @@
 
 `default_nettype none
 
-module uart_rx #(parameter 
-    BIT_RATE     = 9600,       // Input bit rate of the UART line, bits / sec
-    CLK_HZ       = 50_000_000, // Clock frequency in hertz.
+module tqvp_uart_rx #(parameter 
+    COUNT_REG_LEN = 13,        // Enough to allow baud rates down to 9600 at 64MHz clock
     PAYLOAD_BITS = 8,          // Number of data bits recieved per UART packet.
     STOP_BITS    = 1           // Number of stop bits indicating the end of a packet.
 ) (
@@ -23,20 +22,9 @@ module uart_rx #(parameter
     output reg        uart_rts     , // UART Request to send pin.
     input  wire       uart_rx_read , // Available byte has been read and can be cleared.
     output wire       uart_rx_valid, // Valid data recieved and available.
-    output wire [PAYLOAD_BITS-1:0] uart_rx_data   // The recieved data.
+    output wire [PAYLOAD_BITS-1:0]  uart_rx_data, // The recieved data.
+    input  wire [COUNT_REG_LEN-1:0] baud_divider  // The divider for the required baud rate
 );
-
-// -------------------------------------------------------------------------- 
-// Internal parameters.
-// 
-
-//
-// Number of clock cycles per uart bit.
-localparam       CYCLES_PER_BIT     = (CLK_HZ - 1) / BIT_RATE;
-
-//
-// Size of the registers which store sample counts and bit durations.
-localparam       COUNT_REG_LEN      = 1+$clog2(CYCLES_PER_BIT);
 
 // -------------------------------------------------------------------------- 
 // Internal registers.
@@ -75,8 +63,8 @@ assign uart_rx_data = recieved_data;
 // FSM next state selection.
 // 
 
-wire next_bit     = cycle_counter == CYCLES_PER_BIT[COUNT_REG_LEN-1:0];
-wire mid_bit      = cycle_counter == CYCLES_PER_BIT[COUNT_REG_LEN-1:0] / 2;
+wire next_bit     = cycle_counter >= baud_divider;
+wire mid_bit      = cycle_counter == baud_divider >> 1;
 
 //
 // Handle picking the next state.
@@ -158,7 +146,8 @@ always @(posedge clk) begin : p_rts
     if (!resetn) begin
         uart_rts <= 1'b1;
     end else begin
-        uart_rts <= fsm_state > FSM_START;  // RTS is active low, 0 when IDLE or START.
+        // RTS is active low, 0 when IDLE or START, or when read is asserted.
+        uart_rts <= fsm_state > FSM_START && !uart_rx_read;  
     end
 end
 

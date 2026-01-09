@@ -7,22 +7,10 @@ Loading NGL library 'C:/lscc/diamond/3.14/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-WARNING - synthesis: logical net 'ui_in[7]' has no load.
-WARNING - synthesis: input pad net 'ui_in[7]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[6]' has no load.
-WARNING - synthesis: input pad net 'ui_in[6]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[5]' has no load.
-WARNING - synthesis: input pad net 'ui_in[5]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[4]' has no load.
-WARNING - synthesis: input pad net 'ui_in[4]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[3]' has no load.
-WARNING - synthesis: input pad net 'ui_in[3]' has no legal load.
-WARNING - synthesis: logical net 'ui_in[2]' has no load.
-WARNING - synthesis: input pad net 'ui_in[2]' has no legal load.
-WARNING - synthesis: DRC complete with 12 warnings.
+DRC complete with no errors or warnings
 
 Design Results:
-   3558 blocks expanded
+   4034 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file ProjetoTinyQV_impl1.ngd.

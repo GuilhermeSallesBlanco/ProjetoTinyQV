@@ -1,5 +1,5 @@
 // Copyright (c) 2021 Ben Marshall
-// Changes Copyright (c) 2023 Michael Bell
+// Changes Copyright (c) 2023-2025 Michael Bell
 // MIT License
 
 // 
@@ -11,9 +11,8 @@
 
 `default_nettype none
 
-module uart_tx #(parameter 
-    BIT_RATE     = 9600,       // Input bit rate of the UART line, bits / sec
-    CLK_HZ       = 50_000_000, // Clock frequency in hertz.
+module tqvp_uart_tx #(parameter 
+    COUNT_REG_LEN = 13,        // Enough to allow baud rates down to 9600 at 64MHz clock
     PAYLOAD_BITS = 8,          // Number of data bits sent per UART packet.
     STOP_BITS    = 1           // Number of stop bits indicating the end of a packet.
 ) (
@@ -22,20 +21,9 @@ module uart_tx #(parameter
     output wire         uart_txd    , // UART transmit pin.
     output wire         uart_tx_busy, // Module busy sending previous item.
     input  wire         uart_tx_en  , // Send the data on uart_tx_data
-    input  wire [PAYLOAD_BITS-1:0]   uart_tx_data  // The data to be sent
+    input  wire [PAYLOAD_BITS-1:0]   uart_tx_data,  // The data to be sent
+    input  wire [COUNT_REG_LEN-1:0]  baud_divider   // The divider for the required baud rate
 );
-
-// --------------------------------------------------------------------------- 
-// Internal parameters.
-// 
-
-//
-// Number of clock cycles per uart bit.
-localparam       CYCLES_PER_BIT     = (CLK_HZ - 1) / BIT_RATE;
-
-//
-// Size of the registers which store sample counts and bit durations.
-localparam       COUNT_REG_LEN      = 1+$clog2(CYCLES_PER_BIT);
 
 // --------------------------------------------------------------------------- 
 // Internal registers.
@@ -71,7 +59,7 @@ localparam FSM_END = FSM_STOP + STOP_BITS - 1;
 assign uart_tx_busy = fsm_state != FSM_IDLE;
 assign uart_txd     = txd_reg;
 
-wire next_bit     = cycle_counter == CYCLES_PER_BIT[COUNT_REG_LEN-1:0];
+wire next_bit     = cycle_counter >= baud_divider;
 
 //
 // Handle picking the next state.

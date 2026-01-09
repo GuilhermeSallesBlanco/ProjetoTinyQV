@@ -1,22 +1,26 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Wed Jan 07 19:48:41 2026 *
-NOTE DESIGN NAME: uart_rx *
+NOTE DATE CREATED: Thu Jan 08 21:52:58 2026 *
+NOTE DESIGN NAME: tinyQV_top *
 NOTE DEVICE NAME: LFE5U-45F-6CABGA381 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS uart_rx_valid : K20 : out *
-NOTE PINS uart_rts : L19 : out *
-NOTE PINS uart_rx_data[7] : H20 : out *
-NOTE PINS uart_rx_data[6] : G19 : out *
-NOTE PINS uart_rx_data[5] : K18 : out *
-NOTE PINS uart_rx_data[4] : J18 : out *
-NOTE PINS uart_rx_data[3] : E20 : out *
-NOTE PINS uart_rx_data[2] : G20 : out *
-NOTE PINS uart_rx_data[1] : F19 : out *
-NOTE PINS uart_rx_data[0] : F20 : out *
+NOTE PINS uo_out[2] : C12 : out *
+NOTE PINS uo_out[3] : D11 : out *
+NOTE PINS uo_out[4] : B11 : out *
+NOTE PINS uo_out[5] : B12 : out *
+NOTE PINS uo_out[6] : A10 : out *
+NOTE PINS ui_in[0] : J3 : in *
+NOTE PINS uo_out[7] : C11 : out *
+NOTE PINS ui_in[1] : J5 : in *
+NOTE PINS ui_in[2] : A13 : in *
+NOTE PINS ui_in[3] : B13 : in *
+NOTE PINS ui_in[4] : E12 : in *
+NOTE PINS ui_in[5] : A12 : in *
+NOTE PINS ui_in[6] : E13 : in *
+NOTE PINS ui_in[7] : D12 : in *
+NOTE PINS rst_n : J18 : in *
 NOTE PINS clk : P3 : in *
-NOTE PINS resetn : K19 : in *
-NOTE PINS uart_rxd : J20 : in *
-NOTE PINS uart_rx_read : J19 : in *
+NOTE PINS uo_out[0] : J16 : out *
+NOTE PINS uo_out[1] : E11 : out *
 NOTE CONFIGURATION MODE: JTAG *
 NOTE COMPRESSION: off *

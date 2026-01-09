@@ -1,1 +1,1 @@
-uart_rx_rtl.vdb
+tinyQV_top_rtl.vdb

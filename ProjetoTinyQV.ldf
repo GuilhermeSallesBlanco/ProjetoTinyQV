@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="ProjetoTinyQV" device="LFE5U-45F-6BG381C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="tinyQV_top"/>
+        <Options def_top="uart_rx"/>
         <Source name="impl1/source/alu.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -28,7 +28,7 @@
             <Options/>
         </Source>
         <Source name="impl1/source/peripherals_min.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="tinyQV_peripherals"/>
         </Source>
         <Source name="impl1/source/qspi_ctrl.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -49,7 +49,7 @@
             <Options top_module="tinyQV_top"/>
         </Source>
         <Source name="impl1/source/uart_rx.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="uart_rx"/>
         </Source>
         <Source name="impl1/source/uart_tx.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -57,7 +57,19 @@
         <Source name="impl1/source/sim_qspi.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="led.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="led.hex" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
+        <Source name="ledstrip.hex" type="Unknown Type" type_short="Unknown">
+            <Options/>
+        </Source>
         <Source name="ProjetoTinyQV.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="TinyQVSIM/TinyQVSIM.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
     </Implementation>

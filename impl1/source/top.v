@@ -210,14 +210,30 @@ module tinyQV_top (
         end
     end
 
-    uart_tx #(.CLK_HZ(CLOCK_MHZ*1_000_000), .BIT_RATE(1_000_000)) i_debug_uart_tx(
-        .clk(clk),
-        .resetn(rst_reg_n),
-        .uart_txd(debug_uart_txd),
-        .uart_tx_en(debug_uart_tx_start),
-        .uart_tx_data(data_to_write[7:0]),
-        .uart_tx_busy(debug_uart_tx_busy) 
-    );
+ //   uart_tx #(.CLK_HZ(CLOCK_MHZ*1_000_000), .BIT_RATE(1_000_000)) i_debug_uart_tx(
+ //       .clk(clk),
+ //       .resetn(rst_reg_n),
+ //       .uart_txd(debug_uart_txd),
+ //       .uart_tx_en(debug_uart_tx_start),
+ //       .uart_tx_data(data_to_write[7:0]),
+ //       .uart_tx_busy(debug_uart_tx_busy) 
+ //   );
+
+	
+	localparam [12:0] DEBUG_BAUD_DIV = (CLOCK_MHZ*1_000_000) / 1_000_000; // = 14 para 14 MHz
+	tqvp_uart_tx #(
+		.COUNT_REG_LEN(13),
+		.PAYLOAD_BITS(8),
+		.STOP_BITS(1)
+	) i_debug_uart_tx (
+		.clk(clk),
+		.resetn(rst_reg_n),
+		.uart_txd(debug_uart_txd),
+		.uart_tx_busy(debug_uart_tx_busy),
+		.uart_tx_en(debug_uart_tx_start),
+		.uart_tx_data(data_to_write[7:0]),
+		.baud_divider(DEBUG_BAUD_DIV)
+	);
 
     reg [7:0] time_count;
     always @(posedge clk) begin

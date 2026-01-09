@@ -14,7 +14,7 @@
 // 0x800_00c0 - 0ff: UART RX
 // 0x800_0100 - 3ff: 12 user peripherals (64 bytes each, word and halfword access supported, each has an interrupt)
 // 0x800_0400 - 4ff: 16 simple peripherals (16 bytes each, byte access only)
-module tinyQV_peripherals #(parameter CLOCK_MHZ=64) (
+module peripherals_min #(parameter CLOCK_MHZ=64) (
     input wire        clk,
     input wire        rst_n,
 
@@ -33,7 +33,7 @@ module tinyQV_peripherals #(parameter CLOCK_MHZ=64) (
 
     input wire        data_read_complete,  // Set by TinyQV when a read is complete
 
-    output reg [15:2] user_interrupts  // User peripherals get interrupts 2-15
+    output wire [15:2] user_interrupts  // User peripherals get interrupts 2-15
 );
 
     // Registered data out to TinyQV
@@ -89,7 +89,7 @@ module tinyQV_peripherals #(parameter CLOCK_MHZ=64) (
 
     localparam PERI_GPIO = 1;
     localparam PERI_UART = 2;
-	localparam PERI_LED = 4;
+	localparam PERI_LED = 8;
 
     reg [15:0] peri_user;
     reg [15:0] peri_simple;
@@ -164,24 +164,43 @@ module tinyQV_peripherals #(parameter CLOCK_MHZ=64) (
     // --------------------------------------------------------------------- //
     // UART
 
-    tqvp_uart_wrapper #(.CLOCK_MHZ(CLOCK_MHZ)) i_uart (
-        .clk(clk),
-        .rst_n(rst_n),
+ //   tqvp_uart_wrapper #(.CLOCK_MHZ(CLOCK_MHZ)) i_uart (
+ //       .clk(clk),
+ //       .rst_n(rst_n),
 
-        .ui_in(ui_in),
-        .uo_out(uo_out_from_user_peri[PERI_UART]),
+ //       .ui_in(ui_in),
+ //       .uo_out(uo_out_from_user_peri[PERI_UART]),
 
-        .address(addr_in[5:0]),
-        .data_in(data_in),
+ //       .address(addr_in[5:0]),
+ //       .data_in(data_in),
 
-        .data_write_n(data_write_n    | {2{~peri_user[PERI_UART]}}),
-        .data_read_n(data_read_n_peri | {2{~peri_user[PERI_UART]}}),
+ //       .data_write_n(data_write_n    | {2{~peri_user[PERI_UART]}}),
+ //       .data_read_n(data_read_n_peri | {2{~peri_user[PERI_UART]}}),
 
-        .data_out(data_from_user_peri[PERI_UART]),
-        .data_ready(data_ready_from_user_peri[PERI_UART]),
+ //      .data_out(data_from_user_peri[PERI_UART]),
+ //       .data_ready(data_ready_from_user_peri[PERI_UART]),
 
-        .user_interrupt(user_interrupts[PERI_UART+1:PERI_UART])
-    );
+ //       .user_interrupt(user_interrupts[PERI_UART+1:PERI_UART])
+ //   );
+ 
+ 
+	wire [1:0] uart_write_n = peri_user[PERI_UART] ? data_write_n     : 2'b11;
+	wire [1:0] uart_read_n  = peri_user[PERI_UART] ? data_read_n_peri : 2'b11;
+
+	tqvp_uart_wrapper #(.CLOCK_MHZ(CLOCK_MHZ)) i_uart (
+		.clk(clk),
+		.rst_n(rst_n),
+		.ui_in(ui_in),
+		.uo_out(uo_out_from_user_peri[PERI_UART]),
+		.address(addr_in[5:0]),
+		.data_in(data_in),
+		.data_write_n(uart_write_n),     // <-- usa o wire
+		.data_read_n(uart_read_n),       // <-- usa o wire
+		.data_out(data_from_user_peri[PERI_UART]),
+		.data_ready(data_ready_from_user_peri[PERI_UART]),
+		.user_interrupt(user_interrupts[PERI_UART+1:PERI_UART])
+	);
+
 
     // There is no peripheral 3, UART uses its interrupt.
     assign uo_out_from_user_peri[3] = 8'h0;
