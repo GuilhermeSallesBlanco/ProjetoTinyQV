@@ -1,0 +1,367 @@
+----------------------------------------------------------------------
+Report for cell tinyQV_top.TECH
+Register bits:  1288 of 44457 (2.897%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       104          100.0
+                             DP16KD         7          100.0
+                            FD1P3AX       328          100.0
+                            FD1P3BX         1          100.0
+                            FD1P3IX       270          100.0
+                            FD1P3JX         9          100.0
+                            FD1S3AX       603          100.0
+                            FD1S3IX        71          100.0
+                            FD1S3JX         6          100.0
+                                GSR         1          100.0
+                                 IB        10          100.0
+                                INV         1          100.0
+                            L6MUX21        67          100.0
+                               LUT4      2237          100.0
+                         MULT18X18D         1          100.0
+                                 OB         8          100.0
+                              PFUMX       312          100.0
+SUB MODULES
+                BRAM(ADDR_WIDTH=11)         1
+                BRAM(ADDR_WIDTH=12)         1
+                BRAM(ADDR_WIDTH=13)         1
+      peripherals_min(CLOCK_MHZ=25)         1
+                    qspi_controller         1
+                      sim_qspi_pmod         1
+                             tinyQV         1
+                        tinyQV_time         1
+                         tinyqv_alu         1
+                        tinyqv_core         1
+                     tinyqv_counter         1
+     tinyqv_counter(OUTPUT_WIDTH=7)         1
+                  tinyqv_counter_U0         1
+                         tinyqv_cpu         1
+                     tinyqv_decoder         1
+                    tinyqv_mem_ctrl         1
+                         tinyqv_mul         1
+                   tinyqv_registers         1
+                     tinyqv_shifter         1
+                      tqvp_led_byte         1
+                       tqvp_uart_rx         1
+                       tqvp_uart_tx         1
+                    tqvp_uart_tx_U1         1
+    tqvp_uart_wrapper(CLOCK_MHZ=25)         1
+                              TOTAL      4060
+----------------------------------------------------------------------
+Report for cell peripherals_min(CLOCK_MHZ=25).v1
+Instance Path : i_peripherals
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        12           11.5
+                            FD1P3AX        28            8.5
+                            FD1P3IX        88           32.6
+                            FD1P3JX         5           55.6
+                            FD1S3IX        17           23.9
+                            FD1S3JX         2           33.3
+                            L6MUX21         3            4.5
+                               LUT4       137            6.1
+                              PFUMX        13            4.2
+SUB MODULES
+                      tqvp_led_byte         1
+                       tqvp_uart_rx         1
+                       tqvp_uart_tx         1
+    tqvp_uart_wrapper(CLOCK_MHZ=25)         1
+                              TOTAL       309
+----------------------------------------------------------------------
+Report for cell tqvp_uart_wrapper(CLOCK_MHZ=25).v1
+Instance Path : i_peripherals.i_uart
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        12           11.5
+                            FD1P3AX        18            5.5
+                            FD1P3IX        34           12.6
+                            FD1P3JX         5           55.6
+                            FD1S3IX        17           23.9
+                            FD1S3JX         2           33.3
+                               LUT4        76            3.4
+                              PFUMX         2            0.6
+SUB MODULES
+                       tqvp_uart_rx         1
+                       tqvp_uart_tx         1
+                              TOTAL       168
+----------------------------------------------------------------------
+Report for cell tqvp_uart_tx.v1
+Instance Path : i_peripherals.i_uart.i_uart_tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            0.3
+                            FD1P3IX        24            8.9
+                            FD1S3JX         1           16.7
+                               LUT4        17            0.8
+                              TOTAL        43
+----------------------------------------------------------------------
+Report for cell tqvp_uart_rx.v1
+Instance Path : i_peripherals.i_uart.i_uart_rx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        12           11.5
+                            FD1P3AX         8            2.4
+                            FD1P3IX         1            0.4
+                            FD1S3IX        17           23.9
+                            FD1S3JX         1           16.7
+                               LUT4        40            1.8
+                              PFUMX         2            0.6
+                              TOTAL        81
+----------------------------------------------------------------------
+Report for cell tqvp_led_byte.v1
+Instance Path : i_peripherals.i_led_byte
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX         1            0.4
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell tinyQV.v1
+Instance Path : i_tinyqv
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX       252           76.8
+                            FD1P3BX         1          100.0
+                            FD1P3IX       157           58.1
+                            FD1P3JX         4           44.4
+                            FD1S3AX       546           90.5
+                            FD1S3IX        46           64.8
+                            FD1S3JX         3           50.0
+                            L6MUX21        63           94.0
+                               LUT4      1904           85.1
+                         MULT18X18D         1          100.0
+                              PFUMX       278           89.1
+SUB MODULES
+                    qspi_controller         1
+                        tinyQV_time         1
+                         tinyqv_alu         1
+                        tinyqv_core         1
+                     tinyqv_counter         1
+     tinyqv_counter(OUTPUT_WIDTH=7)         1
+                  tinyqv_counter_U0         1
+                         tinyqv_cpu         1
+                     tinyqv_decoder         1
+                    tinyqv_mem_ctrl         1
+                         tinyqv_mul         1
+                   tinyqv_registers         1
+                     tinyqv_shifter         1
+                              TOTAL      3268
+----------------------------------------------------------------------
+Report for cell tinyqv_mem_ctrl.v1
+Instance Path : i_tinyqv.mem
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        71           21.6
+                            FD1P3IX        18            6.7
+                            FD1P3JX         3           33.3
+                            FD1S3AX         1            0.2
+                            FD1S3IX         6            8.5
+                            FD1S3JX         2           33.3
+                            L6MUX21         4            6.0
+                               LUT4       267           11.9
+                              PFUMX        20            6.4
+SUB MODULES
+                    qspi_controller         1
+                              TOTAL       393
+----------------------------------------------------------------------
+Report for cell qspi_controller.v1
+Instance Path : i_tinyqv.mem.q_ctrl
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        37           11.3
+                            FD1P3IX        13            4.8
+                            FD1P3JX         3           33.3
+                            FD1S3AX         1            0.2
+                            FD1S3IX         3            4.2
+                            FD1S3JX         2           33.3
+                            L6MUX21         4            6.0
+                               LUT4       132            5.9
+                              PFUMX        19            6.1
+                              TOTAL       214
+----------------------------------------------------------------------
+Report for cell tinyqv_cpu.v1
+Instance Path : i_tinyqv.cpu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX       181           55.2
+                            FD1P3BX         1          100.0
+                            FD1P3IX       139           51.5
+                            FD1P3JX         1           11.1
+                            FD1S3AX       543           90.0
+                            FD1S3IX        40           56.3
+                            FD1S3JX         1           16.7
+                            L6MUX21        59           88.1
+                               LUT4      1636           73.1
+                         MULT18X18D         1          100.0
+                              PFUMX       258           82.7
+SUB MODULES
+                        tinyQV_time         1
+                         tinyqv_alu         1
+                        tinyqv_core         1
+                     tinyqv_counter         1
+     tinyqv_counter(OUTPUT_WIDTH=7)         1
+                  tinyqv_counter_U0         1
+                     tinyqv_decoder         1
+                         tinyqv_mul         1
+                   tinyqv_registers         1
+                     tinyqv_shifter         1
+                              TOTAL      2870
+----------------------------------------------------------------------
+Report for cell tinyQV_time.v1
+Instance Path : i_tinyqv.cpu.i_timer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            0.3
+                            FD1S3AX        56            9.3
+                            FD1S3IX        10           14.1
+                            FD1S3JX         1           16.7
+                               LUT4        45            2.0
+                              PFUMX         1            0.3
+SUB MODULES
+                     tinyqv_counter         1
+                              TOTAL       115
+----------------------------------------------------------------------
+Report for cell tinyqv_counter.v1
+Instance Path : i_tinyqv.cpu.i_timer.i_mtime
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        28            4.6
+                            FD1S3IX         5            7.0
+                               LUT4        32            1.4
+                              TOTAL        65
+----------------------------------------------------------------------
+Report for cell tinyqv_decoder.v1
+Instance Path : i_tinyqv.cpu.i_decoder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4       147            6.6
+                              PFUMX        18            5.8
+                              TOTAL       165
+----------------------------------------------------------------------
+Report for cell tinyqv_core.v1
+Instance Path : i_tinyqv.cpu.i_core
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        60           18.3
+                            FD1P3BX         1          100.0
+                            FD1P3IX        36           13.3
+                            FD1S3AX       487           80.8
+                            FD1S3IX        16           22.5
+                            L6MUX21        33           49.3
+                               LUT4       658           29.4
+                         MULT18X18D         1          100.0
+                              PFUMX        88           28.2
+SUB MODULES
+                         tinyqv_alu         1
+     tinyqv_counter(OUTPUT_WIDTH=7)         1
+                  tinyqv_counter_U0         1
+                         tinyqv_mul         1
+                   tinyqv_registers         1
+                     tinyqv_shifter         1
+                              TOTAL      1386
+----------------------------------------------------------------------
+Report for cell tinyqv_mul.v1
+Instance Path : i_tinyqv.cpu.i_core.multiplier
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        12            2.0
+                            FD1S3IX         4            5.6
+                               LUT4        14            0.6
+                         MULT18X18D         1          100.0
+                              TOTAL        31
+----------------------------------------------------------------------
+Report for cell tinyqv_shifter.v1
+Instance Path : i_tinyqv.cpu.i_core.i_shift
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            L6MUX21        12           17.9
+                               LUT4       114            5.1
+                              PFUMX        16            5.1
+                              TOTAL       142
+----------------------------------------------------------------------
+Report for cell tinyqv_registers.v1
+Instance Path : i_tinyqv.cpu.i_core.i_registers
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX       416           69.0
+                            L6MUX21        15           22.4
+                               LUT4       139            6.2
+                              PFUMX        28            9.0
+                              TOTAL       598
+----------------------------------------------------------------------
+Report for cell tinyqv_counter_U0.v1
+Instance Path : i_tinyqv.cpu.i_core.i_instrret
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        28            4.6
+                            FD1S3IX         5            7.0
+                               LUT4         4            0.2
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell tinyqv_counter(OUTPUT_WIDTH=7).v1
+Instance Path : i_tinyqv.cpu.i_core.i_cycles
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        28            4.6
+                            FD1S3IX         5            7.0
+                               LUT4         5            0.2
+                              TOTAL        38
+----------------------------------------------------------------------
+Report for cell tinyqv_alu.v1
+Instance Path : i_tinyqv.cpu.i_core.i_alu
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        27            1.2
+                              PFUMX         5            1.6
+                              TOTAL        32
+----------------------------------------------------------------------
+Report for cell tqvp_uart_tx_U1.v1
+Instance Path : i_debug_uart_tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            0.3
+                            FD1P3IX        24            8.9
+                            FD1S3JX         1           16.7
+                               LUT4        27            1.2
+                              TOTAL        53
+----------------------------------------------------------------------
+Report for cell sim_qspi_pmod.v1
+Instance Path : i_qspi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         4            3.8
+                             DP16KD         7          100.0
+                            FD1P3AX        44           13.4
+                            FD1P3IX         1            0.4
+                            FD1S3AX        36            6.0
+                               LUT4        96            4.3
+                              PFUMX        17            5.4
+SUB MODULES
+                BRAM(ADDR_WIDTH=11)         1
+                BRAM(ADDR_WIDTH=12)         1
+                BRAM(ADDR_WIDTH=13)         1
+                              TOTAL       208
+----------------------------------------------------------------------
+Report for cell BRAM(ADDR_WIDTH=13).v1
+Instance Path : i_qspi.rom
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             DP16KD         4           57.1
+                            FD1P3AX         2            0.6
+                               LUT4         8            0.4
+                              PFUMX         4            1.3
+                              TOTAL        18
+----------------------------------------------------------------------
+Report for cell BRAM(ADDR_WIDTH=11).v1
+Instance Path : i_qspi.ram_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             DP16KD         1           14.3
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell BRAM(ADDR_WIDTH=12).v1
+Instance Path : i_qspi.ram_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             DP16KD         2           28.6
+                            FD1P3AX         1            0.3
+                              TOTAL         3

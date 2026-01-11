@@ -1,0 +1,675 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Jan 11 17:38:13 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     tinyQV_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets spi_clk_pos_derived_59]
+            79 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 1.638ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \i_qspi/start_count_3543__i0  (from spi_clk_pos_derived_59 +)
+   Destination:    FD1S3AX    D              \i_qspi/start_count_3543__i5  (to spi_clk_pos_derived_59 +)
+
+   Delay:                   3.537ns  (31.6% logic, 68.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      3.537ns data_path \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i5 meets
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 1.638ns
+
+ Path Details: \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/start_count_3543__i0 (from spi_clk_pos_derived_59)
+Route         3   e 1.339                                  \i_qspi/start_count[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           \i_qspi/start_count_3543_add_4_1
+Route         1   e 0.020                                  \i_qspi/n24225
+FCI_TO_FCO  ---     0.051            CIN to COUT           \i_qspi/start_count_3543_add_4_3
+Route         1   e 0.020                                  \i_qspi/n24226
+FCI_TO_FCO  ---     0.051            CIN to COUT           \i_qspi/start_count_3543_add_4_5
+Route         1   e 0.020                                  \i_qspi/n24227
+FCI_TO_F    ---     0.322            CIN to S[2]           \i_qspi/start_count_3543_add_4_7
+Route         1   e 1.020                                  \i_qspi/n30
+                  --------
+                    3.537  (31.6% logic, 68.4% route), 5 logic levels.
+
+
+Passed:  The following path meets requirements by 1.709ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \i_qspi/start_count_3543__i0  (from spi_clk_pos_derived_59 +)
+   Destination:    FD1S3AX    D              \i_qspi/start_count_3543__i3  (to spi_clk_pos_derived_59 +)
+
+   Delay:                   3.466ns  (30.8% logic, 69.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      3.466ns data_path \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i3 meets
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 1.709ns
+
+ Path Details: \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/start_count_3543__i0 (from spi_clk_pos_derived_59)
+Route         3   e 1.339                                  \i_qspi/start_count[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           \i_qspi/start_count_3543_add_4_1
+Route         1   e 0.020                                  \i_qspi/n24225
+FCI_TO_FCO  ---     0.051            CIN to COUT           \i_qspi/start_count_3543_add_4_3
+Route         1   e 0.020                                  \i_qspi/n24226
+FCI_TO_F    ---     0.322            CIN to S[2]           \i_qspi/start_count_3543_add_4_5
+Route         1   e 1.020                                  \i_qspi/n32
+                  --------
+                    3.466  (30.8% logic, 69.2% route), 4 logic levels.
+
+
+Passed:  The following path meets requirements by 1.709ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \i_qspi/start_count_3543__i0  (from spi_clk_pos_derived_59 +)
+   Destination:    FD1S3AX    D              \i_qspi/start_count_3543__i4  (to spi_clk_pos_derived_59 +)
+
+   Delay:                   3.466ns  (30.8% logic, 69.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      3.466ns data_path \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i4 meets
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 1.709ns
+
+ Path Details: \i_qspi/start_count_3543__i0 to \i_qspi/start_count_3543__i4
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/start_count_3543__i0 (from spi_clk_pos_derived_59)
+Route         3   e 1.339                                  \i_qspi/start_count[0]
+A1_TO_FCO   ---     0.329           A[2] to COUT           \i_qspi/start_count_3543_add_4_1
+Route         1   e 0.020                                  \i_qspi/n24225
+FCI_TO_FCO  ---     0.051            CIN to COUT           \i_qspi/start_count_3543_add_4_3
+Route         1   e 0.020                                  \i_qspi/n24226
+FCI_TO_F    ---     0.322            CIN to S[2]           \i_qspi/start_count_3543_add_4_5
+Route         1   e 1.020                                  \i_qspi/n31
+                  --------
+                    3.466  (30.8% logic, 69.2% route), 4 logic levels.
+
+Report: 3.362 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets qspi_clk_N_56]
+            409 items scored, 66 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.104ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \i_qspi/error_118  (from qspi_clk_N_56 +)
+   Destination:    FD1S3AX    D              \i_qspi/addr_i1  (to qspi_clk_N_56 +)
+
+   Delay:                   8.279ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.279ns data_path \i_qspi/error_118 to \i_qspi/addr_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.104ns
+
+ Path Details: \i_qspi/error_118 to \i_qspi/addr_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/error_118 (from qspi_clk_N_56)
+Route         2   e 1.258                                  \i_qspi/error
+LUT4        ---     0.166              B to Z              \i_qspi/i1_3_lut
+Route         1   e 1.020                                  \i_qspi/n29321
+LUT4        ---     0.166              B to Z              \i_qspi/i1_4_lut_adj_275
+Route         1   e 1.020                                  \i_qspi/n29325
+LUT4        ---     0.166              C to Z              \i_qspi/i1_4_lut
+Route        19   e 1.608                                  \i_qspi/writing_N_151
+LUT4        ---     0.166              A to Z              \i_qspi/i5294_3_lut_4_lut
+Route         1   e 1.020                                  \i_qspi/addr_24__N_224
+LUT4        ---     0.166              D to Z              \i_qspi/addr_24__I_0_i2_3_lut_4_lut
+Route         2   e 1.158                                  \i_qspi/addr_24__N_89[1]
+                  --------
+                    8.279  (14.4% logic, 85.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.104ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \i_qspi/error_118  (from qspi_clk_N_56 +)
+   Destination:    FD1S3AX    D              \i_qspi/addr_res1_i0_i0  (to qspi_clk_N_56 +)
+
+   Delay:                   8.279ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.279ns data_path \i_qspi/error_118 to \i_qspi/addr_res1_i0_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.104ns
+
+ Path Details: \i_qspi/error_118 to \i_qspi/addr_res1_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/error_118 (from qspi_clk_N_56)
+Route         2   e 1.258                                  \i_qspi/error
+LUT4        ---     0.166              B to Z              \i_qspi/i1_3_lut
+Route         1   e 1.020                                  \i_qspi/n29321
+LUT4        ---     0.166              B to Z              \i_qspi/i1_4_lut_adj_275
+Route         1   e 1.020                                  \i_qspi/n29325
+LUT4        ---     0.166              C to Z              \i_qspi/i1_4_lut
+Route        19   e 1.608                                  \i_qspi/writing_N_151
+LUT4        ---     0.166              A to Z              \i_qspi/i5294_3_lut_4_lut
+Route         1   e 1.020                                  \i_qspi/addr_24__N_224
+LUT4        ---     0.166              D to Z              \i_qspi/addr_24__I_0_i2_3_lut_4_lut
+Route         2   e 1.158                                  \i_qspi/addr_24__N_89[1]
+                  --------
+                    8.279  (14.4% logic, 85.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.104ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \i_qspi/error_118  (from qspi_clk_N_56 +)
+   Destination:    FD1S3AX    D              \i_qspi/addr_res2_i0_i11  (to qspi_clk_N_56 +)
+
+   Delay:                   8.279ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.279ns data_path \i_qspi/error_118 to \i_qspi/addr_res2_i0_i11 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.104ns
+
+ Path Details: \i_qspi/error_118 to \i_qspi/addr_res2_i0_i11
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_qspi/error_118 (from qspi_clk_N_56)
+Route         2   e 1.258                                  \i_qspi/error
+LUT4        ---     0.166              B to Z              \i_qspi/i1_3_lut
+Route         1   e 1.020                                  \i_qspi/n29321
+LUT4        ---     0.166              B to Z              \i_qspi/i1_4_lut_adj_275
+Route         1   e 1.020                                  \i_qspi/n29325
+LUT4        ---     0.166              C to Z              \i_qspi/i1_4_lut
+Route        19   e 1.608                                  \i_qspi/writing_N_151
+LUT4        ---     0.166              A to Z              \i_qspi/i5272_3_lut_4_lut
+Route         1   e 1.020                                  \i_qspi/addr_24__N_202
+LUT4        ---     0.166              D to Z              \i_qspi/addr_24__I_0_i13_3_lut_4_lut
+Route         2   e 1.158                                  \i_qspi/addr_24__N_89[12]
+                  --------
+                    8.279  (14.4% logic, 85.6% route), 6 logic levels.
+
+Warning: 8.104 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 30.198ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \i_tinyqv/cpu/counter_hi_3544__i4_rep_844  (from clk_c +)
+   Destination:    FD1P3IX    SP             \i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+
+   Delay:                  35.277ns  (13.0% logic, 87.0% route), 28 logic levels.
+
+ Constraint Details:
+
+     35.277ns data_path \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i2 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 30.198ns
+
+ Path Details: \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 (from clk_c)
+Route        22   e 1.738                                  \i_tinyqv/cpu/n34281
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i28351_3_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/reg_access[4][3]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_registers/i27593_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30302
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_registers/i27600
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30309
+MUXL5       ---     0.116             D0 to Z              \i_tinyqv/cpu/i_core/i_registers/i27604
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_registers/n30313
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i27606_3_lut
+Route        12   e 1.516                                  \i_tinyqv/cpu/data_rs1[0]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/pc_23__I_0_450_i269_3_lut
+Route         1   e 1.020                                  \i_tinyqv/cpu/debug_branch_N_442[28]
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i15094_4_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/i_core/alu_a_in[0]
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i5464_3_lut_rep_576_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n32591
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i5459_4_lut_rep_842
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n34274
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/i5450_4_lut_rep_841
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n34273
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_alu/n6997_bdd_4_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n31759
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i28887
+Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n31760
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/n31760_bdd_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/cmp_out
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/cycle_0__I_0_548_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1654
+MUXL5       ---     0.116           BLUT to Z              \i_tinyqv/cpu/i_core/instr_complete_I_132
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1649
+MUXL5       ---     0.116             D1 to Z              \i_tinyqv/cpu/i_core/instr_complete_I_131
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/instr_complete_N_1648
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i1_3_lut_4_lut_adj_341
+Route        16   e 1.574                                  instr_complete_N_1647
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i1_4_lut_rep_533
+Route        51   e 1.806                                  n32548
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_3_lut_adj_501
+Route         5   e 1.341                                  \i_tinyqv/n8
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_rep_529
+Route        37   e 1.742                                  n32544
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_adj_481
+Route        40   e 1.757                                  \i_tinyqv/start_instr
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/data_addr_24__I_0_i24_3_lut_rep_511_4_lut
+Route         4   e 1.297                                  \i_tinyqv/mem/n32526
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i1_4_lut_adj_579
+Route         4   e 1.297                                  \i_tinyqv/mem/ram_a_block_N_2299
+LUT4        ---     0.166              C to Z              \i_tinyqv/mem/i1_2_lut_rep_508_3_lut_4_lut
+Route         3   e 1.239                                  n32523
+LUT4        ---     0.166              A to Z              \i_tinyqv/mem/q_ctrl/i3181_3_lut_4_lut
+Route         1   e 1.020                                  \i_tinyqv/mem/q_ctrl/n6216
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i3180_4_lut
+Route         1   e 1.020                                  n6218
+LUT4        ---     0.166              C to Z              i3842_4_lut
+Route         3   e 1.239                                  clk_c_enable_340
+                  --------
+                   35.277  (13.0% logic, 87.0% route), 28 logic levels.
+
+
+Error:  The following path violates requirements by 30.198ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \i_tinyqv/cpu/counter_hi_3544__i4_rep_844  (from clk_c +)
+   Destination:    FD1P3IX    SP             \i_tinyqv/mem/q_ctrl/fsm_state__i2  (to clk_c +)
+
+   Delay:                  35.277ns  (13.0% logic, 87.0% route), 28 logic levels.
+
+ Constraint Details:
+
+     35.277ns data_path \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i2 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 30.198ns
+
+ Path Details: \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 (from clk_c)
+Route        22   e 1.738                                  \i_tinyqv/cpu/n34281
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i28351_3_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/reg_access[4][3]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_registers/i27593_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30302
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_registers/i27600
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30309
+MUXL5       ---     0.116             D0 to Z              \i_tinyqv/cpu/i_core/i_registers/i27604
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_registers/n30313
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i27606_3_lut
+Route        12   e 1.516                                  \i_tinyqv/cpu/data_rs1[0]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/pc_23__I_0_450_i269_3_lut
+Route         1   e 1.020                                  \i_tinyqv/cpu/debug_branch_N_442[28]
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i15094_4_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/i_core/alu_a_in[0]
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i5464_3_lut_rep_576_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n32591
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i5459_4_lut_rep_842
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n34274
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i4715_2_lut_rep_542_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n32557
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_alu/n6997_bdd_4_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n31759
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i28887
+Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n31760
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/n31760_bdd_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/cmp_out
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/cycle_0__I_0_548_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1654
+MUXL5       ---     0.116           BLUT to Z              \i_tinyqv/cpu/i_core/instr_complete_I_132
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1649
+MUXL5       ---     0.116             D1 to Z              \i_tinyqv/cpu/i_core/instr_complete_I_131
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/instr_complete_N_1648
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i1_3_lut_4_lut_adj_341
+Route        16   e 1.574                                  instr_complete_N_1647
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i1_4_lut_rep_533
+Route        51   e 1.806                                  n32548
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_3_lut_adj_501
+Route         5   e 1.341                                  \i_tinyqv/n8
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_rep_529
+Route        37   e 1.742                                  n32544
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_adj_481
+Route        40   e 1.757                                  \i_tinyqv/start_instr
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/data_addr_24__I_0_i24_3_lut_rep_511_4_lut
+Route         4   e 1.297                                  \i_tinyqv/mem/n32526
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i1_4_lut_adj_579
+Route         4   e 1.297                                  \i_tinyqv/mem/ram_a_block_N_2299
+LUT4        ---     0.166              C to Z              \i_tinyqv/mem/i1_2_lut_rep_508_3_lut_4_lut
+Route         3   e 1.239                                  n32523
+LUT4        ---     0.166              A to Z              \i_tinyqv/mem/q_ctrl/i3181_3_lut_4_lut
+Route         1   e 1.020                                  \i_tinyqv/mem/q_ctrl/n6216
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i3180_4_lut
+Route         1   e 1.020                                  n6218
+LUT4        ---     0.166              C to Z              i3842_4_lut
+Route         3   e 1.239                                  clk_c_enable_340
+                  --------
+                   35.277  (13.0% logic, 87.0% route), 28 logic levels.
+
+
+Error:  The following path violates requirements by 30.198ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \i_tinyqv/cpu/counter_hi_3544__i4_rep_844  (from clk_c +)
+   Destination:    FD1P3IX    SP             \i_tinyqv/mem/q_ctrl/fsm_state__i1  (to clk_c +)
+
+   Delay:                  35.277ns  (13.0% logic, 87.0% route), 28 logic levels.
+
+ Constraint Details:
+
+     35.277ns data_path \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i1 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 30.198ns
+
+ Path Details: \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 to \i_tinyqv/mem/q_ctrl/fsm_state__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \i_tinyqv/cpu/counter_hi_3544__i4_rep_844 (from clk_c)
+Route        22   e 1.738                                  \i_tinyqv/cpu/n34281
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i28351_3_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/reg_access[4][3]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i_registers/i27593_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30302
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_registers/i27600
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_registers/n30309
+MUXL5       ---     0.116             D0 to Z              \i_tinyqv/cpu/i_core/i_registers/i27604
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/i_registers/n30313
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_registers/i27606_3_lut
+Route        12   e 1.516                                  \i_tinyqv/cpu/data_rs1[0]
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/pc_23__I_0_450_i269_3_lut
+Route         1   e 1.020                                  \i_tinyqv/cpu/debug_branch_N_442[28]
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i15094_4_lut
+Route         5   e 1.341                                  \i_tinyqv/cpu/i_core/alu_a_in[0]
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i5464_3_lut_rep_576_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n32591
+LUT4        ---     0.166              C to Z              \i_tinyqv/cpu/i_core/i_alu/i5459_4_lut_rep_842
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n34274
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i_alu/i4715_2_lut_rep_542_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/i_alu/n32557
+LUT4        ---     0.166              A to Z              \i_tinyqv/cpu/i_core/i_alu/n6997_bdd_4_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/i_alu/n31759
+MUXL5       ---     0.116           ALUT to Z              \i_tinyqv/cpu/i_core/i_alu/i28887
+Route         1   e 1.020                                  \i_tinyqv/cpu/i_core/n31760
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/n31760_bdd_3_lut_4_lut
+Route         3   e 1.239                                  \i_tinyqv/cpu/i_core/cmp_out
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/cycle_0__I_0_548_3_lut
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1654
+MUXL5       ---     0.116           BLUT to Z              \i_tinyqv/cpu/i_core/instr_complete_I_132
+Route         1   e 0.020                                  \i_tinyqv/cpu/i_core/instr_complete_N_1649
+MUXL5       ---     0.116             D1 to Z              \i_tinyqv/cpu/i_core/instr_complete_I_131
+Route         2   e 1.158                                  \i_tinyqv/cpu/i_core/instr_complete_N_1648
+LUT4        ---     0.166              D to Z              \i_tinyqv/cpu/i_core/i1_3_lut_4_lut_adj_341
+Route        16   e 1.574                                  instr_complete_N_1647
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i_core/i1_4_lut_rep_533
+Route        51   e 1.806                                  n32548
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_3_lut_adj_501
+Route         5   e 1.341                                  \i_tinyqv/n8
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_rep_529
+Route        37   e 1.742                                  n32544
+LUT4        ---     0.166              B to Z              \i_tinyqv/cpu/i1_4_lut_adj_481
+Route        40   e 1.757                                  \i_tinyqv/start_instr
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/data_addr_24__I_0_i24_3_lut_rep_511_4_lut
+Route         4   e 1.297                                  \i_tinyqv/mem/n32526
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i1_4_lut_adj_579
+Route         4   e 1.297                                  \i_tinyqv/mem/ram_a_block_N_2299
+LUT4        ---     0.166              C to Z              \i_tinyqv/mem/i1_2_lut_rep_508_3_lut_4_lut
+Route         3   e 1.239                                  n32523
+LUT4        ---     0.166              A to Z              \i_tinyqv/mem/q_ctrl/i3181_3_lut_4_lut
+Route         1   e 1.020                                  \i_tinyqv/mem/q_ctrl/n6216
+LUT4        ---     0.166              B to Z              \i_tinyqv/mem/q_ctrl/i3180_4_lut
+Route         1   e 1.020                                  n6218
+LUT4        ---     0.166              C to Z              i3842_4_lut
+Route         3   e 1.239                                  clk_c_enable_340
+                  --------
+                   35.277  (13.0% logic, 87.0% route), 28 logic levels.
+
+Warning: 35.198 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets spi_clk_pos_derived_59]  |     5.000 ns|     3.362 ns|     5  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets qspi_clk_N_56]           |     5.000 ns|     8.104 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    35.198 ns|    28 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\i_tinyqv/cpu/i_core/cmp_out            |       3|    4095|     98.39%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/instr_complete_N_16|        |        |
+48                                      |       2|    4095|     98.39%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/instr_complete_N_16|        |        |
+49                                      |       1|    4095|     98.39%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/instr_complete_N_16|        |        |
+54                                      |       1|    4095|     98.39%
+                                        |        |        |
+\i_tinyqv/start_instr                   |      40|    4095|     98.39%
+                                        |        |        |
+instr_complete_N_1647                   |      16|    4095|     98.39%
+                                        |        |        |
+\i_tinyqv/n8                            |       5|    3990|     95.87%
+                                        |        |        |
+\i_tinyqv/mem/n32526                    |       4|    3867|     92.91%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n32591       |       3|    3720|     89.38%
+                                        |        |        |
+\i_tinyqv/cpu/data_rs1[0]               |      12|    3558|     85.49%
+                                        |        |        |
+\i_tinyqv/cpu/debug_branch_N_442[28]    |       1|    3558|     85.49%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/alu_a_in[0]        |       5|    3558|     85.49%
+                                        |        |        |
+\i_tinyqv/mem/ram_a_block_N_2299        |       4|    3180|     76.41%
+                                        |        |        |
+clk_c_enable_340                        |       3|    2853|     68.55%
+                                        |        |        |
+\i_tinyqv/mem/q_ctrl/n6216              |       1|    2805|     67.40%
+                                        |        |        |
+n6218                                   |       1|    2805|     67.40%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n34274       |       3|    2788|     66.99%
+                                        |        |        |
+n32548                                  |      51|    2706|     65.02%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n34273       |       3|    2623|     63.02%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30313 |       2|    2616|     62.85%
+                                        |        |        |
+n32523                                  |       3|    2606|     62.61%
+                                        |        |        |
+n32544                                  |      37|    2556|     61.41%
+                                        |        |        |
+\i_tinyqv/cpu/reg_access[4][3]          |       5|    2262|     54.35%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n31759       |       1|    2245|     53.94%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/n31760             |       1|    2245|     53.94%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30309 |       1|    2175|     52.26%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30302 |       1|    1974|     47.43%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/n31758             |       1|    1850|     44.45%
+                                        |        |        |
+\i_tinyqv/cpu/debug_early_branch        |       5|    1539|     36.98%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n32557       |       3|    1472|     35.37%
+                                        |        |        |
+\i_tinyqv/cpu/debug_early_branch_N_955  |       2|    1284|     30.85%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_alu/n32562       |       2|    1229|     29.53%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30314 |       2|     942|     22.63%
+                                        |        |        |
+\i_tinyqv/mem/ram_b_block_N_2303        |       6|     915|     21.98%
+                                        |        |        |
+clk_c_enable_66                         |       3|     900|     21.62%
+                                        |        |        |
+\i_tinyqv/cpu/n34281                    |      22|     858|     20.62%
+                                        |        |        |
+\i_tinyqv/cpu/n34283                    |      18|     800|     19.22%
+                                        |        |        |
+\i_tinyqv/cpu/rs1[0]                    |      30|     768|     18.45%
+                                        |        |        |
+n32522                                  |       3|     752|     18.07%
+                                        |        |        |
+n6220                                   |       1|     729|     17.52%
+                                        |        |        |
+\i_tinyqv/cpu/counter_hi[2]             |     121|     604|     14.51%
+                                        |        |        |
+n1072                                   |       8|     482|     11.58%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30311 |       1|     450|     10.81%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30312 |       1|     450|     10.81%
+                                        |        |        |
+\i_tinyqv/cpu/data_rs2[0]               |       5|     435|     10.45%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/alu_b_in[0]        |       8|     435|     10.45%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30287 |       1|     435|     10.45%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30294 |       1|     435|     10.45%
+                                        |        |        |
+\i_tinyqv/cpu/i_core/i_registers/n30298 |       1|     435|     10.45%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4162  Score: 114994508
+
+Constraints cover  14514794 paths, 4045 nets, and 12561 connections (95.3% coverage)
+
+
+Peak memory: 161955840 bytes, TRCE: 18968576 bytes, DLYMAN: 983040 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
