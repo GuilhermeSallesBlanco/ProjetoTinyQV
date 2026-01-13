@@ -6,7 +6,7 @@
  \----------------------------------------------------------------------------/
  Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
 
--- Running command `read -define ECP5 PURE_RTL SYNTH_FPGA PROG_FILE="ledstrip.hex"' --
+-- Running command `read -define ECP5 PURE_RTL SYNTH_FPGA PROG_FILE="testeUART.hex"' --
 
 -- Running command `read -sv top.v peripherals.v sim_qspi.v bram.v ../../src/tinyQV/cpu/*.v ../../src/tinyQV/peri/uart/*.v ../../src/peri_byte_example.v ../../src/peri_full_example.v ../../src/peri_full_empty.v ../../src/peri_byte_empty.v ../../src/user_peripherals/*.v ../../src/user_peripherals/*.sv ../../src/user_peripherals/*/*.v ../../src/user_peripherals/*/*.sv ; synth_ecp5 -top tinyQV_top  -json tinyqv.json' --
 
@@ -983,12 +983,12 @@ Parameter \ADDR_WIDTH = 12
 Parameter \ADDR_WIDTH = 12
 Generating RTLIL representation for module `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100'.
 Parameter \ADDR_WIDTH = 13
-Parameter \INIT_FILE = 96'011011000110010101100100011100110111010001110010011010010111000000101110011010000110010101111000
+Parameter \INIT_FILE = 104'01110100011001010111001101110100011001010101010101000001010100100101010000101110011010000110010101111000
 
 125.4.9. Executing AST frontend in derive mode using pre-parsed AST for module `\BRAM'.
 Parameter \ADDR_WIDTH = 13
-Parameter \INIT_FILE = 96'011011000110010101100100011100110111010001110010011010010111000000101110011010000110010101111000
-Generating RTLIL representation for module `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM'.
+Parameter \INIT_FILE = 104'01110100011001010111001101110100011001010101010101000001010100100101010000101110011010000110010101111000
+Generating RTLIL representation for module `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM'.
 
 125.4.10. Executing AST frontend in derive mode using pre-parsed AST for module `\tinyqv_mem_ctrl'.
 Generating RTLIL representation for module `\tinyqv_mem_ctrl'.
@@ -1031,7 +1031,7 @@ Used module:         \tinyqv_cpu
 Used module:     \sim_qspi_pmod
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100
-Used module:         $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM
+Used module:         $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM
 Parameter \CLOCK_MHZ = 25
 Found cached RTLIL representation for module `$paramod\tqvp_cattuto_ws2812b_driver\CLOCK_MHZ=s32'00000000000000000000000000011001'.
 Parameter \CLOCK_MHZ = 25
@@ -1072,7 +1072,7 @@ Used module:             \tinyqv_decoder
 Used module:     \sim_qspi_pmod
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100
-Used module:         $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM
+Used module:         $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM
 
 125.4.23. Executing AST frontend in derive mode using pre-parsed AST for module `\tqvp_uart_rx'.
 Generating RTLIL representation for module `\tqvp_uart_rx'.
@@ -1148,7 +1148,7 @@ Used module:             \tinyqv_decoder
 Used module:     \sim_qspi_pmod
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100
-Used module:         $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM
+Used module:         $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM
 
 125.4.34. Analyzing design hierarchy..
 Top module:  \tinyQV_top
@@ -1179,7 +1179,7 @@ Used module:             \tinyqv_decoder
 Used module:     \sim_qspi_pmod
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011
 Used module:         $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100
-Used module:         $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM
+Used module:         $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM
 Removing unused module `$abstract\tqvp_nkanderson_wdt'.
 Removing unused module `$abstract\tqvp_meiniKi_waveforms'.
 Removing unused module `$abstract\font_rom'.
@@ -1332,8 +1332,8 @@ Mapping positional arguments of cell $paramod$c6073fd8a5b287029e036048d234daa072
 
 125.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
 Removing empty process `$paramod$0bd43786140b93eb70c2498b80b185fc842c8610\char_rom.$proc$../../src/user_peripherals/ledstrip/char_rom.v:18$26702'.
-Found and cleaned up 1 empty switch in `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:18$25288'.
-Removing empty process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:18$25288'.
+Found and cleaned up 1 empty switch in `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:18$25288'.
+Removing empty process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:18$25288'.
 Found and cleaned up 1 empty switch in `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.$proc$bram.v:18$17085'.
 Found and cleaned up 1 empty switch in `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011.$proc$bram.v:18$4787'.
 Cleaned up 3 empty switches.
@@ -1453,7 +1453,7 @@ Marked 1 switch rules as full_case in process $proc$../../src/tinyQV/cpu/mem_ctr
 Marked 1 switch rules as full_case in process $proc$../../src/tinyQV/cpu/mem_ctrl.v:138$25325 in module tinyqv_mem_ctrl.
 Marked 1 switch rules as full_case in process $proc$../../src/tinyQV/cpu/mem_ctrl.v:103$25315 in module tinyqv_mem_ctrl.
 Marked 9 switch rules as full_case in process $proc$../../src/tinyQV/cpu/mem_ctrl.v:68$25298 in module tinyqv_mem_ctrl.
-Marked 1 switch rules as full_case in process $proc$bram.v:26$25279 in module $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.
+Marked 1 switch rules as full_case in process $proc$bram.v:26$25279 in module $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.
 Marked 1 switch rules as full_case in process $proc$bram.v:26$12981 in module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.
 Marked 1 switch rules as full_case in process $proc$bram.v:26$2731 in module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011.
 Marked 5 switch rules as full_case in process $proc$sim_qspi.v:77$659 in module sim_qspi_pmod.
@@ -2134,7 +2134,7 @@ Creating decoders for process `\tinyqv_mem_ctrl.$proc$../../src/tinyQV/cpu/mem_c
     13/15: $1\start_write[0:0]
     14/15: $1\start_read[0:0]
     15/15: $1\start_instr[0:0]
-Creating decoders for process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Creating decoders for process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
      1/4: $1$memwr$\mem$bram.v:31$25278_EN[7:0]$25286
      2/4: $1$memwr$\mem$bram.v:31$25278_DATA[7:0]$25285
      3/4: $1$memwr$\mem$bram.v:31$25278_ADDR[12:0]$25284
@@ -8900,13 +8900,13 @@ Creating register for signal `\tinyqv_mem_ctrl.\instr_fetch_stopped' using proce
   created $dff cell `$procdff$31260' with positive edge clock.
 Creating register for signal `\tinyqv_mem_ctrl.\instr_active' using process `\tinyqv_mem_ctrl.$proc$../../src/tinyQV/cpu/mem_ctrl.v:103$25315'.
   created $dff cell `$procdff$31261' with positive edge clock.
-Creating register for signal `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.\data_out' using process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Creating register for signal `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.\data_out' using process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
   created $dff cell `$procdff$31262' with positive edge clock.
-Creating register for signal `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$memwr$\mem$bram.v:31$25278_ADDR' using process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Creating register for signal `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$memwr$\mem$bram.v:31$25278_ADDR' using process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
   created $dff cell `$procdff$31263' with positive edge clock.
-Creating register for signal `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$memwr$\mem$bram.v:31$25278_DATA' using process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Creating register for signal `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$memwr$\mem$bram.v:31$25278_DATA' using process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
   created $dff cell `$procdff$31264' with positive edge clock.
-Creating register for signal `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$memwr$\mem$bram.v:31$25278_EN' using process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Creating register for signal `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$memwr$\mem$bram.v:31$25278_EN' using process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
   created $dff cell `$procdff$31265' with positive edge clock.
 Creating register for signal `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.\data_out' using process `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.$proc$bram.v:26$12981'.
   created $dff cell `$procdff$31266' with positive edge clock.
@@ -9287,8 +9287,8 @@ Found and cleaned up 1 empty switch in `\tinyqv_mem_ctrl.$proc$../../src/tinyQV/
 Removing empty process `tinyqv_mem_ctrl.$proc$../../src/tinyQV/cpu/mem_ctrl.v:103$25315'.
 Found and cleaned up 9 empty switches in `\tinyqv_mem_ctrl.$proc$../../src/tinyQV/cpu/mem_ctrl.v:68$25298'.
 Removing empty process `tinyqv_mem_ctrl.$proc$../../src/tinyQV/cpu/mem_ctrl.v:68$25298'.
-Found and cleaned up 2 empty switches in `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
-Removing empty process `$paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.$proc$bram.v:26$25279'.
+Found and cleaned up 2 empty switches in `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
+Removing empty process `$paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.$proc$bram.v:26$25279'.
 Removing empty process `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.$proc$bram.v:18$17085'.
 Found and cleaned up 2 empty switches in `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.$proc$bram.v:26$12981'.
 Removing empty process `$paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.$proc$bram.v:26$12981'.
@@ -9350,7 +9350,7 @@ Optimizing module tinyqv_cpu.
 <suppressed ~74 debug messages>
 Optimizing module tinyqv_mem_ctrl.
 <suppressed ~8 debug messages>
-Optimizing module $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.
+Optimizing module $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.
 Optimizing module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.
 Optimizing module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011.
 Optimizing module sim_qspi_pmod.
@@ -9382,7 +9382,7 @@ Deleting now unused module $paramod\tqvp_cattuto_ws2812b_driver\CLOCK_MHZ=s32'00
 Deleting now unused module tqvp_byte_empty.
 Deleting now unused module tinyqv_cpu.
 Deleting now unused module tinyqv_mem_ctrl.
-Deleting now unused module $paramod$2b7d3a0a6a12190795569b204f0e6fa06eebea4a\BRAM.
+Deleting now unused module $paramod$47bbbd21794cfc9771adc8b76eaa66dfcf0c9d1d\BRAM.
 Deleting now unused module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001100.
 Deleting now unused module $paramod\BRAM\ADDR_WIDTH=s32'00000000000000000000000000001011.
 Deleting now unused module sim_qspi_pmod.
@@ -17357,10 +17357,10 @@ Successfully finished Verilog frontend.
 125.29.3. Continuing TECHMAP pass.
 Using template $paramod$4a3968bf9c07651b40fc1a1622c8e8ab2bd2b663\$__DP16KD_ for cells of type $__DP16KD_.
 Using template $paramod$c21c80b0fc4fa6a8553b8eb42497444159b37c3e\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$f933e918b6a7467c14bd207bd95ca38f96468aa0\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$fc6a367c356524af0f05bc807f1dd102afdff6b3\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$5bd9672850bfbaccde0325c4a48365990f132812\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$d9b856ada6fa7c89185eff8992abf581f627362c\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$85c83eef4f74be860f2c9b77a5ce9d9be29564c9\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$a98a70ddd6efe43fb049d3c220ba6b94ab82b8b2\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$63f5a69cb94161373e5a2e1782eb898dda960ccf\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$67d288862b56d3b76d80b6b8213270339edc82b4\$__DP16KD_ for cells of type $__DP16KD_.
 No more expansions possible.
 <suppressed ~186 debug messages>
 
@@ -19256,7 +19256,7 @@ ABC: Mapping (K=7)  :  lut =   2273  edge =    8344  lev =   12 (1.62)  levB =  
 ABC: LUT = 2273 : 2=386 17.0 %  3=614 27.0 %  4=812 35.7 %  5=350 15.4 %  6=45 2.0 %  7=66 2.9 %  Ave = 3.67
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
-ABC: elapse: 1.13 seconds, total: 1.13 seconds
+ABC: elapse: 1.19 seconds, total: 1.19 seconds
 
 125.45.20.6. Executing AIGER frontend.
 <suppressed ~5792 debug messages>
@@ -21086,6 +21086,6 @@ Found and reported 0 problems.
 125.52. Executing JSON backend.
 
 Warnings: 4 unique messages, 5 total
-End of script. Logfile hash: 92d9ea0248, CPU: user 11.84s system 0.45s, MEM: 522.68 MB peak
+End of script. Logfile hash: bd17f151d3, CPU: user 12.70s system 0.59s, MEM: 522.47 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 28% 2x hierarchy (3 sec), 17% 1x autoname (2 sec), ...
+Time spent: 27% 2x hierarchy (3 sec), 17% 1x autoname (2 sec), ...

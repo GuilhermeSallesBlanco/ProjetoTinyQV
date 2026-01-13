@@ -40,7 +40,7 @@ $(PROJ).config: $(PROJ).json $(LPF)
 
 	# Convert to bitstream using IcePack
 $(PROJ).bit: $(PROJ).config
-	ecppack $(PROJ).config $(PROJ).bit
+	ecppack $(PROJ).config $(PROJ).bit --compress
 
 stats:
 # 	@grep Warn yosys.log | grep -v tri-state || true
