@@ -17357,10 +17357,10 @@ Successfully finished Verilog frontend.
 125.29.3. Continuing TECHMAP pass.
 Using template $paramod$4a3968bf9c07651b40fc1a1622c8e8ab2bd2b663\$__DP16KD_ for cells of type $__DP16KD_.
 Using template $paramod$c21c80b0fc4fa6a8553b8eb42497444159b37c3e\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$85c83eef4f74be860f2c9b77a5ce9d9be29564c9\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$a98a70ddd6efe43fb049d3c220ba6b94ab82b8b2\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$63f5a69cb94161373e5a2e1782eb898dda960ccf\$__DP16KD_ for cells of type $__DP16KD_.
-Using template $paramod$67d288862b56d3b76d80b6b8213270339edc82b4\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$5206a2dc75aecd7800e2e82b4013b0c5122d397c\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$e88d2e544738847eb1d0f391739c48223418984c\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$59bc87ccebdcd9d5f8091482f38c52f22dfb06e3\$__DP16KD_ for cells of type $__DP16KD_.
+Using template $paramod$a2d1de5c265d41a7aa7d852f4a7b70289089b941\$__DP16KD_ for cells of type $__DP16KD_.
 No more expansions possible.
 <suppressed ~186 debug messages>
 
@@ -19256,7 +19256,7 @@ ABC: Mapping (K=7)  :  lut =   2273  edge =    8344  lev =   12 (1.62)  levB =  
 ABC: LUT = 2273 : 2=386 17.0 %  3=614 27.0 %  4=812 35.7 %  5=350 15.4 %  6=45 2.0 %  7=66 2.9 %  Ave = 3.67
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
-ABC: elapse: 1.19 seconds, total: 1.19 seconds
+ABC: elapse: 1.18 seconds, total: 1.18 seconds
 
 125.45.20.6. Executing AIGER frontend.
 <suppressed ~5792 debug messages>
@@ -21086,6 +21086,6 @@ Found and reported 0 problems.
 125.52. Executing JSON backend.
 
 Warnings: 4 unique messages, 5 total
-End of script. Logfile hash: bd17f151d3, CPU: user 12.70s system 0.59s, MEM: 522.47 MB peak
+End of script. Logfile hash: 4d8f5435f2, CPU: user 13.04s system 0.42s, MEM: 523.03 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 27% 2x hierarchy (3 sec), 17% 1x autoname (2 sec), ...
+Time spent: 27% 2x hierarchy (4 sec), 17% 1x autoname (2 sec), ...
