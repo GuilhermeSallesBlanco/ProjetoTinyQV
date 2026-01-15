@@ -156,7 +156,22 @@ module tinyQV_top (
     assign uo_out[4] = debug_register_data ? debug_rd_r[2] : peri_out[4];
     assign uo_out[5] = debug_register_data ? debug_rd_r[3] : peri_out[5];
     assign uo_out[6] = gpio_out_sel[6] ? peri_out[6] : debug_uart_txd;
-    assign uo_out[7] = gpio_out_sel[7] ? peri_out[7] : debug_signal;
+    assign uo_out[7] = led_blink; // Apenas para teste do LED
+
+
+    // ========= TESTE PISCAR LED EM uo_out[7] =========
+    // Divisor simples de clock (~1,5 Hz @ 25 MHz com bit 24)
+    reg [25:0] led_div;
+    always @(posedge clk or negedge rst_reg_n) begin
+        if (!rst_reg_n) led_div <= 26'd0;
+        else            led_div <= led_div + 1'b1;
+    end
+    wire led_blink = led_div[25]; // ~1,5 Hz
+
+    // Dirigir uo_out[7] diretamente com o blink, ignorando seleção de função.
+    // (Somente para o teste de vida. Remova/volte ao original depois que validar o hardware.)
+    // =================================================
+
 
     tinyQV_peripherals #(.CLOCK_MHZ(CLOCK_MHZ)) i_peripherals (
         .clk(clk),
