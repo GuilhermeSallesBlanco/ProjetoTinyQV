@@ -1,4 +1,4 @@
-RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-toolchain
+RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/toolchain
 TINYQV_SDK      = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main
 
 PROJECT_NAME ?= [NOME DO PROGRAMA .c]

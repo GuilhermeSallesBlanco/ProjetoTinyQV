@@ -1,8 +1,8 @@
-RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-toolchain
-TINYQV_SDK      = /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main
-
 PROJECT_NAME ?= testeUART
-PROJECT_SOURCES ?= $(PROJECT_NAME).c
+
+PROJECT_SOURCES ?= testeUART.c
+
+RISCV_TOOLCHAIN = /home/guisb_ubuntu/tinyqv/TinyQVSDK/toolchain
 
 CC = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-gcc
 AS = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-as
@@ -10,19 +10,21 @@ AR = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-ar
 LD = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-ld
 OBJCOPY = $(RISCV_TOOLCHAIN)/bin/riscv32-unknown-elf-objcopy
 
+TINYQV_SDK ?= /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main
+
 all: $(PROJECT_NAME).bin $(PROJECT_NAME).hex
 
 clean:
 	cd $(dir $(PROJECT_NAME)) && rm *.o *.elf *.bin *.hex
 
 %.o: %.c
-	$(CC) -O2 -I$(TINYQV_SDK) -march=rv32ec_zcb -mabi=ilp32e -mno-strict-align -nostdlib -nostartfiles -ffreestanding -ffunction-sections -fdata-sections -Wall -Werror -lc -c $< -o $@
+	$(CC) -O2 -I$(TINYQV_SDK) -march=rv32ec_zicsr_zcb_zicond -mabi=ilp32e -mno-strict-align -nostdlib -nostartfiles -ffreestanding -ffunction-sections -fdata-sections -Wall -Werror -lc -c $< -o $@
 
 %.o: %.s
-	$(AS) -march=rv32ec_zcb -mabi=ilp32e $< -o $@
+	$(AS) -march=rv32ec_zicsr_zcb_zicond -mabi=ilp32e $< -o $@
 
 $(PROJECT_NAME).elf: $(PROJECT_SOURCES:.c=.o)
-	$(LD) $^ $(TINYQV_SDK)/start.o $(TINYQV_SDK)/tinyQV.a $(RISCV_TOOLCHAIN)/riscv32-unknown-elf/lib/libc.a $(RISCV_TOOLCHAIN)/lib/gcc/riscv32-unknown-elf/*/libgcc.a  -T $(TINYQV_SDK)/memmap --gc-sections -o $@
+	$(LD) $^ $(TINYQV_SDK)/start.o $(TINYQV_SDK)/tinyQV-sim.a $(RISCV_TOOLCHAIN)/riscv32-unknown-elf/lib/libc.a $(RISCV_TOOLCHAIN)/lib/gcc/riscv32-unknown-elf/*/libgcc.a  -T $(TINYQV_SDK)/memmap_sim --gc-sections -o $@
 
 $(PROJECT_NAME).bin: $(PROJECT_NAME).elf
 	$(OBJCOPY) $< -O binary $@

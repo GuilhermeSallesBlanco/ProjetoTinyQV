@@ -1,0 +1,116 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 testeUART.o
+ .data          0x00000000        0x0 testeUART.o
+ .bss           0x00000000        0x0 testeUART.o
+ .text          0x00000000        0x0 /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+ .data          0x00000000        0x0 /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+ .bss           0x00000000        0x0 /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00010000         xr
+ram_a            0x01000000         0x00004000         rw
+ram_b            0x01800000         0x00002000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD testeUART.o
+LOAD /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+LOAD /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/tinyQV-sd.a
+
+.boot           0x00000000       0x1a
+ *(.boot)
+ .boot          0x00000000       0x1a /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+ *(.boot)
+
+.vectors        0x00000040       0x10
+ *(.vectors)
+ .vectors       0x00000040       0x10 /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+
+.srodata
+ *(.srodata*)
+
+.isrs
+ *(.isrs*)
+ *(.isrs)
+
+.text           0x00000050       0x38
+ *(.text*)
+ .text.startup.main
+                0x00000050       0x38 testeUART.o
+                0x00000050                main
+
+.rela.dyn       0x00000088        0x0
+ .rela.vectors  0x00000088        0x0 testeUART.o
+
+.rodata
+ *(.rodata*)
+
+.peri           0x01000000        0x0 load address 0x00000088
+                0x01000000                        . = ALIGN (0x4)
+                0x01000000                        __peri_data_start__ = .
+ *(.peri_data*)
+                0x01000000                        . = ALIGN (0x4)
+                0x01000000                        __peri_data_end__ = .
+ *(.peri_bss*)
+                0x00000088                        __peri_lma = LOADADDR (.peri)
+
+.scratch        0x01000200       0xc0
+                0x010002c0                        . = (. + 0xc0)
+ *fill*         0x01000200       0xc0 
+
+.data           0x010002c0        0x0 load address 0x00000088
+                0x010002c0                        . = ALIGN (0x10)
+                0x010002c0                        __data_start__ = .
+ *(.sdata*)
+ *(.data*)
+                0x010002c0                        . = ALIGN (0x10)
+                0x010002c0                        __data_end__ = .
+                0x00000088                        __data_lma = LOADADDR (.data)
+
+.bss            0x010002c0        0x0 load address 0x00000088
+                0x010002c0                        . = ALIGN (0x10)
+                0x010002c0                        __bss_start__ = .
+ *(.sbss*)
+ *(.bss*)
+                0x010002c0                        . = ALIGN (0x10)
+                0x010002c0                        __bss_end__ = .
+
+.heap           0x01800000        0x0
+                0x01800000                        __HeapStart = .
+ *(.heap*)
+                0x01800000                        __HeapLimit = .
+                0x01000400                        __global_pointer$ = 0x1000400
+                0x01004000                        __StackTop = (ORIGIN (ram_a) + LENGTH (ram_a))
+                0x01003000                        __StackLimit = (__StackTop - 0x1000)
+                0x00000001                        ASSERT ((__StackLimit >= __bss_end__), region RAM overflowed)
+OUTPUT(testeUART.elf elf32-littleriscv)
+
+.comment        0x00000000        0xf
+ .comment       0x00000000        0xf testeUART.o
+                                 0x10 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 testeUART.o
+
+.riscv.attributes
+                0x00000000       0x46
+ .riscv.attributes
+                0x00000000       0x42 testeUART.o
+ .riscv.attributes
+                0x00000042       0x3a /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+
+.early_text     0x00000000       0x40
+ .early_text    0x00000000       0x40 /home/guisb_ubuntu/tinyqv/TinyQVSDK/tinyQV-sdk-main/start.o
+                0x00000000                _start
+                0x0000001c                _trap_handler
+                0x00000020                isr_in0
+                0x00000020                isr_in1
+                0x00000030                isr_uart_writable
+                0x00000030                isr_uart_byte_available

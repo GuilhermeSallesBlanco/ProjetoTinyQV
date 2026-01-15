@@ -14,9 +14,9 @@ module sim_qspi_pmod (
 );
 
     // ROM and RAM size in bytes is 1 << XXX_BITS.
-    parameter   ROM_BITS       = 13;
-    parameter   RAM_A_BITS     = 12;
-    parameter   RAM_B_BITS     = 11;
+    parameter   ROM_BITS       = 16;
+    parameter   RAM_A_BITS     = 14;
+    parameter   RAM_B_BITS     = 13;
 
     reg [31:0] cmd;
     reg [24:0] addr;
