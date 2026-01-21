@@ -10,7 +10,8 @@ module tinyQV_top (
         input rst_n,
 
         input [7:0] ui_in,
-        output [7:0] uo_out
+        output [7:0] uo_out,
+        output uo_out_AL // Saída para analisador lógico
 
 );
     localparam CLOCK_MHZ = 25;
@@ -156,28 +157,26 @@ module tinyQV_top (
     assign uo_out[4] = debug_register_data ? debug_rd_r[2] : peri_out[4];
     assign uo_out[5] = debug_register_data ? debug_rd_r[3] : peri_out[5];
     assign uo_out[6] = gpio_out_sel[6] ? peri_out[6] : debug_uart_txd;
-    //assign uo_out[7] = led_blink; // Apenas para teste do LED
+    assign uo_out[7] = gpio_out_sel[7] ? peri_out[7] : debug_signal; // Comentar essa linha para fazer o LED funcionar
+    assign uo_out_AL = uo_out[7]; // Saída para analisador lógico
 
 
-    // ========= TESTE PISCAR LED EM uo_out[7] =========
-    reg [31:0] led_counter;
+    // // ========= TESTE PISCAR LED EM uo_out[7] =========
+    // reg [31:0] led_counter;
 
-    initial begin
-        led_counter = 0;
-        uo_out[7] = 0;
-    end
+    // initial begin
+    //     led_counter = 0;
+    //     uo_out[7] = 0;
+    // end
 
-    always @(posedge clk) begin
-        if(led_counter < 32'd12500000) begin
-            led_counter <= led_counter + 1;
-        end else begin
-            led_counter <= 0;
-            uo_out[7] <= ~uo_out[7];
-        end
-    end
-
-    // Dirigir uo_out[7] diretamente com o blink, ignorando seleção de função.
-    // (Somente para o teste de vida. Remova/volte ao original depois que validar o hardware.)
+    // always @(posedge clk) begin
+    //     if(led_counter < 32'd12500000) begin
+    //         led_counter <= led_counter + 1;
+    //     end else begin
+    //         led_counter <= 0;
+    //         uo_out[7] <= ~uo_out[7];
+    //     end
+    // end
     // =================================================
 
 
