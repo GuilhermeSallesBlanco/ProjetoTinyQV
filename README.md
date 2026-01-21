@@ -1,6 +1,3 @@
-# Introdução
-[explicar propósito do projeto e relevância do TinyTapeout]
-
 # Alterações feitas
 O projeto original, disponibilizado pela TinyTapeout nos repositórios:
 - https://github.com/TinyTapeout/tinyqv-byte-peripheral-template
@@ -52,5 +49,9 @@ Ao passar do tempo, percebeu-se que a utilização do Lattice Diamond estava atr
 Adicionalmente, eu percebi que o SDK que estava utilizando era uma versão desatualizada, assim, tive que reinstalar ele novamente e recompilar os programas C que estava usando no SDK novo, isso incluindo as alterações necessárias aos diversos Makefiles sendo utilizados (geração de bitstream, código C -> código hex (a versão correta está dentro de testeUART), etc).
 
 Em algum momento, eu estava em dúvida se eu havia clonado o repositório do TinyQV corretamente, e decidi reiniciar todo o processo de clonagem do TinyQV. Isso levou a alguns problemas: lidar com o fato de que talvez esteja usando todos os periféricos de usuários (acabou não sendo o caso, pois peripherals.v não chama todos os periféricos como eu imaginava); lidar com uma leve desorganização dos diretórios; gerenciar três terminais diferentes (um terminal WSL para usar o Yosys, outro WSL para usar o SDK e um terminal do Windows para usar o oss-cad-suite para colocar o bitstream na placa), entre outros desafios.
+<img width="1558" height="1031" alt="Pasted image 20260113203313" src="https://github.com/user-attachments/assets/456fc0c2-755f-4898-9180-a2fe9ddb857b" />
 
 Eventualmente, eu consegui controlar o LED da FPGA por meio de um programa C, comprovando que o processador estava realizando seu papel corretamente. Os próximos passos incluem a utilização de outros periféricos e programas C mais complexos, como a inclusão de sinais de entrada para controle de saída.
+
+https://github.com/user-attachments/assets/c92c5dc2-85ba-4992-9cac-ec56f3858d9e
+
