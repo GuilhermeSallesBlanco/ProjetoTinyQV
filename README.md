@@ -1,4 +1,4 @@
-# Alterações feitas
+<img width="694" height="398" alt="tinyqv_physical" src="https://github.com/user-attachments/assets/a59b9558-fb06-4988-bb7e-be15f787b70f" /># Alterações feitas
 O projeto original, disponibilizado pela TinyTapeout nos repositórios:
 - https://github.com/TinyTapeout/tinyqv-byte-peripheral-template
 - https://github.com/MichaelBell/tinyQV
@@ -53,5 +53,13 @@ Em algum momento, eu estava em dúvida se eu havia clonado o repositório do Tin
 
 Eventualmente, eu consegui controlar o LED da FPGA por meio de um programa C, comprovando que o processador estava realizando seu papel corretamente. Os próximos passos incluem a utilização de outros periféricos e programas C mais complexos, como a inclusão de sinais de entrada para controle de saída.
 
+# Imagens dos resultados obtidos
+Síntese RTL do Yosys:
+<img width="10846" height="3267" alt="tinyqv_rtl" src="https://github.com/user-attachments/assets/74372412-e748-44f6-8097-35f471ac826b" />
+
+Síntese física do nexpnr-ecp5:
+<img width="694" height="398" alt="tinyqv_physical" src="https://github.com/user-attachments/assets/9bdaab1b-e7e9-4002-b97a-76956068a7c5" />
+
+Vídeo com LED piscando:
 https://github.com/user-attachments/assets/c92c5dc2-85ba-4992-9cac-ec56f3858d9e
 
