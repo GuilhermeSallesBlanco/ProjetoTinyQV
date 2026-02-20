@@ -63,4 +63,7 @@ Síntese física do nexpnr-ecp5:
 <img width="694" height="398" alt="tinyqv_physical" src="https://github.com/user-attachments/assets/9bdaab1b-e7e9-4002-b97a-76956068a7c5" />
 
 Vídeo com LED piscando:
-https://github.com/user-attachments/assets/c92c5dc2-85ba-4992-9cac-ec56f3858d9e
+
+https://github.com/user-attachments/assets/9c7eb344-f9df-4191-b398-1575b47fe9d2
+
+
