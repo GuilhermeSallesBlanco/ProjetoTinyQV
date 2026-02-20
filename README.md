@@ -58,9 +58,9 @@ Síntese RTL do Yosys:
 
 <img width="10846" height="3267" alt="tinyqv_rtl" src="https://github.com/user-attachments/assets/74372412-e748-44f6-8097-35f471ac826b" />
 
-Síntese física do nexpnr-ecp5:
+Vídeo demonstrando a síntese física do nexpnr-ecp5:
 
-<img width="694" height="398" alt="tinyqv_physical" src="https://github.com/user-attachments/assets/9bdaab1b-e7e9-4002-b97a-76956068a7c5" />
+https://github.com/user-attachments/assets/8b81a4e6-ac5d-45ae-94e9-29e59ccbb273
 
 Vídeo com LED piscando:
 
