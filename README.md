@@ -66,4 +66,4 @@ Vídeo com LED piscando:
 
 https://github.com/user-attachments/assets/9c7eb344-f9df-4191-b398-1575b47fe9d2
 
-
+[Relatório Final](https://github.com/GuilhermeSallesBlanco/ProjetoTinyQV/blob/main/RelatorioFinal.pdf)
